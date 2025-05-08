@@ -445,6 +445,30 @@ Extended Permissions mode on device must be enabled in some of the projects to a
       </p>
       <p>Teleprompter lens for public speaking practice and presentation delivery.</p>
     </td>
+         <td align="center" valign="top" width="33%">
+      <a href="#">
+        <img src="./Essentials/README-ref/sample-list-essentials.gif" alt="public-speaker" width="250px" />
+      </a>
+      <h3>Essentials</h3>
+      <p>
+        <a href="https://developers.snap.com/spectacles/spectacles-frameworks/spectacles-interaction-kit/features/overview?">
+          <img src="https://img.shields.io/badge/SIK-Light%20Gray?color=D3D3D3" />
+        </a>
+        <a href="https://developers.snap.com/lens-studio/features/physics/physics-overview?">
+          <img src="https://img.shields.io/badge/Physics-Light%20Gray?color=D3D3D3" />
+        </a>
+        <a href="https://developers.snap.com/spectacles/about-spectacles-features/apis/gesture-module?">
+          <img src="https://img.shields.io/badge/Gesture%20Module-Light%20Gray?color=D3D3D3" />
+        </a>
+        <a href="https://developers.snap.com/lens-studio/api/lens-scripting/modules/Packages_LSTween_LSTween.html?">
+          <img src="https://img.shields.io/badge/Animation-Light%20Gray?color=D3D3D3" />
+        </a>
+        <a href="https://developers.snap.com/lens-studio/4.55.1/references/guides/lens-features/physics/raycast?">
+          <img src="https://img.shields.io/badge/Raycast-Light%20Gray?color=D3D3D3" />
+        </a>
+      </p>
+      <p>Collection of foundational concepts for creating lenses in Lens Studio.</p>
+    </td>
     <td align="center" valign="top" width="33%">
       <!-- Third cell can be left empty or filled with another sample -->
     </td>
