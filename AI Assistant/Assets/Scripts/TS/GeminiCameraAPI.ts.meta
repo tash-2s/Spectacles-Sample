@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/adba11d1-0372-4eb5-81e0-8d3eaa1f026e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> ed76ef2c-d3e3-4702-afe2-fe12abf352e3
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> ed76ef2c-d3e3-4702-afe2-fe12abf352e3
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8f2a6e96-44be-436a-91af-0a28da0513ac
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8f2a6e96-44be-436a-91af-0a28da0513ac>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00ec5dfd-7242-4c7e-8cfb-7db878a19e1f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    frameInterval: false
+    geminiLiveAPI: false
+    uiImage: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - uiImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      geminiLiveAPI: !<MappingBased.GeminiLiveAPI> 00000000-0000-0000-0000-000000000000
+      frameInterval: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.Image uiImage {"hint":"The image in the scene that will be showing the captured frame"}'
+    - '// @input GeminiLiveAPI geminiLiveAPI {"hint":"The GeminiLiveAPI component to send frames to"}'
+    - '// @input float frameInterval = 1 {"hint":"Frame rate in seconds (Gemini recommends 1 frame per second)"}'

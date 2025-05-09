@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 596
+    size: 601
     values:
       - Device Camera Texture.deviceCameraTexture
       - Echopark.hdr
@@ -13,7 +13,12 @@ CollapsedEntities:
       - Scripts/JS/SpeechToText.js
       - Scripts/JS/TextToSpeechOpenAI.js
       - Scripts/JS/VisionOpenAI.js
+      - Scripts/Microphone Audio.micaudio
       - Scripts/TS/CameraAPI.ts
+      - Scripts/TS/GeminiAudioAPI.ts
+      - Scripts/TS/GeminiCameraAPI.ts
+      - Scripts/TS/GeminiController.ts
+      - Scripts/TS/GeminiLiveAPI.ts
       - Scripts/TS/SpeechToText.ts
       - Scripts/TS/TextToSpeechOpenAI.ts
       - Scripts/TS/VisionOpenAI.ts

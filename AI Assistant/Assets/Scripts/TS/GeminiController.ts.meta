@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/8a8423c6-68ef-4154-b6cb-8bf95cde25fb>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d4e73f3d-5cca-46ce-87a1-bad39b9bbd97
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d4e73f3d-5cca-46ce-87a1-bad39b9bbd97
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 61e367d5-f7b4-401e-aa39-0a8f5b2f8de0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/61e367d5-f7b4-401e-aa39-0a8f5b2f8de0>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3bff1e70-8f37-48e1-b64c-8e5008d67213
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    geminiAudioAPI: false
+    geminiCameraAPI: false
+    geminiLiveAPI: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - geminiLiveAPI: !<MappingBased.GeminiLiveAPI> 00000000-0000-0000-0000-000000000000
+      geminiCameraAPI: !<MappingBased.GeminiCameraAPI> 00000000-0000-0000-0000-000000000000
+      geminiAudioAPI: !<MappingBased.GeminiAudioAPI> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input GeminiLiveAPI geminiLiveAPI {"hint":"GeminiLiveAPI component"}'
+    - '// @input GeminiCameraAPI geminiCameraAPI {"hint":"GeminiCameraAPI component"}'
+    - '// @input GeminiAudioAPI geminiAudioAPI {"hint":"GeminiAudioAPI component"}'

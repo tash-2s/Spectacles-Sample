@@ -6,6 +6,8 @@ dock:
           - items:
               - persistentName: Snap.Plugin.Gui.SceneHierarchyEditor
                 Uuid: 6778142c-0629-4c2a-afc3-92a65ce29e1a
+              - persistentName: snap.plugin.gui.typescript_status_panel
+                Uuid: b3efe89d-2f1c-4fc1-be1a-fe21a1d5536d
             type: section
             current: 0
           - items:
@@ -14,8 +16,8 @@ dock:
             type: section
             current: 0
         sizes:
-          - 540
-          - 792
+          - 394
+          - 578
         type: splitter
         orientation: vertical
       - items:
@@ -32,8 +34,8 @@ dock:
             type: section
             current: 0
         sizes:
-          - 303
-          - 1029
+          - 221
+          - 751
         type: splitter
         orientation: vertical
       - items:
@@ -49,9 +51,9 @@ dock:
         type: section
         current: 0
     sizes:
-      - 559
-      - 530
-      - 497
-      - 957
+      - 418
+      - 620
+      - 345
+      - 520
     type: splitter
     orientation: horizontal

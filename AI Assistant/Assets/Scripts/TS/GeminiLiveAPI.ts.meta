@@ -1,0 +1,63 @@
+- !<AssetImportMetadata/0fb31b4b-c09b-459c-b56c-533b67b3442b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> fc508164-fb95-4caa-a852-fed9e81b1c00
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> fc508164-fb95-4caa-a852-fed9e81b1c00
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 700f3acc-35df-4ade-9911-874b05b83ba9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/700f3acc-35df-4ade-9911-874b05b83ba9>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 6b2a5d18-ab9b-4ae5-94ce-ba9236f71dfa
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    apiKey: false
+    autoConnect: false
+    maxReconnectAttempts: false
+    model: false
+    outputText: false
+    reconnectInterval: false
+    systemInstruction: false
+    ttsComponent: false
+    videoIntervalMs: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - apiKey: Insert your Gemini API Key
+      model: gemini-2.0-flash-live-001
+      outputText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      autoConnect: true
+      maxReconnectAttempts: !<float> 5.000000
+      reconnectInterval: !<float> 3.000000
+      systemInstruction: You are a helpful AI assistant for Snap Spectacles. Keep responses concise and under 30 words. Be a little funny and keep it positive.
+      videoIntervalMs: !<float> 500.000000
+      ttsComponent: !<MappingBased.TextToSpeechOpenAI> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string apiKey = "Insert your Gemini API Key" {"hint":"API Key for Gemini (do not hardcode in production)"}'
+    - '// @input string model = "gemini-2.0-flash-live-preview-04-09" {"hint":"Model name to use"}'
+    - '// @input Component.Text outputText {"hint":"Text component to display assistant responses"}'
+    - '// @input TextToSpeechOpenAI ttsComponent {"hint":"TextToSpeechOpenAI component for speaking responses"}'
+    - '// @input bool autoConnect = true {"hint":"Auto-connect on start"}'
+    - '// @input float maxReconnectAttempts = 5 {"hint":"Maximum reconnection attempts"}'
+    - '// @input float reconnectInterval = 3 {"hint":"Reconnection interval in seconds"}'
+    - '// @input string systemInstruction = "You are a helpful AI assistant for Snap Spectacles. Keep responses concise and under 30 words. Be a little funny and keep it positive." {"hint":"System instruction for assistant personality"}'
+    - '// @input float videoIntervalMs = 1000 {"hint":"Video frame interval in milliseconds"}'

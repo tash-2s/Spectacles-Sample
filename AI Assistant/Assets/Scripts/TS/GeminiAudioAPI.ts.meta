@@ -1,0 +1,42 @@
+- !<AssetImportMetadata/a4acfef8-5f77-4733-85dc-fc26a91d5f24>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 979b2a21-457b-4b3b-9e5b-d87b0d41d240
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 979b2a21-457b-4b3b-9e5b-d87b0d41d240
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> acb74253-9a3d-422d-9b15-b3d4a81b1611
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/acb74253-9a3d-422d-9b15-b3d4a81b1611>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: e4d4b6e9-78fa-440b-8a76-a6a51e2cace4
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    geminiLiveAPI: false
+    micAudioTrack: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - geminiLiveAPI: !<MappingBased.GeminiLiveAPI> 00000000-0000-0000-0000-000000000000
+      micAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input GeminiLiveAPI geminiLiveAPI {"hint":"The GeminiLiveAPI component to stream audio to"}'
+    - '// @input Asset.AudioTrackAsset micAudioTrack {"hint":"Audio track asset with Microphone Provider"}'

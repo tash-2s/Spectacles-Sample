@@ -2,6 +2,7 @@
   PackagePath: ""
   objects:
     - !<own> 00000000-0000-0065-0000-000000000064
+    - !<own> 736e618d-7e26-4f28-8219-96960d775f27
     - !<own> 6f077e82-270e-4b51-8817-3f348eb1932b
     - !<own> 3b4bc368-95d4-466a-b3ed-e5c67fe69b75
     - !<own> 7bb133b7-6767-4ea5-a82b-9bf7effe3899
@@ -305,22 +306,6 @@
       radialGradientOcclusionMaterial: !<reference.Material> af45ff34-c96f-42c2-8446-8282edf6dece
       handOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
       handOccluderMaterial: !<reference.Material> bb8479b9-021e-4c42-809a-60edf99cbeac
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/14168468-fa0a-401f-b2d3-56eba4dbef80>
-  PrefabRemaps:
-    []
-  Name: SpeechToText
-  Enabled: true
-  ScriptAsset: !<reference> 68109cc9-77c2-4e56-9324-6164610d66d7
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      text: !<reference.Text> 49568b2b-ea56-4506-8c4e-89eb6d64b5f8
   ScriptTypes:
     "":
       {}
@@ -632,21 +617,6 @@
     - !<own> eb3bd3a3-0acd-4e44-b29e-53eba9e8f52d
   Components:
     []
-- !<SceneObject/244efaf2-0ca9-4f0f-bd40-f21c2600d4fd>
-  PrefabRemaps:
-    []
-  Name: "[Capture-CameraAPI]"
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 36a6fdd0-48e1-4d67-a46e-1dc5c4cf5db8
 - !<SceneObject/28f5176d-cf5e-40dc-af18-328ff6056391>
   PrefabRemaps:
     []
@@ -869,22 +839,6 @@
     - !<own> 7ad3d049-294f-426b-9117-6bb2127c0bc7
   Components:
     []
-- !<ScriptComponent/36a6fdd0-48e1-4d67-a46e-1dc5c4cf5db8>
-  PrefabRemaps:
-    []
-  Name: CameraAPI
-  Enabled: true
-  ScriptAsset: !<reference> e799f18d-da38-4c37-bf65-417166d9ea84
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      uiImage: !<reference.Image> 9a041840-fea4-4eba-a83e-6811ca3aacbd
-  ScriptTypes:
-    "":
-      {}
 - !<ScriptComponent/3b1cbb75-b50f-4a57-ba00-02299d0fdf3e>
   PrefabRemaps:
     []
@@ -1314,9 +1268,10 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 773ff007-4a24-4507-9815-1be4d4889354
-    - !<own> 7cd1326d-a920-43da-b8a9-0d43f6e44f04
-    - !<own> ac38169f-0dd4-40b7-be96-af67eaf15f77
-    - !<own> 244efaf2-0ca9-4f0f-bd40-f21c2600d4fd
+    - !<own> c76b333d-6b35-44f4-a61c-14da69616055
+    - !<own> fa6b419f-471f-40e0-9d88-9b4c4bffb119
+    - !<own> bb6b8aa1-987d-4252-8751-cd78ee817bac
+    - !<own> d91220af-9247-49f7-9ab0-30064ae9f23b
   Components:
     []
 - !<SceneObject/604759ef-9c93-44ba-97f4-4843f965b4fc>
@@ -1722,6 +1677,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/736e618d-7e26-4f28-8219-96960d775f27>
+  PrefabRemaps:
+    []
+  Name: Microphone Audio
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 91f03a7e-0ccb-415d-90dd-2b78e17f813d
 - !<SceneObject/764d951d-7c7b-4a93-98bf-18baacf60e6b>
   PrefabRemaps:
     []
@@ -1798,6 +1768,24 @@
     - !<own> bcad0d99-0744-48fa-8269-064c7052ae12
   Components:
     []
+- !<ScriptComponent/7ab9b1cb-6c07-4dc5-ae20-6473789c3975>
+  PrefabRemaps:
+    []
+  Name: GeminiCameraAPI
+  Enabled: true
+  ScriptAsset: !<reference> ed76ef2c-d3e3-4702-afe2-fe12abf352e3
+  ScriptInputsDefault:
+    frameInterval: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      uiImage: !<reference.Image> 9a041840-fea4-4eba-a83e-6811ca3aacbd
+      geminiLiveAPI: !<MappingBased.GeminiLiveAPI> 9b783821-2ed4-4c90-8572-e06d146c4a04
+      frameInterval: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/7ad3d049-294f-426b-9117-6bb2127c0bc7>
   PrefabRemaps:
     []
@@ -1831,21 +1819,6 @@
     - !<own> 2b73dbfc-15b2-46ee-8a75-4e56c9dbcdad
   Components:
     []
-- !<SceneObject/7cd1326d-a920-43da-b8a9-0d43f6e44f04>
-  PrefabRemaps:
-    []
-  Name: "[SpeechToText-VoiceML]"
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 14168468-fa0a-401f-b2d3-56eba4dbef80
 - !<SceneObject/7d330596-072d-4080-b6a5-2013263c8648>
   PrefabRemaps:
     []
@@ -2027,6 +2000,23 @@
     - !<own> 4574bfbb-dad0-428e-b77b-a4845dfb4c68
   Components:
     []
+- !<AudioComponent/91f03a7e-0ccb-415d-90dd-2b78e17f813d>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 911a914b-3635-4810-96cf-c3b14a9b928a
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
 - !<SceneObject/935c60bd-e9ca-4e32-9fbc-039ac6a995b7>
   PrefabRemaps:
     []
@@ -2042,26 +2032,6 @@
     - !<own> 2e344d73-e486-41de-b4dd-ddbe6160ebcf
   Components:
     []
-- !<ScriptComponent/938a5bb9-4061-4019-9e4a-be82d9fb56d3>
-  PrefabRemaps:
-    []
-  Name: VisionOpenAI
-  Enabled: true
-  ScriptAsset: !<reference> 1cde895a-a2ed-4eae-ab8b-5c5117ec7eb7
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      textInput: !<reference.Text> 49568b2b-ea56-4506-8c4e-89eb6d64b5f8
-      textOutput: !<reference.Text> 9783c153-eb99-4de0-9a1e-b20d6b4e2ce4
-      image: !<reference.Image> 9a041840-fea4-4eba-a83e-6811ca3aacbd
-      interactable: !<MappingBased.Interactable> 141999ab-6407-4f7e-a341-68818c100bc4
-      ttsComponent: !<MappingBased.TextToSpeechOpenAI> c5b4401b-2516-44da-bb81-68e63b8d7e65
-  ScriptTypes:
-    "":
-      {}
 - !<Canvas/9590cd11-a03a-43f0-982f-274155ee78b0>
   PrefabRemaps:
     []
@@ -2234,6 +2204,33 @@
     - !<own> b595d24d-fb2c-40a8-9874-4f344444f03a
   Components:
     []
+- !<ScriptComponent/9b783821-2ed4-4c90-8572-e06d146c4a04>
+  PrefabRemaps:
+    []
+  Name: GeminiLiveAPI
+  Enabled: true
+  ScriptAsset: !<reference> fc508164-fb95-4caa-a852-fed9e81b1c00
+  ScriptInputsDefault:
+    autoConnect: true
+    maxReconnectAttempts: true
+    reconnectInterval: true
+    systemInstruction: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      apiKey: FIXME
+      model: gemini-2.0-flash-live-preview-04-09
+      outputText: !<reference.Text> 9783c153-eb99-4de0-9a1e-b20d6b4e2ce4
+      ttsComponent: !<MappingBased.TextToSpeechOpenAI> c5b4401b-2516-44da-bb81-68e63b8d7e65
+      autoConnect: true
+      maxReconnectAttempts: !<float> 5.000000
+      reconnectInterval: !<float> 3.000000
+      systemInstruction: You are a helpful AI assistant for Snap Spectacles. Keep responses concise and under 30 words. Be a little funny and keep it positive.
+      videoIntervalMs: !<float> 1000.000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/9ba56f09-3478-472c-8539-dd03a4237e40>
   PrefabRemaps:
     []
@@ -2437,21 +2434,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/ac38169f-0dd4-40b7-be96-af67eaf15f77>
-  PrefabRemaps:
-    []
-  Name: "[Vision-OAI]"
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 938a5bb9-4061-4019-9e4a-be82d9fb56d3
 - !<SceneObject/ac3adad6-fa6a-478f-99b3-55dda6d2af5a>
   PrefabRemaps:
     []
@@ -2587,6 +2569,21 @@
     - !<own> 227cb1cd-7372-41b4-ad74-9aa6e8fd2a84
   Components:
     []
+- !<SceneObject/bb6b8aa1-987d-4252-8751-cd78ee817bac>
+  PrefabRemaps:
+    []
+  Name: GeminiCameraAPI
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 7ab9b1cb-6c07-4dc5-ae20-6473789c3975
 - !<SceneObject/bcad0d99-0744-48fa-8269-064c7052ae12>
   PrefabRemaps:
     []
@@ -2780,6 +2777,7 @@
       audioComponent: !<reference.AudioComponent> 9abaf3e6-6efd-401f-9063-823688bfd745
       audioOutputAsset: !<reference.Asset> 2e6ed1d7-70a0-4e65-b507-be426feaf71d
       voice: alloy
+      apiKey: FIXME
   ScriptTypes:
     "":
       {}
@@ -2824,6 +2822,21 @@
     InvertRotation: false
   SurfaceOptions: !<SurfaceOptions>
     EnhanceWithNativeAR: false
+- !<SceneObject/c76b333d-6b35-44f4-a61c-14da69616055>
+  PrefabRemaps:
+    []
+  Name: GeminiLiveAPI
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9b783821-2ed4-4c90-8572-e06d146c4a04
 - !<ScriptComponent/c9ca0319-123c-434e-b34a-9e64abb8994d>
   PrefabRemaps:
     []
@@ -3002,6 +3015,21 @@
     - !<own> 400fc4aa-3607-4a85-a072-838aeacc4324
   Components:
     []
+- !<SceneObject/d91220af-9247-49f7-9ab0-30064ae9f23b>
+  PrefabRemaps:
+    []
+  Name: GeminiAudioAPI
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f52dba90-ef6a-413f-9165-6007e6b48fff
 - !<SceneObject/db4a032d-caf7-423c-801f-a27bdbf3754c>
   PrefabRemaps:
     []
@@ -3175,6 +3203,24 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<ScriptComponent/e81c83c2-41f2-4fc9-932d-a89bd34d837e>
+  PrefabRemaps:
+    []
+  Name: GeminiController
+  Enabled: true
+  ScriptAsset: !<reference> d4e73f3d-5cca-46ce-87a1-bad39b9bbd97
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      geminiLiveAPI: !<MappingBased.GeminiLiveAPI> 9b783821-2ed4-4c90-8572-e06d146c4a04
+      geminiCameraAPI: !<MappingBased.GeminiCameraAPI> 7ab9b1cb-6c07-4dc5-ae20-6473789c3975
+      geminiAudioAPI: !<MappingBased.GeminiAudioAPI> f52dba90-ef6a-413f-9165-6007e6b48fff
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/e8e0f75c-97e4-4635-83c9-68e1e07babce>
   PrefabRemaps:
     []
@@ -3238,6 +3284,23 @@
     - !<own> cabbc4c9-146d-41f9-b343-9c4ff65a285e
   Components:
     []
+- !<ScriptComponent/f52dba90-ef6a-413f-9165-6007e6b48fff>
+  PrefabRemaps:
+    []
+  Name: GeminiAudioAPI
+  Enabled: true
+  ScriptAsset: !<reference> 979b2a21-457b-4b3b-9e5b-d87b0d41d240
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      geminiLiveAPI: !<MappingBased.GeminiLiveAPI> 9b783821-2ed4-4c90-8572-e06d146c4a04
+      micAudioTrack: !<reference.AudioTrackAsset> 911a914b-3635-4810-96cf-c3b14a9b928a
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/f7bd66e3-55b9-4e32-92d6-feaf59e5f41f>
   PrefabRemaps:
     []
@@ -3284,6 +3347,21 @@
     - !<own> 2d976170-4f04-464e-b4a3-3f1341d218f4
   Components:
     []
+- !<SceneObject/fa6b419f-471f-40e0-9d88-9b4c4bffb119>
+  PrefabRemaps:
+    []
+  Name: GeminiController
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e81c83c2-41f2-4fc9-932d-a89bd34d837e
 - !<SceneObject/fafe016f-b3c3-4977-8ce4-7b53483ead99>
   PrefabRemaps:
     []

@@ -26,6 +26,7 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    apiKey: false
     audioComponent: false
     audioOutputAsset: false
     voice: false
@@ -35,6 +36,7 @@
     - audioComponent: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
       voice: alloy
       audioOutputAsset: !<reference.Asset> 00000000-0000-0000-0000-000000000000
+      apiKey: Insert your OpenAI API Key
   ScriptTypes:
     -
       {}
@@ -42,4 +44,5 @@
     - // @input Component.AudioComponent audioComponent
     - // @input Asset.Asset audioOutputAsset
     - '// @input string voice = "alloy" {"widget":"combobox", "values":[{"label":"Alloy", "value":"alloy"}, {"label":"Echo", "value":"echo"}, {"label":"Fable", "value":"fable"}, {"label":"Onyx", "value":"onyx"}, {"label":"Nova", "value":"nova"}, {"label":"Shimmer", "value":"shimmer"}]}'
+    - '// @input string apiKey = "Insert your OpenAI API Key" {"hint":"API Key for OpenAI (do not hardcode in production)"}'
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
