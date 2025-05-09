@@ -9,7 +9,7 @@
     ObjectPrefab: !<own> 3c1a725d-5721-447b-9c77-4d091667a0e8
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/81762b2f-fed0-4799-be31-2411a91cea4c>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -7293,6 +7293,7 @@
   Size:
     x: !<float> 1.000000
     y: !<float> 1.000000
+  RotationAngle: 0
 - !<SceneObject/a35fe040-10c5-48f7-a857-76fdf979cfa6>
   PrefabRemaps:
     []
@@ -7411,6 +7412,7 @@
   Size:
     x: !<float> 1.000000
     y: !<float> 1.000000
+  RotationAngle: 0
 - !<ObjectPrefab/a619ae14-24b3-4d99-84ac-21fde1056f5e>
   PackagePath: ""
   objects:

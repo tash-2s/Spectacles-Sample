@@ -2,9 +2,9 @@
   PackagePath: ""
   StudioVersion:
     major: 5
-    minor: 4
-    patch: 0
-    build: 24121706
+    minor: 7
+    patch: 2
+    build: 25030805
     type: Unset
   Description: |-
     Release
@@ -23,7 +23,7 @@
   VersionMajor: 0
   VersionMinor: 10
   VersionPatch: 0
-  UpdateCheckpoint: 52
+  UpdateCheckpoint: 55
   ExportUid: be6fd4cf-737d-41f1-adeb-b97e6d34b3c4
   ComponentUid: 0f7a0bbe-777c-41a5-b979-0b0430f25836
   CurrentVisibility: Editable
@@ -38,3 +38,5 @@
       minor: 10
       patch: 0
       build: 0
+  coreVersion: 301
+  clientVersion: 13.300000

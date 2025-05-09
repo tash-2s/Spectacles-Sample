@@ -4,7 +4,7 @@
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> c16bf5f8-44ac-4d89-a0b9-09161ad2279d
   PackageType: NotAPackage
-  ImporterSettings: !<AssetImporterSettings/85c6a20e-3578-4d00-bd40-d40e9820dc97>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   AssetDataMap:
     TypeScriptAsset: !<own> 01ad0f49-de03-4318-a929-c325fa87c649
@@ -23,7 +23,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 46b42d31-0c11-4010-8b30-b9051c02bcd6
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -38,3 +38,4 @@
     -
       {}
   SvgIcon: ""
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

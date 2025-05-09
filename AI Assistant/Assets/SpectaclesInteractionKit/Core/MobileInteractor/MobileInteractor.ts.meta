@@ -1,5 +1,5 @@
 - !<AssetImportMetadata/e5bec3c9-8172-4b55-b3d3-c3c32c32dcd6>
-  ImporterSettings: !<AssetImporterSettings/e71442f9-dee6-4fa7-89a7-c08712c0957a>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 7876e94e-1942-4993-ab2d-d35e572dbe74
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 91aa23e6-226a-402b-b397-1761b00442e9
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -80,3 +80,4 @@
     - // @input float touchpadDragThreshold = 0.05
     - '// @ui {"widget":"group_end"}'
   SvgIcon: ""
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

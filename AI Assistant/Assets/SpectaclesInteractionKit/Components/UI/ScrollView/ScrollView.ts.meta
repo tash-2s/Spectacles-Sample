@@ -1,5 +1,5 @@
 - !<AssetImportMetadata/14a0e732-86b0-427f-b1fe-3699a5bc0b6b>
-  ImporterSettings: !<AssetImporterSettings/4e8f4d40-b806-4610-a39c-897ab93c1f53>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 8ba7b68a-4b25-4d72-a4a4-a57730a77680
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 8e84ca4e-8712-4342-9e16-b4a94d8041f8
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -55,3 +55,4 @@
     - '// @input float _scrollLimit = 0.3 {"widget":"slider", "min":0, "max":1, "step":0.01}'
     - '// @input vec2 scrollAreaBounds = "{1, 1}"'
   SvgIcon: ""
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

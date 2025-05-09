@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> 1680d65a-3b7b-487b-b350-f646ca09ca48
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/badb2f13-36ac-43ba-b134-953ada848683>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 57d905b2-cf69-4509-9aab-2c3c1f07bac9
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -66,3 +66,4 @@
     - // @input Component.Text flightPathText
     - // @input ToggleButton launchPlatformToggleButton
     - // @input SceneObject launchPlatform
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

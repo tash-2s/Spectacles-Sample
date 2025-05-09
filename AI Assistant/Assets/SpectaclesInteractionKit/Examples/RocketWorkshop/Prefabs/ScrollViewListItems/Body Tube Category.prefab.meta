@@ -1,5 +1,5 @@
 - !<AssetImportMetadata/61b27493-9720-471e-bec4-d5ecfdd433a8>
-  ImporterSettings: !<AssetImporterSettings/3c3f7b95-0122-4a35-b0cf-85c79434b595>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   ImportedAssetIds:
     ObjectPrefab: !<reference> 7e3b4e2c-e3e5-40f1-b890-2a6e7d861039
