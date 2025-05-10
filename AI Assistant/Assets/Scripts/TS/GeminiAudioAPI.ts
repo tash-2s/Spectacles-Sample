@@ -12,10 +12,6 @@ export class GeminiAudioAPI extends BaseScriptComponent {
   @hint("Text component to display user speech transcription")
   transcriptionText: Text;
 
-  @input
-  @hint("Whether to automatically start capturing audio")
-  autoStartAudio: boolean = false;
-
   // Voice ML module for speech recognition
   private voiceMLModule: VoiceMLModule = require("LensStudio:VoiceMLModule");
   private isCapturingAudio: boolean = false;
@@ -32,15 +28,16 @@ export class GeminiAudioAPI extends BaseScriptComponent {
 
   onAwake() {
     this.createEvent("OnStartEvent").bind(() => {
-      if (this.autoStartAudio) {
-        this.startAudioCapture();
-      }
+      // Initialize VoiceML, but don't start capturing yet - this will be done by GeminiController
+      this.initializeVoiceML();
     });
 
     this.createEvent("UpdateEvent").bind(() => {
       this.update();
     });
+  }
 
+  initializeVoiceML() {
     // Set up VoiceML for transcription
     let options = VoiceML.ListeningOptions.create();
     options.shouldReturnAsrTranscription = true;
@@ -50,6 +47,8 @@ export class GeminiAudioAPI extends BaseScriptComponent {
       this.voiceMLModule.startListening(options);
       this.voiceMLModule.onListeningUpdate.add(this.onListenUpdate);
     });
+
+    log.d("VoiceML initialized for speech recognition");
   }
 
   update() {

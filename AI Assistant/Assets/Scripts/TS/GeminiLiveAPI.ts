@@ -20,14 +20,6 @@ export class GeminiLiveAPI extends BaseScriptComponent {
   statusText: Text;
 
   @input
-  @hint("Audio component for speaking responses")
-  audioComponent: AudioComponent;
-
-  @input
-  @hint("Audio output asset")
-  audioOutputAsset: Asset;
-
-  @input
   @hint("Auto-connect on start")
   autoConnect: boolean = true;
 
@@ -38,20 +30,10 @@ export class GeminiLiveAPI extends BaseScriptComponent {
   @input
   @hint("Reconnection interval in seconds")
   reconnectInterval: number = 3.0;
-  
+
   @input
   @hint("System instruction for assistant personality")
   systemInstruction: string = "You are a helpful AI assistant for Snap Spectacles. Keep responses concise and under 30 words. Be a little funny and keep it positive.";
-  
-  @input
-  @widget(
-    new ComboBoxWidget()
-      .addItem("Aoede", "Aoede")
-      .addItem("Helios", "Helios")
-      .addItem("Lumin", "Lumin")
-      .addItem("Nova", "Nova")
-  )
-  voice: string = "Nova"; // Default voice selection
 
   // Remote service module for WebSocket and HTTP requests
   private remoteServiceModule: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
@@ -195,19 +177,12 @@ export class GeminiLiveAPI extends BaseScriptComponent {
     }
 
     try {
-      // Create setup message for Gemini Live
+      // Create setup message for Gemini Live with TEXT only response modality
       const setupMessage = {
         setup: {
           model: this.model,
           generationConfig: {
-            responseModalities: ["AUDIO", "TEXT"],
-            speechConfig: {
-              voiceConfig: {
-                prebuiltVoiceConfig: {
-                  voiceName: this.voice
-                }
-              }
-            }
+            responseModalities: ["TEXT"]
           },
           systemInstruction: {
             parts: [{ text: this.systemInstruction }]
@@ -346,79 +321,9 @@ export class GeminiLiveAPI extends BaseScriptComponent {
           if (this.outputText) {
             this.outputText.text = part.text;
           }
-        } else if (part.audio_part && part.audio_part.data) {
-          log.d("Received audio response");
-          this.processAudioResponse(part.audio_part.data);
         }
       }
     }
-  }
-
-  // Process audio response from Gemini
-  private processAudioResponse(base64Audio: string) {
-    if (!this.audioComponent || !this.audioOutputAsset) {
-      log.e("Audio component or audio output asset is missing");
-      return;
-    }
-
-    try {
-      // Decode base64 audio data
-      const audioData = Base64.decode(base64Audio);
-      
-      // Convert to a format that can be played by the audio component
-      const track = this.getAudioTrackFromData(audioData);
-      this.audioComponent.audioTrack = track;
-      this.audioComponent.play(1);
-      
-      log.d("Playing audio response");
-    } catch (error) {
-      log.e(`Error processing audio response: ${error}`);
-    }
-  }
-
-  // Convert audio data to AudioTrackAsset
-  private getAudioTrackFromData(audioData: Uint8Array): AudioTrackAsset {
-    let outputAudioTrack = this.audioOutputAsset as AudioTrackAsset;
-    if (!outputAudioTrack) {
-      throw new Error("Failed to get Audio Output asset");
-    }
-
-    const sampleRate = 24000; // Gemini audio output is at 24kHz
-
-    const BUFFER_SIZE = audioData.length / 2;
-    log.d("Processing buffer size: " + BUFFER_SIZE);
-
-    var audioOutput = outputAudioTrack.control as AudioOutputProvider;
-    if (!audioOutput) {
-      throw new Error("Failed to get audio output control");
-    }
-
-    audioOutput.sampleRate = sampleRate;
-    var data = new Float32Array(BUFFER_SIZE);
-
-    // Convert PCM16 to Float32
-    for (let i = 0, j = 0; i < audioData.length; i += 2, j++) {
-      const sample = ((audioData[i] | (audioData[i + 1] << 8)) << 16) >> 16;
-      data[j] = sample / 32768;
-    }
-
-    const shape = new vec3(BUFFER_SIZE, 1, 1);
-    shape.x = audioOutput.getPreferredFrameSize();
-
-    // Enqueue audio frames in chunks
-    let i = 0;
-    while (i < BUFFER_SIZE) {
-      try {
-        const chunkSize = Math.min(shape.x, BUFFER_SIZE - i);
-        shape.x = chunkSize;
-        audioOutput.enqueueAudioFrame(data.subarray(i, i + chunkSize), shape);
-        i += chunkSize;
-      } catch (e) {
-        throw new Error("Failed to enqueue audio frame - " + e);
-      }
-    }
-
-    return outputAudioTrack;
   }
 
   // Encode texture to base64

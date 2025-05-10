@@ -12,36 +12,29 @@ export class GeminiCameraAPI extends BaseScriptComponent {
   @input
   @hint("The image in the scene that will be showing the captured frame")
   uiImage: Image | undefined;
-  
+
   @input
   @hint("The GeminiLiveAPI component to send frames to")
   geminiLiveAPI: GeminiLiveAPI;
-  
-  @input
-  @hint("Whether to automatically start sending frames to Gemini")
-  autoStartFrames: boolean = false;
-  
+
   @input
   @hint("Frame rate in seconds (Gemini recommends 1 frame per second)")
   frameInterval: number = 1.0;
-  
+
   private isCapturingFrames: boolean = false;
   private lastFrameTime: number = 0;
 
   onAwake() {
     this.createEvent("OnStartEvent").bind(() => {
       this.initializeCamera();
-      
-      if (this.autoStartFrames) {
-        this.startFrameCapture();
-      }
+      // Camera initialization only - actual capture will be started by GeminiController
     });
-    
+
     this.createEvent("UpdateEvent").bind(() => {
       this.update();
     });
   }
-  
+
   update() {
     if (this.isCapturingFrames && this.geminiLiveAPI && this.geminiLiveAPI.isSessionActive()) {
       const currentTime = getTime();
