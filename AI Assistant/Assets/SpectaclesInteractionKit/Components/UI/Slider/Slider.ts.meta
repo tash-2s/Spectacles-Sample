@@ -1,5 +1,5 @@
 - !<AssetImportMetadata/579a1f23-c253-4464-a4be-55150d7b5cc7>
-  ImporterSettings: !<AssetImporterSettings/d8fdd807-b93c-490b-a373-ff1412afcba5>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 3ad001d8-1e29-46e7-9cc8-d7f0e9bc2335
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 4ff04d0b-52b4-44fe-b9ec-dca2064c9526
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -102,30 +102,31 @@
     - "// @input bool editEventCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callback events\"}"
     - '// @ui {"widget":"group_start", "label":"On Hover Enter Callbacks", "showIf":"editEventCallbacks"}'
     - '// @input Component.ScriptComponent customFunctionForOnHoverEnter {"hint":"The script containing functions to be called on hover enter"}'
-    - '// @input string[] onHoverEnterFunctionNames {"hint":"The names for the functions on the provided script, to be called on hover enter"}'
+    - '// @input string[] onHoverEnterFunctionNames = {} {"hint":"The names for the functions on the provided script, to be called on hover enter"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_start", "label":"On Hover Exit Callbacks", "showIf":"editEventCallbacks"}'
     - '// @input Component.ScriptComponent customFunctionForOnHoverExit {"hint":"The script containing functions to be called on hover exit"}'
-    - '// @input string[] onHoverExitFunctionNames {"hint":"The names for the functions on the provided script, to be called on hover exit"}'
+    - '// @input string[] onHoverExitFunctionNames = {} {"hint":"The names for the functions on the provided script, to be called on hover exit"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_start", "label":"On Slide Start Callbacks", "showIf":"editEventCallbacks"}'
     - '// @input Component.ScriptComponent customFunctionForOnSlideStart {"hint":"The script containing functions to be called on slide start"}'
-    - '// @input string[] onSlideStartFunctionNames {"hint":"The names for the functions on the provided script, to be called on slide start"}'
+    - '// @input string[] onSlideStartFunctionNames = {} {"hint":"The names for the functions on the provided script, to be called on slide start"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_start", "label":"On Slide End Callbacks", "showIf":"editEventCallbacks"}'
     - '// @input Component.ScriptComponent customFunctionForOnSlideEnd {"hint":"The script containing functions to be called on slide end"}'
-    - '// @input string[] onSlideEndFunctionNames {"hint":"The names for the functions on the provided script, to be called on slide end"}'
+    - '// @input string[] onSlideEndFunctionNames = {} {"hint":"The names for the functions on the provided script, to be called on slide end"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_start", "label":"On Value Update Callbacks", "showIf":"editEventCallbacks"}'
     - '// @input Component.ScriptComponent customFunctionForOnValueUpdate {"hint":"The script containing functions to be called on value update"}'
-    - '// @input string[] onValueUpdateFunctionNames {"hint":"The names for the functions on the provided script, to be called on value update"}'
+    - '// @input string[] onValueUpdateFunctionNames = {} {"hint":"The names for the functions on the provided script, to be called on value update"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_start", "label":"On Min Value Reached Callbacks", "showIf":"editEventCallbacks"}'
     - '// @input Component.ScriptComponent customFunctionForOnMinValueReached {"hint":"The script containing functions to be called on min value reached"}'
-    - '// @input string[] onMinValueReachedFunctionNames {"hint":"The names for the functions on the provided script, to be called when minimum value is reached"}'
+    - '// @input string[] onMinValueReachedFunctionNames = {} {"hint":"The names for the functions on the provided script, to be called when minimum value is reached"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_start", "label":"On Max Value Reached Callbacks", "showIf":"editEventCallbacks"}'
     - '// @input Component.ScriptComponent customFunctionForOnMaxValueReached {"hint":"The script containing functions to be called on max value reached"}'
-    - '// @input string[] onMaxValueReachedFunctionNames {"hint":"The names for the functions on the provided script, to be called when maximum value is reached"}'
+    - '// @input string[] onMaxValueReachedFunctionNames = {} {"hint":"The names for the functions on the provided script, to be called when maximum value is reached"}'
     - '// @ui {"widget":"group_end"}'
   SvgIcon: ""
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

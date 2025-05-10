@@ -1,0 +1,64 @@
+- !<ObjectPrefab/13c7bb37-f310-4ab0-bf48-f9459ca3d748>
+  PackagePath: ""
+  objects:
+    - !<own> e706af68-8ab1-4c31-a192-86179826ae45
+  LazyLoading: false
+  RetainAssets: true
+- !<PostEffectVisual/9904d704-31b4-49f0-aaa4-5a59dd46ea59>
+  PrefabRemaps:
+    []
+  Name: Post Effect
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 4b832d78-d865-4983-b441-be98ef76a82b
+- !<PostEffectVisual/b0f38cf5-5319-4e56-85ef-89f3ad9f4780>
+  PrefabRemaps:
+    []
+  Name: Post Effect
+  Enabled: true
+  RenderOrder: 1
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 4b832d78-d865-4983-b441-be98ef76a82b
+- !<SceneObject/e706af68-8ab1-4c31-a192-86179826ae45>
+  PrefabRemaps:
+    []
+  Name: Advanced_Grid__ADD_TO_SCENE
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> f8b4801a-ae6c-4536-95f7-2701e8f35640
+  Components:
+    - !<own> 9904d704-31b4-49f0-aaa4-5a59dd46ea59
+- !<SceneObject/f8b4801a-ae6c-4536-95f7-2701e8f35640>
+  PrefabRemaps:
+    []
+  Name: "Advanced Grid [EDIT MATERIAL]"
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b0f38cf5-5319-4e56-85ef-89f3ad9f4780

@@ -9119,6 +9119,7 @@
     - !<reference> 34d12d25-3725-4d16-941a-8df1fe4a9f81
   FlipX: false
   FlipY: false
+  RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
   Size:
@@ -9820,6 +9821,7 @@
     - !<reference> 7b2b6ca8-bf08-44f6-b88b-c1a789f87ea9
   FlipX: false
   FlipY: false
+  RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
   Size:

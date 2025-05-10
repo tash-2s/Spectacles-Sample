@@ -6,10 +6,10 @@
   PackageType: NotAPackage
   AssetDataMap:
     {}
-  ImporterSettings: !<AssetImporterSettings/903bf290-6cc9-4892-a4ff-95f70306c2e7>
+  ImporterSettings: !<AssetImporterSettings>
     {}
-  CompressionSettings: !<SingleCompressionSettings/f125eb26-d2ec-4942-9821-1999b2b8540d>
-    CompressionSettings: !<TextureCompressionSettings/27de3614-35e1-4a1c-bb3c-5108269ba3d2>
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressionSettings: !<TextureCompressionSettings>
       Level: Medium
     CompressorName: Size
   PackagePolicy: CannotBeUnpacked

@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> cf5e30c5-7aa2-40db-81cb-6df2010939ad
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/f76bee28-e4f4-419f-82f2-19d13b1ceab4>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 96af7cf2-abec-4f6a-98c6-8b9722fe1719
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -39,5 +39,6 @@
     -
       {}
   InputLines:
-    - "// @input SceneObject[] exhausts"
-    - "// @input SceneObject[] smokes"
+    - "// @input SceneObject[] exhausts = {}"
+    - "// @input SceneObject[] smokes = {}"
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

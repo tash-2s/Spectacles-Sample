@@ -11,7 +11,7 @@
     TypeScriptAsset: !<own> 9fa739a2-e0a2-45a4-aaf1-450d271727d9
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/534794f9-e48a-4186-ba21-be49505a0c92>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/9fa739a2-e0a2-45a4-aaf1-450d271727d9>
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 0948730a-74ff-45ca-b7a2-22ec1f7bfc80
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -48,3 +48,4 @@
     - // @input Component.Image image
     - // @input Interactable interactable
     - // @input TextToSpeechOpenAI ttsComponent
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

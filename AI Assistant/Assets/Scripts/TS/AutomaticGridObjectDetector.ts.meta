@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/dc609f59-1e89-439c-a98f-72332e2f34ee>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9f779828-ba6a-446e-96ac-38f28d7df0b4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9f779828-ba6a-446e-96ac-38f28d7df0b4
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 74858e3b-dc22-4098-8f19-a6c13dc895ed
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/74858e3b-dc22-4098-8f19-a6c13dc895ed>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 9c250387-3063-433b-945f-762fecd56690
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    cameraImage: false
+    captureInterval: false
+    debugGridMaterial: false
+    debugMode: false
+    gridLabels: false
+    gridLineColor: false
+    gridLineThickness: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - gridLabels: !<reference.Text[]>
+        []
+      captureInterval: !<float> 3.000000
+      debugMode: false
+      debugGridMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      gridLineColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.500000}
+      gridLineThickness: 0.005000
+      cameraImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.Image cameraImage {"hint":"The image that displays the camera feed"}'
+    - '// @input Component.Text[] gridLabels {"label":"Grid Labels (9)", "hint":"Array of 9 text components for the 3x3 grid display"}'
+    - '// @input float captureInterval = 5 {"hint":"Time interval between captures in seconds"}'
+    - '// @input bool debugMode {"hint":"Enable debug visualization of the grid"}'
+    - '// @input Asset.Material debugGridMaterial {"hint":"Material for grid visualization", "showIf":"debugMode"}'
+    - '// @input vec4 gridLineColor = {1,1,1,0.5} {"hint":"Color for grid lines", "showIf":"debugMode"}'
+    - '// @input float gridLineThickness = 0.005 {"hint":"Thickness of grid lines", "showIf":"debugMode"}'

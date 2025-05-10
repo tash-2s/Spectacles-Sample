@@ -1,5 +1,5 @@
 - !<AssetImportMetadata/40ec8e6a-3f97-45fd-9a3b-68f79f919a6f>
-  ImporterSettings: !<AssetImporterSettings/9bbfe229-51b5-4e3a-bc97-9aeb12ba1511>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> f5721a67-0d8c-4dcb-bc1e-2ce327397845
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: a54dec37-c084-4d0b-a0d6-7be468b6026e
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -40,3 +40,4 @@
     - // @input Component.RenderMeshVisual renderMeshVisual
     - // @input SceneObject knobObject
   SvgIcon: ""
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

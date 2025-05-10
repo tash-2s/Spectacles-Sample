@@ -9,7 +9,7 @@
     ObjectPrefab: !<own> d128203d-c017-47cd-adc7-562ec610ec4e
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/49eab69e-55f7-4278-a7a6-c246279e310c>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
