@@ -1,31 +1,31 @@
 # Gemini Live API Implementation for Spectacles AI Assistant
 
 ## Overview
-This implementation replaces the original OpenAI-based AI Assistant with Google's Gemini Live API. The Gemini Live API allows for real-time streaming of video and audio data from the user, with text responses displayed as output. This implementation automatically starts on application launch without requiring user interaction.
+This implementation replaces the original OpenAI-based AI Assistant with Google's Gemini Live API. The Gemini Live API allows for real-time streaming of both video frames from the camera and raw audio from the microphone, with text responses displayed as output. This implementation automatically starts on application launch without requiring user interaction.
 
 ## Components Created
 
 ### 1. GeminiLiveAPI
 Core component that manages WebSocket connections with Gemini, handles session setup, and processes responses.
-- Establishes WebSocket connection to Gemini Live API
+- Establishes WebSocket connection to Gemini Live API's BidiGenerateContent endpoint
 - Manages session setup and configuration (TEXT responses only)
-- Processes audio/video frames for sending
-- Handles text responses
-- Includes reconnection logic
+- Processes both video frames and audio input in real-time
+- Handles streaming text responses from Gemini
+- Includes automatic reconnection logic
 
 ### 2. GeminiCameraAPI
 Captures camera frames at appropriate intervals and sends them to Gemini.
 - Initializes Spectacles Camera API
-- Captures frames at 1 FPS (as recommended by Gemini)
-- Sends frame data to GeminiLiveAPI component
+- Captures and sends frames every 500ms (configurable)
+- Converts frames to base64-encoded JPEG images
 - Auto-initializes camera on startup
 
 ### 3. GeminiAudioAPI
-Manages audio capture using VoiceML and prepares data for Gemini.
-- Uses VoiceML to capture audio and get transcriptions
-- Converts waveform data to PCM format (16-bit, 16kHz)
-- Buffers and sends audio chunks to GeminiLiveAPI
-- Initializes VoiceML on startup
+Captures and streams raw microphone audio directly to Gemini.
+- Uses MicrophoneAudioProvider to capture raw audio frames
+- Converts audio from Float32 to Int16 format (required by Gemini)
+- Streams audio data in real-time to Gemini Live API
+- Handles audio buffer management
 
 ### 4. GeminiController
 Coordinates all components with auto-start functionality.
@@ -40,43 +40,82 @@ Coordinates all components with auto-start functionality.
 - `/Assets/Scripts/TS/GeminiAudioAPI.ts`
 - `/Assets/Scripts/TS/GeminiController.ts`
 
-## Implementation Notes
+## Implementation Details
 
-### WebSocket Connection
-- Uses RemoteServiceModule from Lens Studio to create WebSocket connections
-- Handles binary data using blob type
-- Implements reconnection logic with configurable retry attempts
+### Direct Audio Streaming
+- Uses Lens Studio's MicrophoneAudioProvider to access raw microphone data
+- Converts Float32 audio samples to Int16 format (required by Gemini)
+- Streams audio frames directly to Gemini Live in base64-encoded format
+- Processes audio in real-time during the Update loop
 
-### Gemini Live API
-- Uses the streaming protocol with session-based communication
-- Configures response modality for TEXT only (as per Gemini Live limitations)
-- Optimized for Spectacles performance (1 FPS video streaming)
-- No audio response processing (TEXT responses only)
+### BidiGenerateContent API Integration
+- Uses the newer WebSocket endpoint: `/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent`
+- Implements the realtimeInput message format for both audio and video
+- Handles setupComplete confirmation from Gemini
+- Processes modelTurn responses in streaming fashion
 
-### Audio Processing
-- Captures audio using VoiceML
-- Converts to PCM 16-bit format at 16kHz as required by Gemini
-- Sends audio data for analysis by Gemini Live
+### Camera Integration
+- Captures camera frames every 500ms (configurable via videoIntervalMs)
+- Converts camera textures to base64-encoded JPEG images
+- Sends images as part of the realtimeInput stream
 
-### Setup Requirements
-1. Replace the API key in GeminiLiveAPI component
-2. Attach components to appropriate scene objects
-3. Connect UI elements (status text, response text, camera display)
-4. No interactable element needed - assistant starts automatically
+### Auto-Start Functionality
+- The assistant starts automatically when the app launches
+- No manual interaction or button press is required
+- Components initialize and connect automatically
+
+## Setup Requirements
+1. Replace the API key in GeminiLiveAPI component with your Gemini API key
+2. Set up a Microphone AudioTrack asset for raw audio capture
+3. Attach components to appropriate scene objects
+4. Connect UI elements (status text, response text, camera display)
 
 ## Integration in Lens Studio
 1. Import all four script files (.ts) into your Lens Studio project
-2. Add the scripts to separate Script Components in your scene
-3. Set the API key in the GeminiLiveAPI component
-4. Connect the components to each other via the Inspector panel:
+2. Create an AudioTrack asset with Microphone Provider type
+3. Add the scripts to separate Script Components in your scene
+4. Set the API key in the GeminiLiveAPI component
+5. Connect the components to each other via the Inspector panel:
    - GeminiController → GeminiLiveAPI, GeminiCameraAPI, GeminiAudioAPI
    - GeminiCameraAPI → GeminiLiveAPI
-   - GeminiAudioAPI → GeminiLiveAPI
-5. Connect UI elements (Text components) for status and response display
-6. Assign a camera texture or image component for displaying camera feed
+   - GeminiAudioAPI → GeminiLiveAPI + micAudioTrack (AudioTrack asset)
+6. Connect UI elements:
+   - Status text (to show connection status)
+   - Response text (to display Gemini's responses)
+   - Camera display (to show what the camera sees)
+
+## Example Scene Setup
+1. Create AudioTrack asset:
+   - Project panel → Create → AudioTrack
+   - Set Provider Type to "Microphone"
+
+2. Create SceneObjects:
+   - Camera object with GeminiCameraAPI component
+   - UI object with Text components for status and response
+   - Controller object with GeminiController and GeminiLiveAPI components
+   - Audio object with GeminiAudioAPI component
+
+3. Connect components:
+   - Assign the micAudioTrack to GeminiAudioAPI
+   - Connect GeminiLiveAPI to both GeminiCameraAPI and GeminiAudioAPI
+   - Connect all components to GeminiController
+
+## Technical Notes
+
+### Audio Format
+- Gemini Live expects PCM audio with the following characteristics:
+  - 16-bit signed integers
+  - 16kHz sample rate (typically)
+  - Mono channel
+- The implementation handles conversion from Lens Studio's Float32 audio format
+
+### WebSocket Handling
+- Uses blob type for binary data handling
+- Implements proper message parsing for both string and blob data types
+- Handles connection state management and automatic reconnection
 
 ## Next Steps
 - Test with actual Spectacles hardware
-- Fine-tune speech recognition for optimal quality
+- Fine-tune audio quality and frame rate for optimal performance
 - Add additional error handling for edge cases
 - Consider implementing a proxy server for secure API key storage

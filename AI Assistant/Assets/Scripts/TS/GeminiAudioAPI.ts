@@ -2,217 +2,136 @@ import { GeminiLiveAPI } from "./GeminiLiveAPI";
 import NativeLogger from "../../SpectaclesInteractionKit/Utils/NativeLogger";
 const log = new NativeLogger("GeminiAudioAPI");
 
+/**
+ * GeminiAudioAPI handles direct microphone audio capture and streaming to Gemini Live API
+ * Uses Lens Studio's MicrophoneAudioProvider to capture raw audio frames
+ */
 @component
 export class GeminiAudioAPI extends BaseScriptComponent {
   @input
-  @hint("The GeminiLiveAPI component to send audio to")
+  @hint("The GeminiLiveAPI component to stream audio to")
   geminiLiveAPI: GeminiLiveAPI;
 
   @input
-  @hint("Text component to display user speech transcription")
-  transcriptionText: Text;
+  @hint("Audio track asset with Microphone Provider")
+  micAudioTrack: AudioTrackAsset;
 
-  // Voice ML module for speech recognition
-  private voiceMLModule: VoiceMLModule = require("LensStudio:VoiceMLModule");
+  // Microphone capture properties
+  private micProvider: MicrophoneAudioProvider | null = null;
+  private audioBuffer: Float32Array | null = null;
   private isCapturingAudio: boolean = false;
-  private audioBuffer: Uint8Array[] = [];
-
-  // Buffer management
-  private readonly AUDIO_CHUNK_SIZE = 8192; // Size of audio chunks to send
-  private lastAudioSendTime: number = 0;
-  private audioSendInterval: number = 0.1; // Send audio every 100ms
-
-  // Simulated audio data for testing
-  private simulateAudioTimer: number = 0;
-  private simulateAudioInterval: number = 0.5; // Simulate audio every 500ms
-
+  
   onAwake() {
     this.createEvent("OnStartEvent").bind(() => {
-      // Initialize VoiceML, but don't start capturing yet - this will be done by GeminiController
-      this.initializeVoiceML();
+      this.initializeMicrophone();
     });
-
+    
+    // Add update event for regular audio frame capture
     this.createEvent("UpdateEvent").bind(() => {
       this.update();
     });
   }
-
-  initializeVoiceML() {
-    // Set up VoiceML for transcription
-    let options = VoiceML.ListeningOptions.create();
-    options.shouldReturnAsrTranscription = true;
-    options.shouldReturnInterimAsrTranscription = true;
-
-    this.voiceMLModule.onListeningEnabled.add(() => {
-      this.voiceMLModule.startListening(options);
-      this.voiceMLModule.onListeningUpdate.add(this.onListenUpdate);
-    });
-
-    log.d("VoiceML initialized for speech recognition");
-  }
-
+  
   update() {
     if (this.isCapturingAudio && this.geminiLiveAPI && this.geminiLiveAPI.isSessionActive()) {
-      const currentTime = getTime();
-
-      // Check if it's time to send buffered audio
-      if (currentTime - this.lastAudioSendTime >= this.audioSendInterval) {
-        this.sendBufferedAudio();
-        this.lastAudioSendTime = currentTime;
-      }
-
-      // Simulate audio data if we don't have real waveform data
-      this.simulateAudioTimer -= getDeltaTime();
-      if (this.simulateAudioTimer <= 0) {
-        this.simulateAudioData();
-        this.simulateAudioTimer = this.simulateAudioInterval;
-      }
+      this.captureAndSendAudioFrame();
     }
   }
-
-  onListenUpdate = (eventData: VoiceML.ListeningUpdateEventArgs) => {
-    // Handle transcription
-    if (eventData.isFinalTranscription) {
-      if (this.transcriptionText) {
-        this.transcriptionText.text = eventData.transcription;
-      }
-      log.d(`Transcription: ${eventData.transcription}`);
-
-      // When we get transcription, simulate audio data based on it
-      if (eventData.transcription && eventData.transcription.length > 0) {
-        this.simulateAudioFromTranscription(eventData.transcription);
-      }
-    }
-  };
-
-  // Since waveform data isn't available, we'll simulate audio data
-  simulateAudioData() {
-    if (!this.isCapturingAudio) {
+  
+  /**
+   * Initialize microphone provider and audio buffer
+   */
+  initializeMicrophone() {
+    if (!this.micAudioTrack) {
+      log.e("Microphone audio track asset is not assigned");
       return;
     }
-
+    
     try {
-      // Create a small buffer of "silence" with occasional noise
-      // This will just keep the connection alive
-      const sampleCount = 1600; // 100ms of audio at 16kHz
-      const pcmBuffer = new Uint8Array(sampleCount * 2);
-
-      // Add to buffer for sending
-      this.audioBuffer.push(pcmBuffer);
-
-      log.d("Simulated audio data (silence)");
+      // Get the microphone provider from the audio track
+      const provider = this.micAudioTrack.control as MicrophoneAudioProvider;
+      if (!provider) {
+        log.e("Failed to get MicrophoneAudioProvider from audio track");
+        return;
+      }
+      
+      // Start the microphone (but don't capture yet)
+      provider.start();
+      this.micProvider = provider;
+      
+      // Create buffer sized to the provider's maximum frame size
+      this.audioBuffer = new Float32Array(provider.maxFrameSize);
+      
+      log.d(`Microphone initialized (sample rate: ${provider.sampleRate}Hz)`);
     } catch (error) {
-      log.e(`Error simulating audio data: ${error}`);
+      log.e(`Error initializing microphone: ${error}`);
     }
   }
-
-  // Generate audio data based on transcription text (just a simulation)
-  simulateAudioFromTranscription(text: string) {
-    if (!this.isCapturingAudio) {
+  
+  /**
+   * Capture a frame of audio data and send it to Gemini Live API
+   */
+  private captureAndSendAudioFrame() {
+    if (!this.micProvider || !this.audioBuffer || !this.geminiLiveAPI) {
       return;
     }
-
+    
     try {
-      // Create a buffer with some "noise" proportional to text length
-      // This is just a simulation - in real life we'd need actual audio data
-      const sampleCount = Math.max(1600, text.length * 100);
-      const pcmBuffer = new Uint8Array(sampleCount * 2);
-
-      // Add some "audio data" pattern based on text
-      for (let i = 0; i < sampleCount; i++) {
-        // Create some variation based on character codes
-        const charIndex = i % text.length;
-        const charCode = text.charCodeAt(charIndex);
-
-        // Create a simple pattern based on character code
-        const sample = Math.sin(i * 0.01 * (charCode % 10)) * 5000;
-        const sampleInt = Math.floor(sample);
-
-        // Write as little-endian
-        pcmBuffer[i * 2] = sampleInt & 0xFF;
-        pcmBuffer[i * 2 + 1] = (sampleInt >> 8) & 0xFF;
+      // Get audio frame from microphone (fills audioBuffer and returns shape)
+      const shape = this.micProvider.getAudioFrame(this.audioBuffer);
+      
+      // Skip if no samples were captured
+      if (shape.x <= 0) {
+        return;
       }
-
-      // Add to buffer for sending
-      this.audioBuffer.push(pcmBuffer);
-
-      log.d(`Simulated audio data based on transcription (${text.length} chars)`);
+      
+      // Convert Float32 [-1,1] to Int16 [-32768,32767] for Gemini
+      const int16 = new Int16Array(shape.x);
+      for (let i = 0; i < shape.x; i++) {
+        const sample = Math.max(-1, Math.min(1, this.audioBuffer[i]));
+        int16[i] = sample < 0 ? sample * 0x8000 : sample * 0x7FFF;
+      }
+      
+      // Encode audio as base64
+      const base64Audio = Base64.encode(new Uint8Array(int16.buffer));
+      
+      // Send to Gemini Live API
+      this.geminiLiveAPI.sendRealtimeAudio(base64Audio);
+      
     } catch (error) {
-      log.e(`Error simulating audio from transcription: ${error}`);
+      log.e(`Error capturing/sending audio frame: ${error}`);
     }
   }
-
-  sendBufferedAudio() {
-    if (!this.geminiLiveAPI || !this.geminiLiveAPI.isSessionActive() || this.audioBuffer.length === 0) {
-      return;
-    }
-
-    try {
-      // Combine all buffered chunks
-      let totalLength = 0;
-      for (const chunk of this.audioBuffer) {
-        totalLength += chunk.length;
-      }
-
-      const combinedBuffer = new Uint8Array(totalLength);
-      let offset = 0;
-
-      for (const chunk of this.audioBuffer) {
-        combinedBuffer.set(chunk, offset);
-        offset += chunk.length;
-      }
-
-      // Send to Gemini
-      this.geminiLiveAPI.sendAudioData(combinedBuffer);
-
-      // Clear buffer after sending
-      this.audioBuffer = [];
-
-    } catch (error) {
-      log.e(`Error sending audio data: ${error}`);
-    }
-  }
-
+  
+  /**
+   * Start capturing and streaming audio frames
+   */
   startAudioCapture() {
     if (!this.geminiLiveAPI) {
       log.e("GeminiLiveAPI component not assigned");
       return;
     }
-
-    this.isCapturingAudio = true;
-    this.lastAudioSendTime = getTime();
-    this.simulateAudioTimer = 0; // Start simulating immediately
-    this.audioBuffer = [];
-
-    // Start VoiceML listening if it's not already active
-    try {
-      this.voiceMLModule.startListening(VoiceML.ListeningOptions.create());
-      log.d("Started VoiceML listening");
-    } catch (error) {
-      log.e(`Error starting VoiceML listening: ${error}`);
+    
+    if (!this.micProvider) {
+      log.e("Microphone provider not initialized");
+      return;
     }
-
+    
+    this.isCapturingAudio = true;
     log.d("Started audio capture for Gemini");
   }
-
+  
+  /**
+   * Stop capturing and streaming audio frames
+   */
   stopAudioCapture() {
     this.isCapturingAudio = false;
-
-    // Send any remaining buffered audio
-    if (this.audioBuffer.length > 0) {
-      this.sendBufferedAudio();
-    }
-
-    // Stop VoiceML listening
-    try {
-      this.voiceMLModule.stopListening();
-    } catch (error) {
-      log.e(`Error stopping VoiceML listening: ${error}`);
-    }
-
     log.d("Stopped audio capture for Gemini");
   }
-
+  
+  /**
+   * Check if audio capture is active
+   */
   isCapturing(): boolean {
     return this.isCapturingAudio;
   }

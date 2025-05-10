@@ -9,7 +9,7 @@ export class GeminiLiveAPI extends BaseScriptComponent {
 
   @input
   @hint("Model name to use")
-  model: string = "gemini-2.0-flash-live-preview-04-09";
+  model: string = "gemini-2.0-flash-live-001";
 
   @input
   @hint("Text component to display assistant responses")
@@ -30,28 +30,27 @@ export class GeminiLiveAPI extends BaseScriptComponent {
   @input
   @hint("Reconnection interval in seconds")
   reconnectInterval: number = 3.0;
-
+  
   @input
   @hint("System instruction for assistant personality")
   systemInstruction: string = "You are a helpful AI assistant for Snap Spectacles. Keep responses concise and under 30 words. Be a little funny and keep it positive.";
+  
+  @input
+  @hint("Video frame interval in milliseconds")
+  videoIntervalMs: number = 500; // Send frames every 500ms
 
   // Remote service module for WebSocket and HTTP requests
   private remoteServiceModule: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
   private webSocket: WebSocket;
   private isConnected: boolean = false;
-  private isProcessing: boolean = false;
   private reconnectAttempts: number = 0;
   private reconnectTimer: number = 0;
   private isReconnecting: boolean = false;
   private sessionActive: boolean = false;
+  private setupComplete: boolean = false;
   
   // Frame management
   private lastFrameTime: number = 0;
-  private frameInterval: number = 1.0; // 1 second between frames, as recommended by Gemini
-  
-  // Audio processing state
-  private isCapturingAudio: boolean = false;
-  private audioBuffer: Uint8Array[] = [];
 
   onAwake() {
     this.createEvent("OnStartEvent").bind(() => {
@@ -94,7 +93,8 @@ export class GeminiLiveAPI extends BaseScriptComponent {
       return;
     }
 
-    const url = `wss://generativelanguage.googleapis.com/v1beta/models/${this.model}:streamGenerateContent?alt=websocket&key=${this.apiKey}`;
+    // This is the new BidiGenerateContent endpoint that supports real-time audio streaming
+    const url = `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent?key=${encodeURIComponent(this.apiKey)}`;
     
     log.d(`Connecting to Gemini Live API: ${this.model}`);
     this.updateStatus("Connecting...");
@@ -116,15 +116,26 @@ export class GeminiLiveAPI extends BaseScriptComponent {
         this.setupSession();
       };
 
-      this.webSocket.onmessage = (message) => {
+      this.webSocket.onmessage = async (event) => {
         log.d("Received message from Gemini");
-        this.handleMessage(message);
+        
+        try {
+          // Convert blob to text if needed
+          const raw = event.data instanceof Blob ? await event.data.text() : event.data;
+          if (!raw) return;
+          
+          const msg = JSON.parse(raw);
+          this.handleServerMessage(msg);
+        } catch (error) {
+          log.e(`Error processing message: ${error}`);
+        }
       };
 
       this.webSocket.onclose = () => {
         log.d("WebSocket connection closed");
         this.isConnected = false;
         this.sessionActive = false;
+        this.setupComplete = false;
         this.updateStatus("Disconnected");
         
         // Start reconnection process
@@ -158,6 +169,7 @@ export class GeminiLiveAPI extends BaseScriptComponent {
     log.d("Disconnecting from Gemini Live API");
     this.isReconnecting = false; // Stop any reconnection attempts
     this.sessionActive = false;
+    this.setupComplete = false;
     
     try {
       this.webSocket.close();
@@ -169,7 +181,7 @@ export class GeminiLiveAPI extends BaseScriptComponent {
     }
   }
 
-  // Set up the Gemini Live session
+  // Set up the Gemini Live session with the new format
   private setupSession() {
     if (!this.isConnected || !this.webSocket) {
       log.e("Cannot setup session: Not connected");
@@ -182,34 +194,34 @@ export class GeminiLiveAPI extends BaseScriptComponent {
         setup: {
           model: this.model,
           generationConfig: {
-            responseModalities: ["TEXT"]
+            responseModalities: ["TEXT"],
+            temperature: 0.2,
+            maxOutputTokens: 1024
           },
-          systemInstruction: {
-            parts: [{ text: this.systemInstruction }]
-          }
+          systemInstruction: this.systemInstruction
         }
       };
 
       log.d("Sending setup message to Gemini Live");
       this.webSocket.send(JSON.stringify(setupMessage));
       this.sessionActive = true;
-      this.updateStatus("Session active");
+      this.updateStatus("Session setup");
     } catch (error) {
       log.e(`Error setting up session: ${error}`);
       this.updateStatus("Setup failed");
     }
   }
 
-  // Send a video frame to Gemini
+  // Send a video frame using the new realtimeInput format
   public sendVideoFrame(texture: Texture) {
-    if (!this.sessionActive || !this.webSocket) {
-      log.d("Cannot send video frame: Session not active");
+    if (!this.sessionActive || !this.webSocket || !this.setupComplete) {
+      log.d("Cannot send video frame: Session not ready");
       return;
     }
 
     // Check if we should send a frame based on the frame rate
     const currentTime = getTime();
-    if (currentTime - this.lastFrameTime < this.frameInterval) {
+    if ((currentTime - this.lastFrameTime) * 1000 < this.videoIntervalMs) {
       return; // Not time to send a frame yet
     }
 
@@ -220,15 +232,8 @@ export class GeminiLiveAPI extends BaseScriptComponent {
       .then(base64Image => {
         try {
           const message = {
-            client_content: {
-              parts: [
-                {
-                  image_part: {
-                    data: base64Image,
-                    mime_type: "image/jpeg"
-                  }
-                }
-              ]
+            realtimeInput: {
+              video: base64Image
             }
           };
 
@@ -243,85 +248,71 @@ export class GeminiLiveAPI extends BaseScriptComponent {
       });
   }
 
-  // Send audio data to Gemini
-  public sendAudioData(audioData: Uint8Array) {
-    if (!this.sessionActive || !this.webSocket) {
-      log.d("Cannot send audio data: Session not active");
+  // Send audio data using the new realtimeInput format
+  public sendRealtimeAudio(base64Audio: string) {
+    if (!this.sessionActive || !this.webSocket || !this.setupComplete) {
+      log.d("Cannot send audio data: Session not ready");
       return;
     }
 
     try {
-      // Convert to base64
-      const base64Audio = Base64.encode(audioData);
-      
       const message = {
-        client_content: {
-          parts: [
-            {
-              audio_part: {
-                data: base64Audio,
-                mime_type: "audio/x-raw;format=pcm16;rate=16000;channels=1"
-              }
-            }
-          ]
+        realtimeInput: {
+          audio: base64Audio
         }
       };
 
-      log.d("Sending audio data to Gemini Live");
       this.webSocket.send(JSON.stringify(message));
     } catch (error) {
       log.e(`Error sending audio data: ${error}`);
     }
   }
 
-  // Handle messages from Gemini
-  private handleMessage(data: any) {
+  // Send text using the new realtimeInput format (not needed for our implementation)
+  public sendText(text: string) {
+    if (!this.sessionActive || !this.webSocket || !this.setupComplete) {
+      log.d("Cannot send text: Session not ready");
+      return;
+    }
+
     try {
-      // Parse the message data
-      let messageData = data;
-      
-      // If data is a string, parse it as JSON
-      if (typeof data === 'string') {
-        messageData = JSON.parse(data);
-      } 
-      // If data is a MessageEvent (from WebSocket), extract the data property
-      else if (data && data.data) {
-        const dataStr = data.data.toString();
-        messageData = JSON.parse(dataStr);
-      }
-      
-      log.d(`Processing Gemini message: ${JSON.stringify(messageData)}`);
-      
-      // Handle different message types
-      if (messageData.server_content) {
-        this.processServerContent(messageData.server_content);
-      } else if (messageData.state) {
-        log.d(`Session state update: ${messageData.state.state}`);
-        
-        if (messageData.state.state === "ENDED") {
-          this.sessionActive = false;
-          this.updateStatus("Session ended");
+      const message = {
+        realtimeInput: {
+          text: text
         }
-      } else if (messageData.error) {
-        log.e(`Gemini API error: ${messageData.error.message}`);
-        this.updateStatus(`Error: ${messageData.error.message}`);
-      }
+      };
+
+      log.d(`Sending text to Gemini Live: ${text}`);
+      this.webSocket.send(JSON.stringify(message));
     } catch (error) {
-      log.e(`Error processing message: ${error}`);
+      log.e(`Error sending text: ${error}`);
     }
   }
 
-  // Process content from the server
-  private processServerContent(serverContent: any) {
-    // Check for text responses
-    if (serverContent.parts) {
-      for (const part of serverContent.parts) {
-        if (part.text) {
-          log.d(`Received text response: ${part.text}`);
-          if (this.outputText) {
-            this.outputText.text = part.text;
-          }
-        }
+  // Handle messages from Gemini with the new format
+  private handleServerMessage(msg: any) {
+    if (msg.setupComplete) {
+      this.setupComplete = true;
+      this.updateStatus("Session active");
+      log.d("Gemini setupComplete received");
+      return;
+    }
+
+    if (msg.serverContent && msg.serverContent.modelTurn) {
+      const parts = msg.serverContent.modelTurn.parts ?? [];
+      let text = "";
+      
+      // Collect all text from parts
+      parts.forEach((p: any) => { 
+        if (p.text) { 
+          text += p.text; 
+        } 
+      });
+      
+      // Update UI with response
+      if (text && this.outputText) {
+        this.outputText.text = text;
+        log.d("Gemini response: " + text);
       }
     }
   }
@@ -378,18 +369,6 @@ export class GeminiLiveAPI extends BaseScriptComponent {
     }
   }
 
-  // Start capturing audio
-  public startAudioCapture() {
-    this.isCapturingAudio = true;
-    log.d("Started audio capture");
-  }
-
-  // Stop capturing audio
-  public stopAudioCapture() {
-    this.isCapturingAudio = false;
-    log.d("Stopped audio capture");
-  }
-
   // Check if WebSocket is connected
   public isWebSocketConnected(): boolean {
     return this.isConnected;
@@ -397,6 +376,6 @@ export class GeminiLiveAPI extends BaseScriptComponent {
 
   // Check if session is active
   public isSessionActive(): boolean {
-    return this.sessionActive;
+    return this.sessionActive && this.setupComplete;
   }
 }
