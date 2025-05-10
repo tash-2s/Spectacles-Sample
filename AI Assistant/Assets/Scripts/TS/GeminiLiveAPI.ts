@@ -116,15 +116,27 @@ export class GeminiLiveAPI extends BaseScriptComponent {
         this.setupSession();
       };
 
-      this.webSocket.onmessage = async (event) => {
+      this.webSocket.onmessage = async (event: any) => {
         log.d("Received message from Gemini");
-        
+
         try {
-          // Convert blob to text if needed
-          const raw = event.data instanceof Blob ? await event.data.text() : event.data;
-          if (!raw) return;
-          
-          const msg = JSON.parse(raw);
+          // Access data property safely (TypeScript doesn't know WebSocketEvent structure in Lens Studio)
+          if (!event || !('data' in event)) {
+            log.e("Invalid WebSocket message event");
+            return;
+          }
+
+          // Convert to string if it's a blob
+          let rawData: any = event.data;
+          if (rawData instanceof Blob) {
+            rawData = await rawData.text();
+          }
+
+          // Skip if no data
+          if (!rawData) return;
+
+          // Parse and handle the message
+          const msg = JSON.parse(rawData.toString());
           this.handleServerMessage(msg);
         } catch (error) {
           log.e(`Error processing message: ${error}`);
