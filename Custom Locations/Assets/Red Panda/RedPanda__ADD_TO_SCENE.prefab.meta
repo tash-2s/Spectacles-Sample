@@ -195,6 +195,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
     - !<AnimationClip>
       AnimationAsset: !<reference> a9d749a3-e081-4306-9246-6082f5a20ab7
       Name: ACTION
@@ -207,6 +208,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
 - !<SceneObject/312ede5e-88a1-4a58-98b3-310f17ca3336>
   PrefabRemaps:
     []

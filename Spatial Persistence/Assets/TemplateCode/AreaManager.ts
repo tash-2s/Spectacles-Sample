@@ -1,4 +1,4 @@
-import { unsubscribe } from "SpectaclesInteractionKit/Utils/Event";
+import { unsubscribe } from "SpectaclesInteractionKit.lspkg/Utils/Event";
 import { AreaPromptButton } from "./MenuUI/AreaPromptButton";
 import { AreaSelectionMenu, NEW_AREA_NAME } from "./MenuUI/AreaSelectionMenu";
 import { Widget } from "./Widget";
@@ -7,14 +7,14 @@ import { AnchorManager } from "./SpatialPersistence/AnchorManager";
 import {
   CancelToken,
   setTimeout,
-} from "SpectaclesInteractionKit/Utils/debounce";
-import WorldCameraFinderProvider from "SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider";
-import { LoggerVisualization } from "../Spatial Anchors/SpatialPersistence/Logging";
-import { InteractableManipulation } from "SpectaclesInteractionKit/Components/Interaction/InteractableManipulation/InteractableManipulation";
-import { Anchor } from "../Spatial Anchors/Anchor";
-import { AnchorComponent } from "../Spatial Anchors/AnchorComponent";
+} from "SpectaclesInteractionKit.lspkg/Utils/FunctionTimingUtils";
+import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider";
+import { LoggerVisualization } from "SpatialAnchors.lspkg/SpatialPersistence/Logging";
+import { InteractableManipulation } from "SpectaclesInteractionKit.lspkg/Components/Interaction/InteractableManipulation/InteractableManipulation";
+import { Anchor } from "SpatialAnchors.lspkg/Anchor";
+import { AnchorComponent } from "SpatialAnchors.lspkg/AnchorComponent";
 import { WidgetSelectionUI } from "./MenuUI/WidgetSelectionUI";
-import { Interactable } from "SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
 import { RecoverState, RecoverWidgetButton } from "./MenuUI/LockWidgetButton";
 import { ToggleMenuButton } from "./MenuUI/ToggleMenuButton";
 import { WidgetSelectionEvent } from "./MenuUI/WidgetSelection";

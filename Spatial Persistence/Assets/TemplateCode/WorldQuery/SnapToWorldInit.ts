@@ -1,4 +1,4 @@
-import { ToggleButton } from "SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton";
+import { ToggleButton } from "SpectaclesInteractionKit.lspkg/Components/UI/ToggleButton/ToggleButton";
 import { SnapToWorld } from "./SnapToWorld";
 
 @component

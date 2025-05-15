@@ -11,7 +11,7 @@
     ObjectPrefab: !<own> f65159c3-08e6-48a9-8c91-f915e4581049
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/c6242aa4-c33f-4a63-8af0-e213d429917a>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/08669e1e-5354-45e0-a036-6a91f4518ad5>
@@ -203,7 +203,7 @@
     {}
   ScriptInputs:
     "":
-      cameraService: !<MappingBased.CameraService> d852d808-b8c8-49b3-8c03-d6110d870730
+      cameraService: !<MappingBased.AssignableType> d852d808-b8c8-49b3-8c03-d6110d870730
       screenCropTexture: !<reference.Texture> cd12b01a-61d6-4671-bba2-6c3bde1a9812
       pointsToTrack: !<reference.SceneObject[]>
         - !<reference> 0f330bc9-980b-4a0c-a286-909c72fcebdc
@@ -429,9 +429,9 @@
       loadingObj: !<reference.SceneObject> e951fad3-a6d8-462f-ae51-d5f5da4a1f2a
       captureRendMesh: !<reference.RenderMeshVisual> 6aa5683f-7998-414b-8a33-bfaa5b590364
       screenCropTexture: !<reference.Texture> cd12b01a-61d6-4671-bba2-6c3bde1a9812
-      cropRegion: !<MappingBased.CropRegion> 56335da1-1898-4303-a33f-ac3f31a06746
-      chatGPT: !<MappingBased.ChatGPT> 65938027-d818-4923-8afa-8b3b06f5c4a9
-      caption: !<MappingBased.CaptionBehavior> 31d05414-4eb1-4b6b-952e-8a222b34b83f
+      cropRegion: !<MappingBased.AssignableType> 56335da1-1898-4303-a33f-ac3f31a06746
+      chatGPT: !<MappingBased.AssignableType_1> 65938027-d818-4923-8afa-8b3b06f5c4a9
+      caption: !<MappingBased.AssignableType_2> 31d05414-4eb1-4b6b-952e-8a222b34b83f
   ScriptTypes:
     "":
       {}

@@ -309,7 +309,7 @@
   ScriptInputs:
     "":
       image: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      frame: !<MappingBased.ContainerFrame> 00000000-0000-0000-0000-000000000000
+      frame: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       validZoneFocal: !<float> 2.000000
       validZoneAngle: !<float> 25.000000
       validZoneThreshold: !<float> 5.000000

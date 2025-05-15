@@ -33,13 +33,16 @@
     {}
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - presentationSwitcher: !<MappingBased.PresentationSwitcher> 00000000-0000-0000-0000-000000000000
-      googleSlideBridge: !<MappingBased.GoogleSlideBridge> 00000000-0000-0000-0000-000000000000
+    - presentationSwitcher: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      googleSlideBridge: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       useGoogleSlide: false
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input PresentationSwitcher presentationSwitcher
-    - // @input GoogleSlideBridge googleSlideBridge
+    - // @input AssignableType presentationSwitcher
+    - // @input AssignableType_1 googleSlideBridge
     - '// @input bool useGoogleSlide {"hint":"Enable this boolean if you are planning to Use Google Slide API and the Google Slide Bridge"}'
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

@@ -1,4 +1,4 @@
-import {SessionController} from "../../../../SpectaclesSyncKit/Core/SessionController"
+import {SessionController} from "SpectaclesSyncKit.lspkg/Core/SessionController"
 
 //The RealtimeStoreKeys namespace defines constants and utility functions for
 // managing and accessing hand position data in a real-time collaborative environment

@@ -13,14 +13,14 @@
     Scene: !<own> 77f80f0a-bcf5-412b-9d04-9d27e820925e
   DependentFiles:
     []
-  ImporterSettings: !<D3FileImporterSettingsBase/ec387c9d-2709-46eb-9d49-462c3d409fe4>
+  ImporterSettings: !<D3FileImporterSettingsBase>
     UseLegacyImporter: false
     WithMaterials: true
     NamingConvention: ByCategorySanitize
     PersistentIdGenerationAlgorithm: DescriptorBased
-  CompressionSettings: !<ComplexCompressionSettings/ba9e71f8-5681-474d-95f7-212fd80c0dd2>
+  CompressionSettings: !<ComplexCompressionSettings>
     Presets:
-      None Compression: !<SingleCompressionSettings/a092b6bd-48e7-4e85-b4e2-3623dc47836d>
+      None Compression: !<SingleCompressionSettings>
         CompressorName: None
         CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
     ExtensionMappings:

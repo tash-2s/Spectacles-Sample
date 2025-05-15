@@ -449,6 +449,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
     - !<AnimationClip>
       AnimationAsset: !<reference> 1334bbab-2b12-43c9-bbd5-da0241c83fb7
       Name: FLY
@@ -461,6 +462,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
 - !<SceneObject/5ad016f0-2d24-4fa8-a86f-e2761016770c>
   PrefabRemaps:
     []

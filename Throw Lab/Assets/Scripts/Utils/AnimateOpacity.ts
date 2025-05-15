@@ -1,4 +1,4 @@
-import animate from "SpectaclesInteractionKit/Utils/animate";
+import animate from "SpectaclesInteractionKit.lspkg/Utils/animate";
 
 @component
 export class AnimateOpacity extends BaseScriptComponent {

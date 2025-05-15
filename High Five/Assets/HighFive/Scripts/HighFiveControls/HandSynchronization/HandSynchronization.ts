@@ -1,10 +1,10 @@
 import {HandSynchronizationInput} from "./HandSynchronizationInput"
-import TrackedHand from "../../../../SpectaclesSyncKit/SpectaclesInteractionKit/Providers/HandInputData/TrackedHand"
-import {SIK} from "../../../../SpectaclesSyncKit/SpectaclesInteractionKit/SIK"
+import TrackedHand from "SpectaclesInteractionKit.lspkg/Providers/HandInputData/TrackedHand"
+import {SIK} from "SpectaclesInteractionKit.lspkg/SIK"
 import {RealtimeStoreKeys} from "../SyncControls/RealtimeStoreKeys"
 import {
   SessionController
-} from "../../../../SpectaclesSyncKit/Core/SessionController"
+} from "SpectaclesSyncKit.lspkg/Core/SessionController"
 
 //The HandSynchronization class synchronizes the position of a virtual box with the user's hand movements in real time.
 // It tracks the right hand's movements, updates the box's position accordingly within the scene,

@@ -9,7 +9,7 @@
     ObjectPrefab: !<own> 5cf5ae47-c795-4b31-831d-558970bcce33
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/d06a12ae-9d38-4a15-ae0a-179b6a4868d1>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -226,6 +226,12 @@
   ScriptInputsDefault:
     targetingMode: true
     enableInstantDrag: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -233,6 +239,12 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: false
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}

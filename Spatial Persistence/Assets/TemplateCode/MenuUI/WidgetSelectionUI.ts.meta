@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> 539eb24a-2c4c-42fc-9d1b-e3f31242d121
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/b3389f5e-fe7d-4c1f-a62d-4e8719b814bf>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: a8d8a9c6-7cea-4f09-b683-062398dcd28a
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -32,10 +32,10 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - itemsOffset: !<float> 5.000000
-      widgetSelectionParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      widgetSelections: !<reference.ObjectPrefab[]>
+    - widgetSelections: !<reference.ObjectPrefab[]>
         []
+      itemsOffset: !<float> 5.000000
+      widgetSelectionParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -43,3 +43,7 @@
     - "// @input Asset.ObjectPrefab[] widgetSelections"
     - // @input float itemsOffset = 5
     - // @input SceneObject widgetSelectionParent
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

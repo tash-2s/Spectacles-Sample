@@ -1,16 +1,19 @@
 studioVersion:
   major: 5
-  minor: 4
-  patch: 1
-  build: 24123021
+  minor: 9
+  patch: 0
+  build: 25050505
   type: Public
-updateCheckpoint: 52
+coreVersion: 309
+clientVersion: 13.380000
+updateCheckpoint: 56
 sceneId: 1e4cae11-cf66-49fa-b479-1f6bf46388cc
 viewConfig:
   simulation:
     device: Spectacles (2024)
     cameraFov: nan
     fullFrameAspect: 0.666660
+    resolutionScale: 1.000000
     viewport: Maximized
     output: Live
     stereoOutputEye: Center
@@ -32,9 +35,20 @@ metaInfo:
     - Web
     - Spectacles
   platformBundlesEnabled: false
-  iconHash: 3fa3d7c97d6646b9c8ba033754cdc789
+  iconHash: ""
   videoPreviewHash: ""
   fromTemplateName: Empty Project
   fromTemplateUrl: Lens Studio Fiji 5.0.2.20231205
   activationCamera: Front
   sourceMapEnabled: false
+  usingMinClientVersions: false
+  androidMinClientVersion:
+    major: 0
+    minor: 0
+    patch: 0
+    build: 0
+  iOSMinClientVersion:
+    major: 0
+    minor: 0
+    patch: 0
+    build: 0

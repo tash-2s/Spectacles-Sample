@@ -1,24 +1,24 @@
 import Event, {
   PublicApi,
   unsubscribe,
-} from "../SpectaclesInteractionKit/Utils/Event";
+} from "SpectaclesInteractionKit.lspkg/Utils/Event";
 import {
   Interactor,
   InteractorInputType,
   TargetingMode,
-} from "../SpectaclesInteractionKit/Core/Interactor/Interactor";
+} from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
 import {
   OneEuroFilterConfig,
   OneEuroFilterVec3,
-} from "../SpectaclesInteractionKit/Utils/OneEuroFilter";
+} from "SpectaclesInteractionKit.lspkg/Utils/OneEuroFilter";
 
-import { Interactable } from "../SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import { InteractionManager } from "../SpectaclesInteractionKit/Core/InteractionManager/InteractionManager";
-import { InteractorEvent } from "../SpectaclesInteractionKit/Core/Interactor/InteractorEvent";
-import { MobileInteractor } from "../SpectaclesInteractionKit/Core/MobileInteractor/MobileInteractor";
-import NativeLogger from "../SpectaclesInteractionKit/Utils/NativeLogger";
-import WorldCameraFinderProvider from "../SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider";
-import { validate } from "../SpectaclesInteractionKit/Utils/validate";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import { InteractionManager } from "SpectaclesInteractionKit.lspkg/Core/InteractionManager/InteractionManager";
+import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
+import { MobileInteractor } from "SpectaclesInteractionKit.lspkg/Core/MobileInteractor/MobileInteractor";
+import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
+import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider";
+import { validate } from "SpectaclesInteractionKit.lspkg/Utils/validate";
 import { MapComponent } from "../MapComponent/Scripts/MapComponent";
 import { customGetEuler } from "../MapComponent/Scripts/MapUtils";
 

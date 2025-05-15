@@ -1,6 +1,6 @@
-import { SyncEntity } from "SpectaclesSyncKit/Core/SyncEntity";
-import { StorageProperty } from "SpectaclesSyncKit/Core/StorageProperty";
-import { SessionController } from "SpectaclesSyncKit/Core/SessionController";
+import { SyncEntity } from "SpectaclesSyncKit.lspkg/Core/SyncEntity";
+import { StorageProperty } from "SpectaclesSyncKit.lspkg/Core/StorageProperty";
+import { SessionController } from "SpectaclesSyncKit.lspkg/Core/SessionController";
 
 @component
 export class AirHockeyPuck extends BaseScriptComponent {

@@ -5,7 +5,7 @@ import {HandSynchronization} from "../HandSynchronization/HandSynchronization"
 import {HighFiveController} from "../HighFiveController/HighFiveController"
 import {
   SessionController
-} from "../../../../SpectaclesSyncKit/Core/SessionController"
+} from "SpectaclesSyncKit.lspkg/Core/SessionController"
 
 // The DataSynchronizationController class is designed to manage the synchronization of
 // hand position data across multiple users in a collaborative environment

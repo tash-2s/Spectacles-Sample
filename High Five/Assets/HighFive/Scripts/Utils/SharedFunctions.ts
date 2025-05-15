@@ -1,5 +1,5 @@
-import animate, {CancelFunction} from "../../../SpectaclesSyncKit/SpectaclesInteractionKit/Utils/animate"
-import {lerp} from "../../../SpectaclesSyncKit/SpectaclesInteractionKit/Utils/mathUtils"
+import animate, {CancelFunction} from "SpectaclesInteractionKit.lspkg/Utils/animate"
+import {lerp} from "SpectaclesInteractionKit.lspkg/Utils/mathUtils"
 
 // This file provides utility functions for managing and animating the
 // alpha (transparency) values of scene objects in a virtual environment

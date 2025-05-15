@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> b347f196-445f-45cc-9059-26b1db8f64de
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/844ff870-4abf-4b08-9adb-78340269c594>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 1fce49db-a4ed-4cb1-9759-54c550dc09c7
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -34,11 +34,15 @@
   DefaultScriptInputs:
     - previewInWorld: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       voiceMLModule: !<reference.WorldQueryModule> 00000000-0000-0000-0000-000000000000
-      snappingToggle: !<MappingBased.ToggleButton> 00000000-0000-0000-0000-000000000000
+      snappingToggle: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input SceneObject previewInWorld
     - // @input Asset.WorldQueryModule voiceMLModule
-    - // @input ToggleButton snappingToggle
+    - // @input AssignableType snappingToggle
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

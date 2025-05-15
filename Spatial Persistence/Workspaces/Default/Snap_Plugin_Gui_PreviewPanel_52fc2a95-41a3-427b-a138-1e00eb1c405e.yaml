@@ -4,7 +4,7 @@ backCameraMultimedia:
   options: 4
 cameraType:
   type: int
-  value: 0
+  value: 1
   options: 4
 deviceType:
   type: string
@@ -24,11 +24,11 @@ fullscreenSpectaclesSimulation:
   options: 4
 lastPosition:
   type: vec3
-  value: {x: 0.000000, y: 0.000000, z: 0.000000}
+  value: {x: -2.555548, y: 0.000000, z: 51.286442}
   options: 4
 lastRotation:
   type: vec3
-  value: {x: 0.000000, y: -0.000000, z: 0.000000}
+  value: {x: -19.500000, y: -2.850000, z: -0.000001}
   options: 4
 mirrorHorizontally:
   type: bool
@@ -36,11 +36,15 @@ mirrorHorizontally:
   options: 4
 previewSource:
   type: string
-  value: PreviewResources.bundle/Video/Idle/Idle.mp4
+  value: InteractiveResources.bundle/Scenes/Sunlit Room
+  options: 4
+previewTarget:
+  type: int
+  value: 0
   options: 4
 previewType:
   type: string
-  value: Multimedia
+  value: Interactive
   options: 4
 recordInput:
   type: bool
@@ -50,6 +54,10 @@ recordTrackingData:
   type: bool
   value: false
   options: 4
+resolutionScale:
+  type: float
+  value: 1.000000
+  options: 4
 simulatedDevice:
   type: string
   value: Spectacles (2024)
@@ -57,4 +65,8 @@ simulatedDevice:
 stereoEye:
   type: string
   value: Center
+  options: 4
+uiMode:
+  type: int
+  value: 0
   options: 4

@@ -1,6 +1,6 @@
-import { ContainerFrame } from "SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame";
+import { ContainerFrame } from "SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/ContainerFrame";
 import { SpatialImageSwapper } from "./SpatialImageSwapper";
-import { setTimeout } from "SpectaclesInteractionKit/Utils/FunctionTimingUtils";
+import { setTimeout } from "SpectaclesInteractionKit.lspkg/Utils/FunctionTimingUtils";
 //import { setTimeout } from "SpectaclesInteractionKit/Utils/debounce";
 
 /**

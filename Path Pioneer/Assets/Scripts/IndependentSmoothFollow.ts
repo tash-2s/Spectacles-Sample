@@ -1,11 +1,11 @@
-import {setTimeout} from "../SpectaclesInteractionKit/Utils/debounce"
+import {setTimeout} from "SpectaclesInteractionKit.lspkg/Utils/FunctionTimingUtils"
 import {
   clamp,
   DegToRad,
   smoothDamp,
   smoothDampAngle,
-} from "../SpectaclesInteractionKit/Utils/mathUtils"
-import {validate} from "../SpectaclesInteractionKit/Utils/validate"
+} from "SpectaclesInteractionKit.lspkg/Utils/mathUtils"
+import {validate} from "SpectaclesInteractionKit.lspkg/Utils/validate"
 
 /**
  * SmoothFollow is a body dynamic behavior which when applied to a scene object,

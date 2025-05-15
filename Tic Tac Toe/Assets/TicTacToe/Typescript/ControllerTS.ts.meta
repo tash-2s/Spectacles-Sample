@@ -11,7 +11,7 @@
     TypeScriptAsset: !<own> a112a1e2-0902-45ed-8ec4-c82ef2210715
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/29183918-dda3-47d6-a7bf-cf46c9d2ba1c>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/a112a1e2-0902-45ed-8ec4-c82ef2210715>
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 5e6042ec-5c5a-4ea5-af03-d66e02bf7e91
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -33,15 +33,19 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - instantiator: !<MappingBased.Instantiator> 00000000-0000-0000-0000-000000000000
-      oPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+    - instantiator: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       xPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      oPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       showLogs: false
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input Instantiator instantiator
+    - // @input AssignableType instantiator
     - // @input Asset.ObjectPrefab xPrefab
     - // @input Asset.ObjectPrefab oPrefab
     - // @input bool showLogs = true
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

@@ -26,9 +26,9 @@
     {}
   ScriptInputs:
     "":
-      container: !<MappingBased.ContainerFrame> abab49ae-4ec9-46a2-bd06-8204190db1af
+      container: !<MappingBased.AssignableType> abab49ae-4ec9-46a2-bd06-8204190db1af
       spatializer: !<Typename.SpatialImage> fcde5b61-09be-4ceb-9731-f3dafa87d722
-      spatialImageSwapper: !<MappingBased.SpatialImageSwapper> 61a73ca3-5018-43e6-8c39-7c9e183c29f3
+      spatialImageSwapper: !<MappingBased.AssignableType_1> 61a73ca3-5018-43e6-8c39-7c9e183c29f3
       camera: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
       imageTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
@@ -83,7 +83,7 @@
   ScriptInputs:
     "":
       spatializer: !<Typename.SpatialImage> fcde5b61-09be-4ceb-9731-f3dafa87d722
-      angleValidator: !<MappingBased.SpatialImageAngleValidator> c81a7955-713c-4726-aaab-b18e60e0ef7c
+      angleValidator: !<MappingBased.AssignableType> c81a7955-713c-4726-aaab-b18e60e0ef7c
       animateSpeed: 0.500000
       minDepth: 0.050000
   ScriptTypes:
@@ -209,7 +209,7 @@
   ScriptInputs:
     "":
       image: !<reference.SceneObject> 9bb5ac71-7af0-4811-840f-dbd8c4f743f7
-      frame: !<MappingBased.ContainerFrame> abab49ae-4ec9-46a2-bd06-8204190db1af
+      frame: !<MappingBased.AssignableType> abab49ae-4ec9-46a2-bd06-8204190db1af
       validZoneFocal: !<float> 2.000000
       validZoneAngle: !<float> 25.000000
       validZoneThreshold: !<float> 5.000000

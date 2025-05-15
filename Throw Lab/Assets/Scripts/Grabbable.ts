@@ -1,8 +1,8 @@
-import { InteractionManager } from "SpectaclesInteractionKit/Core/InteractionManager/InteractionManager";
-import { InteractorInputType } from "SpectaclesInteractionKit/Core/Interactor/Interactor";
-import { Interactor } from "SpectaclesInteractionKit/Core/Interactor/Interactor";
-import { SIK } from "SpectaclesInteractionKit/SIK";
-import Event from "SpectaclesInteractionKit/Utils/Event";
+import { InteractionManager } from "SpectaclesInteractionKit.lspkg/Core/InteractionManager/InteractionManager";
+import { InteractorInputType } from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
+import { Interactor } from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
+import Event from "SpectaclesInteractionKit.lspkg/Utils/Event";
 
 @component
 export class Grabbable extends BaseScriptComponent {

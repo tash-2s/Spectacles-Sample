@@ -1,6 +1,5 @@
-import { Interactable } from "./../../SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import { InteractorEvent } from "./../../SpectaclesInteractionKit/Core/Interactor/InteractorEvent";
-import { SIK } from "./../../SpectaclesInteractionKit/SIK";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
 
 @component
 export class MaterialController extends BaseScriptComponent {
@@ -48,13 +47,17 @@ export class MaterialController extends BaseScriptComponent {
     };
 
     if (this.nextInteractable) {
-      this.nextInteractable.onInteractorTriggerStart(onTriggerStartCallbackNext);
+      this.nextInteractable.onInteractorTriggerStart(
+        onTriggerStartCallbackNext
+      );
     } else {
       print("Next interactable is not defined.");
     }
 
     if (this.previousInteractable) {
-      this.previousInteractable.onInteractorTriggerStart(onTriggerStartCallbackPrevious);
+      this.previousInteractable.onInteractorTriggerStart(
+        onTriggerStartCallbackPrevious
+      );
     } else {
       print("Previous interactable is not defined.");
     }
@@ -62,7 +65,7 @@ export class MaterialController extends BaseScriptComponent {
 
   activateCurrentObject(currentObject: SceneObject) {
     // Deactivate all objects
-    this.sceneObjects.forEach(obj => {
+    this.sceneObjects.forEach((obj) => {
       obj.enabled = false;
     });
 

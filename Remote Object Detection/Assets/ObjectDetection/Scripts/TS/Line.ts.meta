@@ -38,15 +38,15 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - lineMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
-      lineWidth: 0.500000
-      lineStyle: !<float> 0.000000
+    - startPointObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      endPointObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lineMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       _beginColor: !<Vec3> {x: 1.000000, y: 1.000000, z: 0.000000}
       _endColor: !<Vec3> {x: 1.000000, y: 1.000000, z: 0.000000}
+      lineWidth: 0.500000
       lineLength: !<float> 160.000000
+      lineStyle: !<float> 0.000000
       shouldStick: true
-      startPointObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      endPointObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -61,3 +61,6 @@
     - '// @input float lineStyle = 2 {"widget":"combobox", "values":[{"label":"Full", "value":0}, {"label":"Split", "value":1}, {"label":"FadedEnd", "value":2}]}'
     - // @input bool shouldStick = true
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

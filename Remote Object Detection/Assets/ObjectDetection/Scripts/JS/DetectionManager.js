@@ -29,11 +29,11 @@
 //@input Component.ScriptComponent pinholeCapture {"Pinhole Capture": "Pinhole Camera}
 
 // SIK
-const SIK = require("SpectaclesInteractionKit/SIK").SIK;
+const SIK = require("SpectaclesInteractionKit.lspkg/SIK").SIK;
 const interactionManager = SIK.InteractionManager;
 const interactionConfiguration = SIK.InteractionConfiguration;
 // module
-var remoteServiceModule = require("LensStudio:RemoteServiceModule");
+var internetModule = require("LensStudio:InternetModule");
 // others
 var activePrefabs = []; // Array to track active detection prefabs
 var offsetPositioning = 20; // Offset for prefab positioning - regulate based on your context
@@ -44,7 +44,7 @@ script.createEvent("OnStartEvent").bind(() => {
 
 function onStart() {
   // Initialize SIK
-  const SIK = require("SpectaclesInteractionKit/SIK").SIK;
+  const SIK = require("SpectaclesInteractionKit.lspkg/SIK").SIK;
   const interactionManager = SIK.InteractionManager;
   if (script.hfApiToken === null || script.hfApiToken === "") {
     debugLog("Error: Hugging Face API token is not set!");
@@ -392,8 +392,8 @@ function sendToHuggingFace(encodedImage) {
 
   // First configure model and confidence
   Promise.all([
-    remoteServiceModule.fetch(modelRequest),
-    remoteServiceModule.fetch(confidenceRequest),
+    internetModule.fetch(modelRequest),
+    internetModule.fetch(confidenceRequest),
   ])
     .then(() => {
       debugLog("✅ Model settings updated");
@@ -408,7 +408,7 @@ function sendToHuggingFace(encodedImage) {
         body: requestPayload,
       });
 
-      return remoteServiceModule.fetch(request);
+      return internetModule.fetch(request);
     })
     .then((response) => {
       debugLog("🔵 Response status: " + response.status);
@@ -425,7 +425,7 @@ function sendToHuggingFace(encodedImage) {
         const resultUrl = apiUrl + "/" + data.event_id;
         debugLog("🔄 Fetching results from: " + resultUrl);
 
-        return remoteServiceModule.fetch(
+        return internetModule.fetch(
           new Request(resultUrl, {
             method: "GET",
             headers: {

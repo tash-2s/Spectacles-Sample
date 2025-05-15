@@ -4,7 +4,12 @@
     - !<own> 7ff3f04a-9148-4a84-a3ea-66462ba2c0c8
 - !<PassInfo/7ff3f04a-9148-4a84-a3ea-66462ba2c0c8>
   CachedProperties:
-    []
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -43,12 +48,6 @@
     noiseScale:
       typeIdx: 1
       value: 0.500000
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     scrollSpeed:
       typeIdx: 1
       value: 1.000000

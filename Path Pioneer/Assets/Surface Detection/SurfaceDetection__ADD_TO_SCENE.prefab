@@ -81,7 +81,7 @@
     "":
       camObj: !<reference.SceneObject> b03d8e1f-3173-4e63-8552-3d716f664184
       visualObj: !<reference.SceneObject> 147b8681-0b62-4679-9138-decce2cdfb44
-      animation: !<MappingBased.CircleAnimation> 73f4fb65-0609-4b36-8304-958c7fade083
+      animation: !<MappingBased.AssignableType> 73f4fb65-0609-4b36-8304-958c7fade083
   ScriptTypes:
     "":
       {}

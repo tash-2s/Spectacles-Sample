@@ -11,7 +11,7 @@
     TypeScriptAsset: !<own> 9fa739a2-e0a2-45a4-aaf1-450d271727d9
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/534794f9-e48a-4186-ba21-be49505a0c92>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/9fa739a2-e0a2-45a4-aaf1-450d271727d9>
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: bcd841c9-cf4d-492f-b4f8-0e9d9e080701
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -37,8 +37,8 @@
     - textInput: !<reference.Text> 00000000-0000-0000-0000-000000000000
       textOutput: !<reference.Text> 00000000-0000-0000-0000-000000000000
       image: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      interactable: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
-      ttsComponent: !<MappingBased.TextToSpeechOpenAI> 00000000-0000-0000-0000-000000000000
+      interactable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      ttsComponent: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -46,5 +46,9 @@
     - // @input Component.Text textInput
     - // @input Component.Text textOutput
     - // @input Component.Image image
-    - // @input Interactable interactable
-    - // @input TextToSpeechOpenAI ttsComponent
+    - // @input AssignableType interactable
+    - // @input AssignableType_1 ttsComponent
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

@@ -4,7 +4,15 @@
     - !<own> 06d6b29a-3a7b-4697-9358-481fc7c6dfbd
 - !<PassInfo/06d6b29a-3a7b-4697-9358-481fc7c6dfbd>
   CachedProperties:
-    []
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -124,15 +132,6 @@
     noiseFrequency:
       typeIdx: 4
       value: {x: 0.300000, y: 0.300000, z: 0.300000}
-    overrideTimeDelta:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     roughness:
       typeIdx: 1
       value: 0.500000

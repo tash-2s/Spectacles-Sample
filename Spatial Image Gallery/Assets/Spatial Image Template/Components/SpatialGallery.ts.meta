@@ -34,19 +34,22 @@
   ScriptTypesHidden:
     SpatialImage: false
   DefaultScriptInputs:
-    - frame: !<MappingBased.SpatialImageFrame> 00000000-0000-0000-0000-000000000000
+    - frame: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      image: !<Typename.SpatialImage> 00000000-0000-0000-0000-000000000000
+      loadingIndicator: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       gallery: !<reference.Texture[]>
         []
       shuffle: false
-      loadingIndicator: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      image: !<MappingBased.SpatialImage> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     - SpatialImage: !<reference.ScriptAsset> 00000000-0000-0000-0000-000000000000
   InputLines:
     - // @typename SpatialImage
-    - // @input SpatialImageFrame frame
+    - // @input AssignableType frame
     - // @input SpatialImage image
-    - // @input LoadingIndicator loadingIndicator
+    - // @input AssignableType_1 loadingIndicator
     - "// @input Asset.Texture[] gallery"
     - // @input bool shuffle
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

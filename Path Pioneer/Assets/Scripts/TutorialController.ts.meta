@@ -30,10 +30,13 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - ui: !<MappingBased.UI> 00000000-0000-0000-0000-000000000000
+    - ui: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input UI ui
+    - // @input AssignableType ui
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

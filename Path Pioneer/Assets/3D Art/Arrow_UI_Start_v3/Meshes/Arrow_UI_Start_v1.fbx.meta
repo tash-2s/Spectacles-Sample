@@ -109,6 +109,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
 - !<SceneObject/8104fa2b-ee21-4285-8604-56a5179d8913>
   PrefabRemaps:
     []

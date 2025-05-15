@@ -1,4 +1,4 @@
-import { PinchButton } from "SpectaclesSyncKit/SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton"
+import { PinchButton } from "SpectaclesInteractionKit.lspkg/Components/UI/PinchButton/PinchButton"
 
 // The ValueControlInput class defines the input components
 // necessary for the proper functioning of the ValueControl class.

@@ -8,9 +8,10 @@ Cache/**
 PluginsUserPreferences/**
 Support/**
 BackUp/**
-.vscode/**
-jsconfig.json
-tsconfig.json
+Workspaces/**
+.vscode/
+/jsconfig.json
+/tsconfig.json
 .DS_Store
 *.lock
 

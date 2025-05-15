@@ -32,11 +32,14 @@
     {}
   DefaultScriptInputs:
     - audio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
-      dartboardController: !<MappingBased.DartBoardController> 00000000-0000-0000-0000-000000000000
+      dartboardController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Component.AudioComponent audio
-    - // @input DartBoardController dartboardController
+    - // @input AssignableType dartboardController
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

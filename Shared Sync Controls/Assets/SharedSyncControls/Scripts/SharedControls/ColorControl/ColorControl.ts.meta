@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> dc47302c-5f17-4274-b1d5-febf78a8f097
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/a10ee622-9e1e-45fe-8ddd-9e75525703fd>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 2e197ef7-a6fd-4b5e-8cd3-06f4e4cd2dcd
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -37,3 +37,7 @@
       {}
   InputLines:
     []
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

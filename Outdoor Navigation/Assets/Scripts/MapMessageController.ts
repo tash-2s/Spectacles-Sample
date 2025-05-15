@@ -1,5 +1,5 @@
 import { MapComponent } from "../MapComponent/Scripts/MapComponent";
-import { ContainerFrame } from "../SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame";
+import { ContainerFrame } from "SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/ContainerFrame";
 
 @component
 export class MapMessageController extends BaseScriptComponent {

@@ -33,13 +33,16 @@
     {}
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - filterEnabled: true
-      timeoutDuration: !<float> 10.000000
-      container: !<MappingBased.DetectionContainer> 00000000-0000-0000-0000-000000000000
+    - timeoutDuration: !<float> 10.000000
+      container: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      filterEnabled: true
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input float timeoutDuration = 10
-    - // @input DetectionContainer container
+    - // @input AssignableType container
     - // @input bool filterEnabled
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

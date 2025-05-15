@@ -1,10 +1,13 @@
+
+
 // @input Component.ScriptComponent controller
 // @input bool showLogs
 
 const controller = script.controller;
 const showLogs = script.showLogs;
 
-const SIK = require("SpectaclesSyncKit/SpectaclesInteractionKit/SIK").SIK;
+const SIK = require("SpectaclesInteractionKit.lspkg/SIK").SIK;
+const InteractableManipulation = require("SpectaclesInteractionKit.lspkg/Components/Interaction/InteractableManipulation/InteractableManipulation").InteractableManipulation;
 
 let sceneObj;
 let syncEntity;
@@ -27,7 +30,7 @@ function onReady() {
     }
     
     // Get SIK manipulatable component
-    let manipulatable = sceneObj.getComponent(SIK.InteractionConfiguration.requireType("InteractableManipulation"));
+    let manipulatable = sceneObj.getComponent(InteractableManipulation);
     
     if (syncEntity.networkRoot.locallyCreated) {
         // Piece belongs to me, I can move it

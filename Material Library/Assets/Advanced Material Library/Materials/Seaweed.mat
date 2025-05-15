@@ -4,7 +4,15 @@
     - !<own> 690dda33-b02c-4328-b75c-c2307ad8bb49
 - !<PassInfo/690dda33-b02c-4328-b75c-c2307ad8bb49>
   CachedProperties:
-    []
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -35,18 +43,15 @@
     baseColor:
       typeIdx: 5
       value: {x: 0.049943, y: 0.136873, z: 0.078279, w: 1.000000}
+    emissiveColor:
+      typeIdx: 4
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    emissiveIntensity:
+      typeIdx: 1
+      value: 1.000000
     metallic:
       typeIdx: 1
       value: 0.000000
-    overrideTimeDelta:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     roughness:
       typeIdx: 1
       value: 0.855000

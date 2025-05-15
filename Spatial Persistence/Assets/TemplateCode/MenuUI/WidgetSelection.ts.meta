@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> 1d84628f-5dc5-46a0-a5c6-682fb1dcdf64
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/98461e61-8576-48e2-945d-dce6ef6421a7>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 1a8793a7-2d09-43be-b6c1-c880d8e6862b
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -30,9 +30,13 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - interactable: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+    - interactable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input Interactable interactable
+    - // @input AssignableType interactable
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

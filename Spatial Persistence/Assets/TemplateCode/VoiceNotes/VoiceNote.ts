@@ -1,12 +1,12 @@
-import { ToggleButton } from "../../SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton";
-import { Interactable } from "../../SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
+import { ToggleButton } from "SpectaclesInteractionKit.lspkg/Components/UI/ToggleButton/ToggleButton";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
 import { VoiceMLTranscribeSingleton } from "./VoiceMLTranscribeSingleton";
-import { PinchButton } from "../../SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton";
+import { PinchButton } from "SpectaclesInteractionKit.lspkg/Components/UI/PinchButton/PinchButton";
 import { Widget } from "../Widget";
 import Event, {
   PublicApi,
   unsubscribe,
-} from "../../SpectaclesInteractionKit/Utils/Event";
+} from "SpectaclesInteractionKit.lspkg/Utils/Event";
 
 @component
 export class VoiceNote extends BaseScriptComponent {

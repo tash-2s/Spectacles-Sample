@@ -1,6 +1,7 @@
-import { Interactable } from "SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import { SIK } from "SpectaclesInteractionKit/SIK";
-import Event, { PublicApi } from "SpectaclesInteractionKit/Utils/Event";
+
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
+import Event, { PublicApi } from "SpectaclesInteractionKit.lspkg/Utils/Event";
 
 /**
  * A simple button using SpectaclesInteractionKit events to signal user intent to open the area selection menu.

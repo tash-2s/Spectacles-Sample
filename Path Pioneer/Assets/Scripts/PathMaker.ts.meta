@@ -40,17 +40,17 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - camObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      camObjOffset: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      pathDistText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      pathRmv: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
-      finalPathDistText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      ui: !<MappingBased.UI> 00000000-0000-0000-0000-000000000000
-      placingStartFinishLinesForwardDisplace: !<float> 200.000000
+    - pathRmv: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
       pfbSurfaceDetection: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       pfbLine: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
-      pathmakingPlayerFeedback: !<MappingBased.PathmakingPlayerFeedback> 00000000-0000-0000-0000-000000000000
-      playerPaceCalculator: !<MappingBased.PlayerPaceCalculator> 00000000-0000-0000-0000-000000000000
+      camObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      camObjOffset: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      pathDistText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      finalPathDistText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      playerPaceCalculator: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      pathmakingPlayerFeedback: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      ui: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      placingStartFinishLinesForwardDisplace: !<float> 200.000000
   ScriptTypes:
     -
       {}
@@ -62,8 +62,11 @@
     - // @input SceneObject camObjOffset
     - // @input Component.Text pathDistText
     - // @input Component.Text finalPathDistText
-    - // @input PlayerPaceCalculator playerPaceCalculator
-    - // @input PathmakingPlayerFeedback pathmakingPlayerFeedback
-    - // @input UI ui
+    - // @input AssignableType playerPaceCalculator
+    - // @input AssignableType_1 pathmakingPlayerFeedback
+    - // @input AssignableType_2 ui
     - // @input float placingStartFinishLinesForwardDisplace = 200
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

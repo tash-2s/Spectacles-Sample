@@ -9,9 +9,9 @@ import {
   quaternionToPitch,
 } from "../MapComponent/Scripts/MapUtils";
 import { QuestMarker } from "../MapComponent/Scripts/QuestMarker";
-import WorldCameraFinderProvider from "../SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider";
-import { LensConfig } from "../SpectaclesInteractionKit/Utils/LensConfig";
-import { UpdateDispatcher } from "../SpectaclesInteractionKit/Utils/UpdateDispatcher";
+import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider";
+import { LensConfig } from "SpectaclesInteractionKit.lspkg/Utils/LensConfig";
+import { UpdateDispatcher } from "SpectaclesInteractionKit.lspkg/Utils/UpdateDispatcher";
 import { UICollisionSolver } from "./UICollisionDetector";
 
 const BOUNDARY_HALF_WIDTH_PROJECTION = 35;

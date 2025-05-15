@@ -38,12 +38,15 @@
   DefaultScriptInputs:
     - camObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       visualObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      animation: !<MappingBased.CircleAnimation> 00000000-0000-0000-0000-000000000000
+      animation: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input SceneObject camObj
     - // @input SceneObject visualObj
-    - // @input CircleAnimation animation
+    - // @input AssignableType animation
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

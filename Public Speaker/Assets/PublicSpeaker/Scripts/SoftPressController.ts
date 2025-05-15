@@ -1,6 +1,6 @@
-import NativeLogger from "../../SpectaclesInteractionKit/Utils/NativeLogger";
-import { mix } from "../../SpectaclesInteractionKit/Utils/animate";
-import { clamp } from "../../SpectaclesInteractionKit/Utils/mathUtils";
+import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
+import { mix } from "SpectaclesInteractionKit.lspkg/Utils/animate";
+import { clamp } from "SpectaclesInteractionKit.lspkg/Utils/mathUtils";
 import { PresentationSwitcher } from "./PresentationSwitcher";
 import { GoogleSlideBridge } from "./GoogleSlideBridge";
 

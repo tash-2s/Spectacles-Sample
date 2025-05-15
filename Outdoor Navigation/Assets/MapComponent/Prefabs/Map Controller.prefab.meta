@@ -30,7 +30,7 @@
       mapTilePrefab: !<reference.ObjectPrefab> 38e3e231-b4d1-4dd9-ad27-06418512aa95
       lineMaterial: !<reference.Material> 5583a91d-e827-4271-bb12-f7203e8af2a6
       mapRenderPrefab: !<reference.ObjectPrefab> 21d8b3a2-d22d-4441-a55b-aaf33fbfa659
-      placesProvider: !<MappingBased.SnapPlacesProvider> af9153fb-0176-4a2d-936d-c86f0b111e00
+      placesProvider: !<MappingBased.AssignableType> af9153fb-0176-4a2d-936d-c86f0b111e00
   ScriptTypes:
     "":
       {}
@@ -92,7 +92,7 @@
     {}
   ScriptInputs:
     "":
-      remoteServiceModule: !<reference.RemoteServiceModule> bf2a5796-ee15-4221-a339-e7753ae575a9
+      {}
   ScriptTypes:
     "":
       {}

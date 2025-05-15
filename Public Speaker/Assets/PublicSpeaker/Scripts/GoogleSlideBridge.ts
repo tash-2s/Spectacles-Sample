@@ -1,11 +1,11 @@
-import NativeLogger from "../../SpectaclesInteractionKit/Utils/NativeLogger";
+import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
 import { WebSocketController } from "./WebSocketController";
 const log = new NativeLogger("GoogleSlidesBridge");
 
 @component
 export class GoogleSlideBridge extends BaseScriptComponent {
 
-  private remoteService: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
+  private internetModule: InternetModule = require("LensStudio:InternetModule");
   private remoteMediaModule = require("LensStudio:RemoteMediaModule");
 
   @input
@@ -65,8 +65,8 @@ export class GoogleSlideBridge extends BaseScriptComponent {
       if (this.syncNavigationToGoogle && this.hasValidCredentials) {
       }
     };
-    if (!this.remoteService) {
-      log.e("RemoteServiceModule is not available.");
+    if (!this.internetModule) {
+      log.e("Internet Module is not available.");
       return;
     }
 
@@ -75,7 +75,7 @@ export class GoogleSlideBridge extends BaseScriptComponent {
     const accessToken = this.accessToken;
     
     try {
-      const response = await this.remoteService.fetch(url, {
+      const response = await this.internetModule.fetch(url, {
         headers: {
           Authorization: accessToken,
           Accept: "application/json",
@@ -92,8 +92,8 @@ export class GoogleSlideBridge extends BaseScriptComponent {
       log.e(`Error during fetch: ${error}`);
     }
 
-    log.d(`RemoteServiceModule available: ${!!this.remoteService}`);
-    log.d(`RemoteMediaModule available: ${!!this.remoteMediaModule}`);
+    log.d(`Internet Module available: ${!!this.internetModule}`);
+    log.d(`Internet Module available: ${!!this.remoteMediaModule}`);
     if (!global.deviceInfoSystem.isInternetAvailable()) {
       log.e("Internet is not available. Cannot proceed with API requests.");
       return;
@@ -141,7 +141,7 @@ export class GoogleSlideBridge extends BaseScriptComponent {
   // Validate access token by making a test API call
   private async validateCredentials(): Promise<boolean> {
     try {
-      const response = await this.remoteService.fetch(
+      const response = await this.internetModule.fetch(
         `https://slides.googleapis.com/v1/presentations/${this.presentationId}?fields=title`,
         {
           headers: {
@@ -167,12 +167,12 @@ export class GoogleSlideBridge extends BaseScriptComponent {
   // Fetch presentation data including slides and notes
   private async fetchPresentationData() {
     try {
-      if (!this.remoteService || !this.remoteService.fetch) {
-        log.e("RemoteServiceModule or fetch method is not available.");
+      if (!this.internetModule || !this.internetModule.fetch) {
+        log.e("Internet Module or fetch method is not available.");
         return;
       }
 
-      const response = await this.remoteService.fetch(
+      const response = await this.internetModule.fetch(
         `https://slides.googleapis.com/v1/presentations/${this.presentationId}`,
         {
           headers: {
@@ -215,7 +215,7 @@ export class GoogleSlideBridge extends BaseScriptComponent {
       }
 
       // Correct the thumbnail API URL
-      const thumbnailResponse = await this.remoteService.fetch(
+      const thumbnailResponse = await this.internetModule.fetch(
         `https://slides.googleapis.com/v1/presentations/${this.presentationId}/pages/${slideId}/thumbnail`,
         {
           headers: {
@@ -293,7 +293,7 @@ export class GoogleSlideBridge extends BaseScriptComponent {
       return;
     }
 
-    if (!this.remoteMediaModule || !this.remoteService.makeResourceFromUrl) {
+    if (!this.remoteMediaModule || !this.remoteMediaModule.makeResourceFromUrl) {
       log.e(
         "RemoteMediaModule or makeResourceFromUrl is not available. Ensure you are testing on Spectacles or in Lens Studio with Device Type Override set to Spectacles."
       );
@@ -308,7 +308,7 @@ export class GoogleSlideBridge extends BaseScriptComponent {
 
     try {
       // Create a DynamicResource from the URL
-      const resource: DynamicResource = this.remoteService.makeResourceFromUrl(url);
+      const resource: DynamicResource = this.remoteMediaModule.makeResourceFromUrl(url);
       if (!resource) {
         log.e("Failed to create DynamicResource from URL.");
         return;
@@ -342,7 +342,7 @@ export class GoogleSlideBridge extends BaseScriptComponent {
     try {
       // The Google Slides API does not have a "currentSlide" endpoint
       // Instead, you need to fetch the entire presentation and compare slides
-      const response = await this.remoteService.fetch(
+      const response = await this.internetModule.fetch(
         `https://slides.googleapis.com/v1/presentations/${this.presentationId}`,
         {
           headers: {
@@ -398,7 +398,7 @@ export class GoogleSlideBridge extends BaseScriptComponent {
       // Make a request to the URL to navigate to the specific slide
       if (global.deviceInfoSystem.isInternetAvailable()) {
         try {
-          const response = await this.remoteService.fetch(presentationUrl, {
+          const response = await this.internetModule.fetch(presentationUrl, {
             method: "GET",
             headers: {
               Authorization: `Bearer ${this.accessToken}`,
@@ -459,7 +459,7 @@ export class GoogleSlideBridge extends BaseScriptComponent {
       // Make a request to the URL to ensure we're in the right slide
       if (global.deviceInfoSystem.isInternetAvailable()) {
         try {
-          const response = await this.remoteService.fetch(presentationUrl, {
+          const response = await this.internetModule.fetch(presentationUrl, {
             method: "GET",
             headers: {
               Authorization: `Bearer ${this.accessToken}`,

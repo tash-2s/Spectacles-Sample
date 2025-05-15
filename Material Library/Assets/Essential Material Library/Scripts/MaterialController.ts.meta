@@ -11,7 +11,7 @@
     TypeScriptAsset: !<own> 14661ed1-6cbe-4a6d-811d-722ec0dda839
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/19a91a35-face-4502-a72c-138e2ccb8282>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/14661ed1-6cbe-4a6d-811d-722ec0dda839>
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 10cc0c46-b405-466c-bebc-e23915a09982
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -35,14 +35,18 @@
   DefaultScriptInputs:
     - sceneObjects: !<reference.SceneObject[]>
         []
-      nextInteractable: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
-      previousInteractable: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
       textObject: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      nextInteractable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      previousInteractable: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - "// @input SceneObject[] sceneObjects"
     - // @input Component.Text textObject
-    - // @input Interactable nextInteractable
-    - // @input Interactable previousInteractable
+    - // @input AssignableType nextInteractable
+    - // @input AssignableType_1 previousInteractable
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

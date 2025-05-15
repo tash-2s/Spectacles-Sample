@@ -16,7 +16,7 @@
     {}
   ScriptInputs:
     "":
-      remoteServiceModule: !<reference.RemoteServiceModule> bf2a5796-ee15-4221-a339-e7753ae575a9
+      {}
   ScriptTypes:
     "":
       {}
@@ -51,7 +51,7 @@
       mapTilePrefab: !<reference.ObjectPrefab> 38e3e231-b4d1-4dd9-ad27-06418512aa95
       lineMaterial: !<reference.Material> 5583a91d-e827-4271-bb12-f7203e8af2a6
       mapRenderPrefab: !<reference.ObjectPrefab> 21d8b3a2-d22d-4441-a55b-aaf33fbfa659
-      placesProvider: !<MappingBased.SnapPlacesProvider> 216669e4-98a7-498e-99df-34d1914b5d3b
+      placesProvider: !<MappingBased.AssignableType> 216669e4-98a7-498e-99df-34d1914b5d3b
   ScriptTypes:
     "":
       {}

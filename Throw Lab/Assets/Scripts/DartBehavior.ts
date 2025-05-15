@@ -1,10 +1,10 @@
 import { Buffer } from "Scripts/Utils/Buffer";
 import { DartBoardController } from "Scripts/DartBoardController";
-import { Interactable } from "SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable"
-import { InteractorInputType } from "SpectaclesInteractionKit/Core/Interactor/Interactor";
-import { InteractorEvent } from "SpectaclesInteractionKit/Core/Interactor/InteractorEvent";
-import WorldCameraFinderProvider from "SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider";
-import { SIK } from "SpectaclesInteractionKit/SIK";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
+import { InteractorInputType } from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
+import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
+import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
 
 @component
 export class DartBehavior extends BaseScriptComponent {

@@ -35,10 +35,10 @@
     {}
   DefaultScriptInputs:
     - mapModule: !<reference.MapModule> 00000000-0000-0000-0000-000000000000
+      mapTilePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       lineMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       mapRenderPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
-      mapTilePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
-      placesProvider: !<MappingBased.SnapPlacesProvider> 00000000-0000-0000-0000-000000000000
+      placesProvider: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -47,5 +47,8 @@
     - // @input Asset.ObjectPrefab mapTilePrefab
     - // @input Asset.Material lineMaterial
     - // @input Asset.ObjectPrefab mapRenderPrefab
-    - // @input SnapPlacesProvider placesProvider
+    - // @input AssignableType placesProvider
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

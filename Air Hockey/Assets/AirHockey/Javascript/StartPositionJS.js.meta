@@ -9,7 +9,7 @@
     JavaScriptAsset: !<own> 2f7f058d-0cb7-4911-8c02-d4c0d879335d
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/a146cb13-5363-4d51-9228-07a3aebda73c>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 366c7a06-9066-42f7-b6e2-2a095a76577d
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -31,8 +31,10 @@
     {}
   DefaultScriptInputs:
     - camera: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      airHockeyController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      controllerJS: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

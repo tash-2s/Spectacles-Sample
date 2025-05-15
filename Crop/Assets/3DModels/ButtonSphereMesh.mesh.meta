@@ -1,5 +1,5 @@
 - !<AssetImportMetadata/a9f03632-216a-4bab-a5c8-f3dcd814611c>
-  ImporterSettings: !<FileMeshImporterSettings/79f00118-1a6e-4c38-9b74-d231660f68be>
+  ImporterSettings: !<FileMeshImporterSettings>
     ModifiedVertexFormats:
       normal: Float
       position: Float
@@ -11,8 +11,8 @@
   PackageType: NotAPackage
   AssetDataMap:
     FileMesh: !<own> 00000000-0000-0000-0000-000000000000
-  CompressionSettings: !<SingleCompressionSettings/eceee1ae-fc85-4740-b74e-a6705f8e3ffb>
-    CompressionSettings: !<MeshCompressionSettings/9db5fd57-9232-4969-ae66-d36afd20b2f9>
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressionSettings: !<MeshCompressionSettings>
       EnableDracoCompression: false
       CompressionLevel: 0
       PositionBits: 11

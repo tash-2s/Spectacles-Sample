@@ -40,30 +40,33 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - mapComponent: !<MappingBased.MapComponent> 00000000-0000-0000-0000-000000000000
-      spawnPinButton: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
-      zoomInButton: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
-      zoomOutButton: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
-      toggleMiniMapButton: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
-      centerMapButton: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
+    - mapComponent: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      spawnPinButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      clearPinsButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      zoomInButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      zoomOutButton: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      centerMapButton: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      toggleMiniMapButton: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      showRestaurantsButton: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      showCafeButton: !<MappingBased.AssignableType_8> 00000000-0000-0000-0000-000000000000
+      showBarsButton: !<MappingBased.AssignableType_9> 00000000-0000-0000-0000-000000000000
       logObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      showRestaurantsButton: !<MappingBased.ToggleButton> 00000000-0000-0000-0000-000000000000
-      showCafeButton: !<MappingBased.ToggleButton> 00000000-0000-0000-0000-000000000000
-      showBarsButton: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
-      clearPinsButton: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input MapComponent mapComponent
-    - // @input PinchButton spawnPinButton
-    - // @input PinchButton clearPinsButton
-    - // @input PinchButton zoomInButton
-    - // @input PinchButton zoomOutButton
-    - // @input PinchButton centerMapButton
-    - // @input ToggleButton toggleMiniMapButton
-    - // @input PinchButton showRestaurantsButton
-    - // @input PinchButton showCafeButton
-    - // @input PinchButton showBarsButton
+    - // @input AssignableType mapComponent
+    - // @input AssignableType_1 spawnPinButton
+    - // @input AssignableType_2 clearPinsButton
+    - // @input AssignableType_3 zoomInButton
+    - // @input AssignableType_4 zoomOutButton
+    - // @input AssignableType_5 centerMapButton
+    - // @input AssignableType_6 toggleMiniMapButton
+    - // @input AssignableType_7 showRestaurantsButton
+    - // @input AssignableType_8 showCafeButton
+    - // @input AssignableType_9 showBarsButton
     - // @input SceneObject logObject
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

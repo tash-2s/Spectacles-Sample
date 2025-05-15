@@ -36,22 +36,25 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - fetchCatFacts: !<MappingBased.FetchCatFacts> 00000000-0000-0000-0000-000000000000
-      catInteractable: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
-      animationPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
-      animationStateMachine: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      hintImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+    - thoughtBubbleImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       thoughtBubbleText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      thoughtBubbleImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      fetchCatFacts: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      catInteractable: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      animationPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
+      hintImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      animationStateMachine: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Component.Image thoughtBubbleImage
     - // @input Component.Text thoughtBubbleText
-    - // @input FetchCatFacts fetchCatFacts
-    - // @input Interactable catInteractable
+    - // @input AssignableType fetchCatFacts
+    - // @input AssignableType_1 catInteractable
     - // @input Component.AnimationPlayer animationPlayer
     - // @input Component.Image hintImage
     - // @input Component.ScriptComponent animationStateMachine
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

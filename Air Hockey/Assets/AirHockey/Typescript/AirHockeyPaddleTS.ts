@@ -1,5 +1,5 @@
-import { SyncEntity } from "SpectaclesSyncKit/Core/SyncEntity";
-import { StorageProperty } from "SpectaclesSyncKit/Core/StorageProperty";
+import { SyncEntity } from "SpectaclesSyncKit.lspkg/Core/SyncEntity";
+import { StorageProperty } from "SpectaclesSyncKit.lspkg/Core/StorageProperty";
 
 @component
 export class AirHockeyPaddle extends BaseScriptComponent {

@@ -33,16 +33,19 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - renderOrder: !<float> 0.000000
-      container: !<MappingBased.ContainerFrame> 00000000-0000-0000-0000-000000000000
+    - mapComponent: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      container: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       textComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      mapComponent: !<MappingBased.MapComponent> 00000000-0000-0000-0000-000000000000
+      renderOrder: !<float> 0.000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input MapComponent mapComponent
-    - // @input ContainerFrame container
+    - // @input AssignableType mapComponent
+    - // @input AssignableType_1 container
     - // @input Component.Text textComponent
     - // @input float renderOrder
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

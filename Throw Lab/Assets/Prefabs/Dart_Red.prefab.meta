@@ -67,7 +67,7 @@
   ScriptInputs:
     "":
       audio: !<reference.AudioComponent> e2684c21-243a-43c1-ba7c-6bc5e45b6c82
-      dartboardController: !<MappingBased.DartBoardController> 93420ee5-a40b-4959-ab96-baa22679f05d
+      dartboardController: !<MappingBased.AssignableType> 93420ee5-a40b-4959-ab96-baa22679f05d
   ScriptTypes:
     "":
       {}
@@ -222,6 +222,12 @@
   ScriptInputsDefault:
     enableInstantDrag: true
     allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -229,6 +235,12 @@
       targetingMode: !<float> 1.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}

@@ -1,12 +1,9 @@
-import NativeLogger from "../../SpectaclesInteractionKit/Utils/NativeLogger";
+import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
 const log = new NativeLogger("WebSocketController");
 
 @component
 export class WebSocketController extends BaseScriptComponent {
-    // Remote service module for fetching data
-    private remoteServiceModule: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
-
-
+    private internetModule: InternetModule = require("LensStudio:InternetModule");
   @input
   @hint("WebSocket server URL (e.g., wss://google-slide-spectacles-03332e1cf78e.herokuapp.com)")
   serverUrl: string = "wss://google-slide-spectacles-03332e1cf78e.herokuapp.com";
@@ -67,9 +64,9 @@ export class WebSocketController extends BaseScriptComponent {
       return;
     }
 
-    if (!this.remoteServiceModule) {
-      log.e("RemoteServiceModule is not assigned. Please assign it in the Inspector.");
-      this.updateStatus("Error: No RemoteServiceModule");
+    if (!this.internetModule) {
+      log.e("Internet Module is not assigned. Please assign it in the Inspector.");
+      this.updateStatus("Error: No Internet Module");
       return;
     }
 
@@ -77,8 +74,8 @@ export class WebSocketController extends BaseScriptComponent {
     this.updateStatus("Connecting...");
 
     try {
-      // Create WebSocket using the RemoteServiceModule
-      this.webSocket = this.remoteServiceModule.createWebSocket(this.serverUrl);
+      // Create WebSocket using the Internet Module
+      this.webSocket = this.internetModule.createWebSocket(this.serverUrl);
       this.webSocket.binaryType = 'blob';
 
       // Set up event handlers

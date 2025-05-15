@@ -1,7 +1,7 @@
 import { TWEEN_DURATION } from "../../Scripts/MapUIController";
-import { CancelFunction } from "../../SpectaclesInteractionKit/Utils/animate";
-import Event from "../../SpectaclesInteractionKit/Utils/Event";
-import NativeLogger from "../../SpectaclesInteractionKit/Utils/NativeLogger";
+import { CancelFunction } from "SpectaclesInteractionKit.lspkg/Utils/animate";
+import Event from "SpectaclesInteractionKit.lspkg/Utils/Event";
+import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
 import { makeTween } from "./MapUtils";
 
 const FULL_CIRCLE_BOUND_RADIUS = 15;

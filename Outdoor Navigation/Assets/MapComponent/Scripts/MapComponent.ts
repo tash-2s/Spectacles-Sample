@@ -1,7 +1,7 @@
 import Event, {
   callback,
   PublicApi,
-} from "../../SpectaclesInteractionKit/Utils/Event";
+} from "SpectaclesInteractionKit.lspkg/Utils/Event";
 import { MapController } from "./MapController";
 import { MapPin } from "./MapPin";
 import {

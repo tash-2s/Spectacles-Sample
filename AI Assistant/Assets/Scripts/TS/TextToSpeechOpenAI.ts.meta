@@ -11,7 +11,7 @@
     TypeScriptAsset: !<own> 6a26b832-4c10-4163-b9bc-4d3712c358f9
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/ce16e2eb-9cb3-49c1-be6f-6b53f7a113b7>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/6a26b832-4c10-4163-b9bc-4d3712c358f9>
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 5f7c8ae1-743e-4db3-b7d2-a17ab438ebac
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -33,8 +33,8 @@
     {}
   DefaultScriptInputs:
     - audioComponent: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
-      voice: alloy
       audioOutputAsset: !<reference.Asset> 00000000-0000-0000-0000-000000000000
+      voice: alloy
   ScriptTypes:
     -
       {}
@@ -42,3 +42,7 @@
     - // @input Component.AudioComponent audioComponent
     - // @input Asset.Asset audioOutputAsset
     - '// @input string voice = "alloy" {"widget":"combobox", "values":[{"label":"Alloy", "value":"alloy"}, {"label":"Echo", "value":"echo"}, {"label":"Fable", "value":"fable"}, {"label":"Onyx", "value":"onyx"}, {"label":"Nova", "value":"nova"}, {"label":"Shimmer", "value":"shimmer"}]}'
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

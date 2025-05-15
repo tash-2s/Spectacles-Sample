@@ -49,26 +49,26 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - showUserPin: false
-      userPinVisual: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+    - tileCount: !<float> 2.000000
+      mapRenderParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       mapZoomLevel: !<float> 0.000000
+      showUserPin: false
+      userPinVisual: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       userPinScale: !<Vec2> {x: 0.000000, y: 0.000000}
+      userPinAlignedWithOrientation: false
       mapPinPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       mapPinsRotated: false
+      mapPinCursorDetectorSize: 0.020000
       enableScrolling: false
+      scrollingFriction: !<float> 4.000000
       setMapToCustomLocation: false
       longitude: ""
       latitude: ""
       rotation: !<float> 0.000000
-      mapUpdateThreshold: !<float> 0.000000
-      mapPinCursorDetectorSize: 0.020000
-      mapRenderParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      tileCount: !<float> 2.000000
-      startedAsMiniMap: false
-      scrollingFriction: !<float> 4.000000
       isMinimapAutoRotate: false
-      userPinAlignedWithOrientation: false
       enableMapSmoothing: false
+      mapUpdateThreshold: !<float> 0.000000
+      startedAsMiniMap: false
   ScriptTypes:
     -
       {}
@@ -112,3 +112,6 @@
     - // @input float mapUpdateThreshold
     - // @input bool startedAsMiniMap
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

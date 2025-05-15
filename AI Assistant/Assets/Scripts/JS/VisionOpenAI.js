@@ -7,7 +7,7 @@
 const apiKey = "Insert your Open AI Key";
 
 // Remote service module for fetching data
-var remoteServiceModule = require("LensStudio:RemoteServiceModule");
+var internetModule = require("LensStudio:InternetModule");
 
 var isProcessing = false;
 
@@ -17,7 +17,7 @@ script.createEvent("OnStartEvent").bind(() => {
 
 function onStart() {
   // Initialize SIK
-  const SIK = require("SpectaclesInteractionKit/SIK").SIK;
+  const SIK = require("SpectaclesInteractionKit.lspkg/SIK").SIK;
   const interactionManager = SIK.InteractionManager;
 
   if (!script.interactableObject) {
@@ -107,7 +107,7 @@ async function handleTriggerEnd(eventData) {
       body: JSON.stringify(requestPayload),
     });
 
-    let response = await remoteServiceModule.fetch(request);
+    let response = await internetModule.fetch(request);
     if (response.status === 200) {
       print("step 1");
       let responseData = await response.json();

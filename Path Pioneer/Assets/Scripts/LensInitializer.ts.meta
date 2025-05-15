@@ -34,18 +34,21 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - ui: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      tutorialController: !<MappingBased.TutorialController> 00000000-0000-0000-0000-000000000000
+    - ui: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      tutorialController: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      pathMaker: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      pathWalker: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
       camSo: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      pathMaker: !<MappingBased.PathMaker> 00000000-0000-0000-0000-000000000000
-      pathWalker: !<MappingBased.PathWalker> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input UI ui
-    - // @input TutorialController tutorialController
-    - // @input PathMaker pathMaker
-    - // @input PathWalker pathWalker
+    - // @input AssignableType ui
+    - // @input AssignableType_1 tutorialController
+    - // @input AssignableType_2 pathMaker
+    - // @input AssignableType_3 pathWalker
     - // @input SceneObject camSo
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

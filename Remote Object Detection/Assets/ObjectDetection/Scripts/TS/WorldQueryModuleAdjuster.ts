@@ -1,8 +1,8 @@
 // import required modules
 const WorldQueryModule = require("LensStudio:WorldQueryModule");
-const SIK = require("SpectaclesInteractionKit/SIK").SIK;
+const SIK = require("SpectaclesInteractionKit.lspkg/SIK").SIK;
 const InteractorTriggerType =
-  require("SpectaclesInteractionKit/Core/Interactor/Interactor").InteractorTriggerType;
+  require("SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor").InteractorTriggerType;
 
 // Import CameraService
 import { CameraService, CameraType } from "./CameraService";

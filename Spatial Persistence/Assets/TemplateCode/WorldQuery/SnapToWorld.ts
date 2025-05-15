@@ -1,10 +1,10 @@
-import { Singleton } from "../../SpectaclesInteractionKit/Decorators/Singleton";
-import { Interactable } from "../../SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
+import { Singleton } from "SpectaclesInteractionKit.lspkg/Decorators/Singleton";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
 import {
   InteractorEvent,
   DragInteractorEvent,
-} from "../../SpectaclesInteractionKit/Core/Interactor/InteractorEvent";
-import { InteractorInputType } from "../../SpectaclesInteractionKit/Core/Interactor/Interactor";
+} from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
+import { InteractorInputType } from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
 
 // A variable for 'up' (but not exactly up) We can't have it be exactly up because when
 // we do a cross to get our angles and our raycast result points straiught up we cross two
@@ -72,7 +72,7 @@ export class SnapToWorld {
 
     this.previewInWorld
       .getTransform()
-      .setWorldScale(dragEventData.target.transform.getWorldScale()); // TEMP
+      .setWorldScale(dragEventData.target.getTransform().getWorldScale()); // TEMP
     this.updateWorldRaycast(dragEventData);
   }
 
@@ -131,7 +131,7 @@ export class SnapToWorld {
   updateWorldRaycast(dragEventData: DragInteractorEvent) {
     const DIST_IN_FRONT_OF_HAND = 20; // Move in front of the hand a bit as it sometimes results in a raycast hit
     const DIST_BEHIND_TO_CHECK = 30;
-    let targetPos = dragEventData.target.transform.getWorldPosition();
+    let targetPos = dragEventData.target.getTransform().getWorldPosition();
     let rayToWorldStart = dragEventData.interactor.startPoint.add(
       dragEventData.interactor.direction.uniformScale(DIST_IN_FRONT_OF_HAND)
     );

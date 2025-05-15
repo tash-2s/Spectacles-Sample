@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> 663d3452-1e78-4b1e-b350-99d5d8c6f151
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/03562504-b0da-4efc-82e9-ce937914eb21>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 8a00887b-0e6f-4e98-9747-26d6753d4f57
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -35,13 +35,17 @@
   DefaultScriptInputs:
     - root: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       valueText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      valueUpButton: !<Typename.PinchButton> 00000000-0000-0000-0000-000000000000
-      valueDownButton: !<Typename.PinchButton> 00000000-0000-0000-0000-000000000000
+      valueUpButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      valueDownButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input SceneObject root
     - // @input Component.Text valueText
-    - // @input PinchButton valueUpButton
-    - // @input PinchButton valueDownButton
+    - // @input AssignableType valueUpButton
+    - // @input AssignableType_1 valueDownButton
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

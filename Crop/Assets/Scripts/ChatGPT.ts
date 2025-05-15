@@ -3,7 +3,7 @@ const openAIKey = "Open AI Key goes HERE!~!";
 
 @component
 export class ChatGPT extends BaseScriptComponent {
-  @input remoteServiceModule: RemoteServiceModule;
+  private internetModule: InternetModule = require("LensStudio:InternetModule");
 
   private ImageQuality = CompressionQuality.HighQuality;
   private ImageEncoding = EncodingType.Jpg;
@@ -64,7 +64,7 @@ export class ChatGPT extends BaseScriptComponent {
       }
     );
 
-    let resp = await this.remoteServiceModule.fetch(webRequest);
+    let resp = await this.internetModule.fetch(webRequest);
     if (resp.status == 200) {
       let bodyText = await resp.text();
       print("GOT: " + bodyText);

@@ -36,10 +36,10 @@
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - serverUrl: "wss://google-slide-spectacles-03332e1cf78e.herokuapp.com"
-      reconnectInterval: !<float> 5.000000
       statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       autoConnect: true
       maxReconnectAttempts: !<float> 5.000000
+      reconnectInterval: !<float> 5.000000
   ScriptTypes:
     -
       {}
@@ -49,3 +49,6 @@
     - '// @input bool autoConnect = true {"hint":"Auto-connect on start"}'
     - '// @input float maxReconnectAttempts = 5 {"hint":"Maximum reconnection attempts"}'
     - '// @input float reconnectInterval = 3 {"hint":"Reconnection interval in seconds"}'
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

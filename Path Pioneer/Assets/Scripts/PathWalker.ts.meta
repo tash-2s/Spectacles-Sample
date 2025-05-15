@@ -40,17 +40,17 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - timerScript: !<MappingBased.Timer> 00000000-0000-0000-0000-000000000000
-      cam: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      uiScript: !<MappingBased.UI> 00000000-0000-0000-0000-000000000000
-      progressBarController: !<MappingBased.ProgressBarController> 00000000-0000-0000-0000-000000000000
-      arrowSpawner: !<MappingBased.ArrowsSpawner> 00000000-0000-0000-0000-000000000000
-      lapCountText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      pathRmv: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
-      warningController: !<MappingBased.WarningController> 00000000-0000-0000-0000-000000000000
-      playerPaceCalulator: !<MappingBased.PlayerPaceCalculator> 00000000-0000-0000-0000-000000000000
-      averagePaceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+    - cam: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       walkPathScreenHUD: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      averagePaceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      lapCountText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      timerScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      uiScript: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      progressBarController: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      arrowSpawner: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      playerPaceCalulator: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      warningController: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      pathRmv: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -59,11 +59,14 @@
     - // @input SceneObject walkPathScreenHUD
     - // @input Component.Text averagePaceText
     - // @input Component.Text lapCountText
-    - // @input Timer timerScript
-    - // @input UI uiScript
-    - // @input ProgressBarController progressBarController
-    - // @input ArrowsSpawner arrowSpawner
-    - // @input PlayerPaceCalculator playerPaceCalulator
-    - // @input WarningController warningController
+    - // @input AssignableType timerScript
+    - // @input AssignableType_1 uiScript
+    - // @input AssignableType_2 progressBarController
+    - // @input AssignableType_3 arrowSpawner
+    - // @input AssignableType_4 playerPaceCalulator
+    - // @input AssignableType_5 warningController
     - // @input Component.RenderMeshVisual pathRmv
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

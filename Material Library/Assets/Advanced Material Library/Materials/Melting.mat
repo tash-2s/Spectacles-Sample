@@ -4,7 +4,15 @@
     - !<own> 1761f807-1c3b-4f7e-9a16-2b658bda69fa
 - !<PassInfo/1761f807-1c3b-4f7e-9a16-2b658bda69fa>
   CachedProperties:
-    []
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -103,15 +111,6 @@
     noiseScale:
       typeIdx: 1
       value: 0.020000
-    overrideTimeDelta:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     planeHeight:
       typeIdx: 1
       value: 0.200000

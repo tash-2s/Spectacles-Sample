@@ -43,3 +43,6 @@
     - // @input Component.Text lastLapTimeText
     - // @input SceneObject lastLapHUD
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

@@ -1,4 +1,4 @@
-import { SIK } from "SpectaclesInteractionKit/SIK";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
 import { CropRegion } from "./CropRegion";
 import { ChatGPT } from "./ChatGPT";
 import { CaptionBehavior } from "./CaptionBehavior";

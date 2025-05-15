@@ -38,7 +38,7 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - mapComponent: !<MappingBased.MapComponent> 00000000-0000-0000-0000-000000000000
+    - mapComponent: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       questMarkerPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       inViewMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       outOfViewMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
@@ -51,7 +51,7 @@
     -
       {}
   InputLines:
-    - // @input MapComponent mapComponent
+    - // @input AssignableType mapComponent
     - // @input Asset.ObjectPrefab questMarkerPrefab
     - // @input Asset.Material inViewMaterial
     - // @input Asset.Material outOfViewMaterial
@@ -61,3 +61,6 @@
     - // @input float markerHalfHeight = 5
     - // @input float labelHalfHeight = 0.7
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

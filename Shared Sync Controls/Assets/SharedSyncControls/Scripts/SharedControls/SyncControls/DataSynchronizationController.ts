@@ -6,7 +6,7 @@ import {
 } from "./RealtimeStoreKeys"
 import {
   SessionController
-} from "../../../../SpectaclesSyncKit/Core/SessionController"
+} from "SpectaclesSyncKit.lspkg/Core/SessionController"
 
 // The DataSynchronizationController class is responsible for managing data synchronization
 // between ColorControl and ValueControl objects across multiple sessions,

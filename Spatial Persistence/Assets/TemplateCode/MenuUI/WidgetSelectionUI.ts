@@ -1,5 +1,5 @@
 import { WidgetSelection, WidgetSelectionEvent } from "./WidgetSelection";
-import Event, { PublicApi } from "../../SpectaclesInteractionKit/Utils/Event";
+import Event, { PublicApi } from "SpectaclesInteractionKit.lspkg/Utils/Event";
 
 @component
 export class WidgetSelectionUI extends BaseScriptComponent {

@@ -31,10 +31,12 @@
     {}
   DefaultScriptInputs:
     - progressionSpeed: 0.300000
-      spatialImage: !<MappingBased.SpatialImage> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input float progressionSpeed = 0.3
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

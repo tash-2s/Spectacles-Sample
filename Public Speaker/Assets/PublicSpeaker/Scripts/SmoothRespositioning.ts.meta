@@ -55,3 +55,6 @@
     - // @input float xOffset
     - // @input float yOffset
     - // @input float cooldownTime = 2
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

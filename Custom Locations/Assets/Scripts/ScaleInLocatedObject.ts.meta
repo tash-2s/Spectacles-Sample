@@ -40,3 +40,6 @@
   InputLines:
     - '// @input SceneObject contentSceneObject {"hint":"Will be enabled the first time it is activated"}'
     - // @input float animationSpeed
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

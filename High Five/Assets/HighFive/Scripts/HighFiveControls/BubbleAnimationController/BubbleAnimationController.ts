@@ -1,5 +1,5 @@
 import {animateToAlpha, setAlpha} from "../../Utils/SharedFunctions"
-import animate from "../../../../SpectaclesSyncKit/SpectaclesInteractionKit/Utils/animate"
+import animate from "SpectaclesInteractionKit.lspkg/Utils/animate"
 import {BubbleAnimationControllerInput} from "./BubbleAnimationControllerInput"
 
 // The BubbleAnimationController class manages the animations and visual effects for the bubble

@@ -1,6 +1,6 @@
-import { Interactable } from "SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import { InteractorEvent } from "SpectaclesInteractionKit/Core/Interactor/InteractorEvent";
-import { SIK } from "SpectaclesInteractionKit/SIK";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
 import { TextToSpeechOpenAI } from "./TextToSpeechOpenAI";
 
 @component
@@ -14,7 +14,7 @@ export class VisionOpenAI extends BaseScriptComponent {
   apiKey: string = "Insert your Open AI Key";
 
   // Remote service module for fetching data
-  private remoteServiceModule: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
+  private internetModule: InternetModule = require("LensStudio:InternetModule");
 
   private isProcessing: boolean = false;
 
@@ -94,7 +94,7 @@ export class VisionOpenAI extends BaseScriptComponent {
         }
       );
       // More about the fetch API: https://developers.snap.com/spectacles/about-spectacles-features/apis/fetch
-      let response = await this.remoteServiceModule.fetch(request);
+      let response = await this.internetModule.fetch(request);
       if (response.status === 200) {
         let responseData = await response.json();
         this.textOutput.text = responseData.choices[0].message.content;

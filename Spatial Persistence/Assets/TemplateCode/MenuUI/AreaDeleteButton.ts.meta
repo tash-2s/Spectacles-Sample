@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> 34640663-7f14-4e76-bd57-7438ad994fc8
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/70b5d220-0aea-4138-a1e2-a42fef5c7701>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 5b14c880-a113-446d-82c5-a4a1810205d0
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -39,3 +39,7 @@
   InputLines:
     - // @input Component.Text textComponent
     - // @input Component.RenderMeshVisual buttonMesh
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

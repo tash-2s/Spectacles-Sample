@@ -40,3 +40,6 @@
     - // @input float logLimit = 10
     - // @input Component.Text loggerOutput
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

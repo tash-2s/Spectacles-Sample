@@ -1,11 +1,11 @@
 import { MapComponent } from "../MapComponent/Scripts/MapComponent";
 import { makeTween } from "../MapComponent/Scripts/MapUtils";
-import { ContainerFrame } from "../SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame";
-import { PinchButton } from "../SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton";
-import { ToggleButton } from "../SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton";
-import { InteractorEvent } from "../SpectaclesInteractionKit/Core/Interactor/InteractorEvent";
-import { CancelFunction } from "../SpectaclesInteractionKit/Utils/animate";
-import NativeLogger from "../SpectaclesInteractionKit/Utils/NativeLogger";
+import { ContainerFrame } from "SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/ContainerFrame";
+import { PinchButton } from "SpectaclesInteractionKit.lspkg/Components/UI/PinchButton/PinchButton";
+import { ToggleButton } from "SpectaclesInteractionKit.lspkg/Components/UI/ToggleButton/ToggleButton";
+import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
+import { CancelFunction } from "SpectaclesInteractionKit.lspkg/Utils/animate";
+import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
 
 export const TWEEN_DURATION = 0.3;
 const ZOOM_IN_BUTTON_OFFSET_MINI = new vec3(7, -9.5, 2);

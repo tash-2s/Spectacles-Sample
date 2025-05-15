@@ -213,6 +213,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -221,9 +223,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -506,9 +510,9 @@
     {}
   ScriptInputs:
     "":
-      frame: !<MappingBased.SpatialImageFrame> 20688c5e-74f4-4e23-8a41-9d5eb575b6f9
+      frame: !<MappingBased.AssignableType> 20688c5e-74f4-4e23-8a41-9d5eb575b6f9
       image: !<Typename.SpatialImage> 8d87a427-4585-43b8-879f-0eb07089a081
-      loadingIndicator: !<MappingBased.LoadingIndicator> 8488ff98-413b-477f-9ab6-d34551332bf6
+      loadingIndicator: !<MappingBased.AssignableType_1> 8488ff98-413b-477f-9ab6-d34551332bf6
       gallery: !<reference.Texture[]>
         - !<reference> df6ddcc3-9e14-4fe4-8190-b7e727e47582
         - !<reference> 887fbdcd-a66e-425c-bf84-0ed6b49c8a16
@@ -860,6 +864,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -868,9 +874,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}

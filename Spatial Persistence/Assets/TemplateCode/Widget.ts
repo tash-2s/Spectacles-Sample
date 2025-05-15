@@ -1,13 +1,13 @@
-import Event, { PublicApi } from "../SpectaclesInteractionKit/Utils/Event";
+import Event, { PublicApi } from "SpectaclesInteractionKit.lspkg/Utils/Event";
 import { SnapToWorld } from "./WorldQuery/SnapToWorld";
-import { Interactable } from "SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
 import {
   lerp,
   mapValue,
   clamp,
-} from "SpectaclesInteractionKit/Utils/mathUtils";
-import { easingFunctions } from "SpectaclesInteractionKit/Utils/animate";
-import { Billboard } from "SpectaclesInteractionKit/Components/Interaction/Billboard/Billboard";
+} from "SpectaclesInteractionKit.lspkg/Utils/mathUtils";
+import { easingFunctions } from "SpectaclesInteractionKit.lspkg/Utils/animate";
+import { Billboard } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Billboard/Billboard";
 
 @component
 export class Widget extends BaseScriptComponent {

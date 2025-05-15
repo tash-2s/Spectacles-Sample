@@ -113,6 +113,7 @@
     - !<reference> 07dad0f7-076d-4e36-84c4-4612a8e465f0
   FlipX: false
   FlipY: false
+  RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<Text/8df74eec-20d9-45e0-9ff7-e825ce206409>

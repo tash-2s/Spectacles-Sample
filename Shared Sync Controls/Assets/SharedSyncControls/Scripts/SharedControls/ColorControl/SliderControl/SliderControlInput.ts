@@ -1,4 +1,4 @@
-import {Slider} from "../../../../../SpectaclesSyncKit/SpectaclesInteractionKit/Components/UI/Slider/Slider"
+import {Slider} from "SpectaclesInteractionKit.lspkg/Components/UI/Slider/Slider"
 
 // The SliderControlInput class defines the input components
 // necessary for the proper functioning of the SliderControl class.

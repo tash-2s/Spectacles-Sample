@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> 902be18a-1ccd-46f5-87af-1aef3983d7d3
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/8558d96c-7fb6-42fa-8f51-7402a9c25bed>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 9c17732a-f45a-410e-8c41-4df7e58feece
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -34,17 +34,21 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - textField: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
-      recordToggle: !<MappingBased.ToggleButton> 00000000-0000-0000-0000-000000000000
-      deleteButton: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
-      noteInteractable: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+    - textField: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      recordToggle: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      deleteButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      noteInteractable: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
       noteMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Component.Text textField
-    - // @input ToggleButton recordToggle
-    - // @input PinchButton deleteButton
-    - // @input Interactable noteInteractable
+    - // @input AssignableType recordToggle
+    - // @input AssignableType_1 deleteButton
+    - // @input AssignableType_2 noteInteractable
     - // @input Component.RenderMeshVisual noteMesh
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

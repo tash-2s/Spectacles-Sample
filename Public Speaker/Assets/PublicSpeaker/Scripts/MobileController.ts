@@ -1,7 +1,7 @@
-import { SIK } from "../../SpectaclesInteractionKit/SIK";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
 import { PresentationSwitcher } from "./PresentationSwitcher";
 import { GoogleSlideBridge } from "./GoogleSlideBridge";
-import NativeLogger from "../../SpectaclesInteractionKit/Utils/NativeLogger";
+import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
 
 const log = new NativeLogger("MobileController");
 

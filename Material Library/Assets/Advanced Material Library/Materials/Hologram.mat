@@ -4,7 +4,15 @@
     - !<own> a974c82f-c21f-4df3-9ca0-d56b364d2367
 - !<PassInfo/a974c82f-c21f-4df3-9ca0-d56b364d2367>
   CachedProperties:
-    []
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -195,15 +203,6 @@
     glitchSpeed:
       typeIdx: 1
       value: 0.250000
-    overrideTimeDelta:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     randScale:
       typeIdx: 1
       value: 0.270000

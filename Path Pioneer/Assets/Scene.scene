@@ -1635,6 +1635,7 @@
       PlaybackSpeed: 1.000000
       Begin: 0.000000
       End: 915.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -1647,6 +1648,7 @@
       PlaybackSpeed: 2.000000
       Begin: 0.000000
       End: 464.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -1659,6 +1661,7 @@
       PlaybackSpeed: 2.000000
       Begin: 465.000000
       End: 915.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: true
       BlendMode: Default
@@ -1964,6 +1967,12 @@
     targetingMode: true
     enableInstantDrag: true
     allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1971,6 +1980,12 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -2000,6 +2015,12 @@
     targetingMode: true
     enableInstantDrag: true
     allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -2007,6 +2028,12 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -3037,6 +3064,7 @@
   DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ScriptComponent/4c4ab8f9-3cf5-4cff-bfba-7eea1dea14bc>
   PrefabRemaps:
     []
@@ -3049,7 +3077,7 @@
     {}
   ScriptInputs:
     "":
-      interactable: !<MappingBased.Interactable> df91e0af-a7fe-4905-8004-1c2f5737b5f4
+      interactable: !<MappingBased.AssignableType> df91e0af-a7fe-4905-8004-1c2f5737b5f4
       rmv: !<reference.RenderMeshVisual> b911d0d9-90df-447f-b996-4573e556754b
   ScriptTypes:
     "":
@@ -3528,7 +3556,7 @@
     {}
   ScriptInputs:
     "":
-      interactable: !<MappingBased.Interactable> e9e78174-9348-4073-a41e-e769c69b6a4d
+      interactable: !<MappingBased.AssignableType> e9e78174-9348-4073-a41e-e769c69b6a4d
       rmv: !<reference.RenderMeshVisual> 828e7485-ac3d-4a6e-b752-960164bc149e
   ScriptTypes:
     "":
@@ -3864,6 +3892,7 @@
   DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ScriptComponent/5e044d70-72cb-4835-9060-ea95ecadd673>
   PrefabRemaps:
     []
@@ -3871,14 +3900,22 @@
   Enabled: true
   ScriptAsset: !<reference> 1ad7da86-2c32-418c-bdf1-b7150c07c912
   ScriptInputsDefault:
-    hoverAudioTrack: true
+    _playAudioOnHover: true
+    _hoverAudioTrack: true
+    _playAudioOnTriggerStart: true
+    _triggerStartAudioTrack: true
+    _playAudioOnTriggerEnd: true
+    _triggerEndAudioTrack: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      hoverAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
-      triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
-      triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
+      _playAudioOnHover: false
+      _hoverAudioTrack: !<reference.AudioTrackAsset> 97bf97ae-b2da-47d7-bde6-003f597fe888
+      _playAudioOnTriggerStart: true
+      _triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
+      _playAudioOnTriggerEnd: true
+      _triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
   ScriptTypes:
     "":
       {}
@@ -3927,6 +3964,7 @@
       PlaybackSpeed: 1.000000
       Begin: 0.000000
       End: 0.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -4058,12 +4096,10 @@
     indirectTargetingVolumeMultiplier: true
     indirectDragThreshold: true
     handType: true
-    raycastAlgorithm: true
     forcePokeOnNonDominantPalmProximity: true
     directColliderEnterRadius: true
     directColliderExitRadius: true
     directDragThreshold: true
-    filterBasedOnIntent: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -4082,12 +4118,10 @@
       indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 40.000000
       handType: right
-      raycastAlgorithm: Proxy
       forcePokeOnNonDominantPalmProximity: false
       directColliderEnterRadius: !<float> 1.000000
       directColliderExitRadius: 1.500000
       directDragThreshold: !<float> 3.000000
-      filterBasedOnIntent: false
   ScriptTypes:
     "":
       {}
@@ -4387,14 +4421,16 @@
     pinkyMidJoint: true
     pinkyUpperJoint: true
     pinkyTip: true
-    occluderEnabled: true
+    hoverColor: true
+    triggerColor: true
+    behindColor: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handType: right
       selectVisual: Default
-      handInteractor: !<MappingBased.HandInteractor> 6198d015-a0c4-4fba-a165-a592479727c8
+      handInteractor: !<MappingBased.AssignableType> 6198d015-a0c4-4fba-a165-a592479727c8
       handMesh: !<reference.RenderMeshVisual> c5d0163a-cb7a-4481-a419-c87ce8425646
       root: !<reference.SceneObject> 1833787c-7171-4bd2-85ff-399c0021e112
       autoJointMapping: true
@@ -4427,14 +4463,12 @@
       shouldThumbPokeGlow: true
       unitPlaneMesh: !<reference.RenderMesh> a453f19f-0832-419f-bd8f-b3296b433b23
       tipGlowMaterial: !<reference.Material> 26460eea-cbec-488e-aefd-efde6c5d0085
-      idleColor: !<Vec4> {x: 1.000000, y: 0.686275, z: 0.000000, w: 1.000000}
-      pinchDownColor: !<Vec4> {x: 0.968627, y: 0.827451, z: 0.000000, w: 1.000000}
+      hoverColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      triggerColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      behindColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
       tapProximityThreshold: !<float> 8.000000
       pinchTexture: !<reference.Texture> 3391429c-5c74-4b5c-b9fc-4ad3ba30bda4
       tapTexture: !<reference.Texture> e33d2c7f-1d12-4250-92fb-433c25ce1923
-      occluderEnabled: false
-      occluderUnitPlaneMesh: !<reference.RenderMesh> a453f19f-0832-419f-bd8f-b3296b433b23
-      radialGradientOcclusionMaterial: !<reference.Material> af45ff34-c96f-42c2-8446-8282edf6dece
       handOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
       handOccluderMaterial: !<reference.Material> bb8479b9-021e-4c42-809a-60edf99cbeac
   ScriptTypes:
@@ -5108,6 +5142,7 @@
   DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/7c1c0492-d70d-4711-8649-d178b989c1f8>
   PrefabRemaps:
     []
@@ -5129,132 +5164,7 @@
     []
 - !<SceneObject/7c71aeb5-7905-48f3-8f68-bfb2f2e3dedc>
   PrefabRemaps:
-    - 001e45df-f873-493f-8401-5c7284fd86ec: 43126ca5-16da-40f9-82b7-c7a8926063bb
-    - 043b35b6-a627-4fc8-9a04-b9676b72f0fb: e7c7be4e-0d9b-4cd3-baea-a871d82011d6
-    - 047c8f1b-80c5-4713-b750-3aac9181c0ad: 37a62259-1ce7-4744-b6ea-dc2c55f35328
-    - 06be9ceb-6b08-46d1-b391-339af3414ce4: 34c92e27-4c85-440a-bdf3-52d7aef59d1c
-    - 070662e5-95e2-4e56-9850-0465be06637c: 113a8fde-8503-4cd6-97e0-8257930cb223
-    - 0754204b-8f5e-4089-a94f-a1b332e08dbb: 20700869-1aef-485f-a00d-64943ec2a96c
-    - 09f41a03-3050-4368-aead-1af0066e646c: ea015d35-5918-4f78-a6f5-a17df2637bd4
-    - 0f58266b-a754-4eee-bb71-7d86b20e0f45: d54c61ff-e215-476a-95ec-82e3ddc2bb53
-    - 10a9d27a-4c6f-4e30-80f8-c2e8c0e50307: fa0dcbdf-ddc9-4890-90e2-d81f925fe239
-    - 14416381-912e-426c-925e-f059fc44c703: b0156873-8a9f-49b9-957b-a6c2c4d8356f
-    - 17f4cb7e-41d9-457b-b76c-57d4a575d017: faa471eb-2331-4766-902e-ad90ebaada39
-    - 1833787c-7171-4bd2-85ff-399c0021e112: 88104fa0-ad2d-43a1-8271-80188b594b11
-    - 1bc10d64-5ddb-4b69-838a-174039618ce8: 4e6d1f6c-d7ff-4da0-b482-b0c1316e394c
-    - 1c1b4737-dec8-42ba-9635-08befa45d3bf: dc97552e-2a04-4019-8979-482f91a5824f
-    - 1ca534c9-24dc-40da-aeb0-27757f66a392: b1f777fc-9def-4cf7-9504-fc75ebd8523b
-    - 1d2a2d0b-a2c6-4135-980f-390214698f2a: 68c7b547-24e9-465d-9de7-2368fabff0b0
-    - 223c4b00-5dcf-48ae-974b-8c9724cae707: d2fbbe47-d72e-4471-a1f1-02ffbcbe9212
-    - 23b58ab9-c41c-4e5d-bdef-ee11b53bc651: 31059286-43ff-450e-8473-4be6a35e2271
-    - 25d7224a-e4f0-4e45-98ef-43f23c987b33: 743452d1-5aaa-477e-a77d-10b518eabdb2
-    - 286c0985-22e2-4785-8b94-f3a594fe9ff2: fc8e7153-7b17-491b-9c4b-1a7d19a6e707
-    - 28e6419b-63c1-472a-9b5c-8ac707308561: 49bc520e-979b-41dd-af92-c39d30a5a1c3
-    - 2973714a-1fe2-4156-b79f-7494cbc22be9: c99ee9c2-c940-4c10-9c00-6df31f99c027
-    - 2a09a722-0a83-440e-a27c-c5545e696d6f: 44d3ae72-34ce-490d-97d1-811ee37f1a40
-    - 2f4f4708-1ed6-4fb2-9d20-f41c51d40362: 3bc29fda-0d40-4a4c-a1d1-ef088f23beb6
-    - 31e56b7b-bbc2-4d42-91e2-59d5d026fb5c: 746f9b2a-02f1-486b-b70a-611355381f7f
-    - 347e7fa0-cfef-41ae-983f-23ced93170f2: 40f935c2-ac26-43a7-9d4f-2a8c80446a36
-    - 34f5b59f-01b1-44a4-aaa7-b1be38694a0d: c7fc765f-3e34-42ed-b79c-d0d0f19dfd37
-    - 37e6a4c4-fe64-4157-8960-57469e8eb242: c6d77d83-ee46-4487-a43f-d23b0ae9de25
-    - 38dc047a-68c5-411a-9ebf-3089392c5d8e: 1a77b076-e485-4ba9-8978-3f0ab2b2d7fd
-    - 3c0a80a9-b738-4480-ba1f-d3b26422b485: 001d8b74-6a85-4cdd-b231-fd1bdfc8e8d0
-    - 41005c5a-eee7-41a2-8417-20fd84929f85: 43d0e3f6-94eb-4ee1-a4b3-12cc32c39486
-    - 44076b5b-f76a-43dd-8c39-a67e5eb28cfd: b1a805b2-6eb9-49e5-918e-db0608d22c04
-    - 4d975b3e-bc8d-4fa6-b32f-3378c3104697: 0b47d35b-d9ff-43aa-8c18-6b104c9945a7
-    - 4e2dbbfa-9479-4ed5-acb2-eb4dd7e327fd: 24bab02f-73f1-439d-bb0c-0559574f0782
-    - 4f32807b-c73c-42ce-9de0-b2efd924b60b: e61d4d85-a08b-4b79-8a78-bd11a94171f2
-    - 52dedebd-438d-48f4-bf2f-786cb7c3a786: bb442796-5475-4695-9191-7b4a8924ddf6
-    - 5a3ca298-c893-44bf-87dd-98ec8af59342: 7b545c21-569f-42ee-a8bc-6788a927d730
-    - 5b6c7fb3-72b7-45fb-920e-c3b2ae55eb22: 022bb054-542f-44f4-bb45-962f06351c51
-    - 5b705d51-bd83-4eba-b01f-22146e7e91eb: 4c194481-fd5b-43b0-9e1b-2dd8726745ae
-    - 5ccbebd3-9439-4701-8621-ba1c31db91b7: e5f5a9b5-8c25-4543-8704-b054151e7f27
-    - 5f1b2aea-7f46-4d9a-be67-46c9d680e673: a0a63f72-25a0-4d69-9417-5662e98b01e3
-    - 6198d015-a0c4-4fba-a165-a592479727c8: 6167dd36-c853-49b0-b2ae-7bdf862ab8c3
-    - 657b8352-1d18-47ab-b127-9cd4c2cd6b16: ac3ceda4-1236-4a0b-b52a-e8a75ab781be
-    - 67841de0-7490-414a-afa1-c447d8f687d9: 95af3b28-6f17-49e5-80c3-e8a9c88ee332
-    - 67f9e6ee-f450-4f50-8002-32c6ec4fc62a: e798d31a-2bad-4d59-9110-f038120ad232
-    - 6850b352-e9ae-4760-aaa9-1356d36fc194: e1e61e4a-f61f-4b8e-9778-77240c5d03b4
-    - 68db9d6c-77fc-4f51-a883-c22939554108: d4da8107-4c33-4f45-b961-1df209595381
-    - 6a8c4c96-18c1-4ab7-b662-ad184f8d62fa: c0fbe2e8-b696-42bd-aa0d-28c8c92aca11
-    - 6c344a2c-3ab4-49dd-b450-db5f1dc6bca4: 4e42b98e-ee9f-4953-b355-a82cfc02463a
-    - 6ef9fa08-c123-473b-975f-766321a11ede: 9faf2521-a7a5-4e36-9485-5c8084723790
-    - 70d23330-8855-4cd6-893d-26da509930f9: 5108b158-1992-4fd3-a4de-e59d1ab57470
-    - 791fbb9a-85f4-4f73-b7dc-fb17b0e5b2f9: e3ec5982-f5aa-45f3-baae-b2c56d5e0bcd
-    - 7a1a25d2-fcc3-4e7f-b939-185140914727: 17aeff26-95dc-4958-804b-97bfc549c671
-    - 7b0af0de-31d3-4b3f-9aa1-cc848bb088b1: 215027b3-748f-4737-8ae7-d31403ea7638
-    - 7c1c0492-d70d-4711-8649-d178b989c1f8: 70290c16-3e1e-4ebd-8841-ee066580ac95
-    - 7c71aeb5-7905-48f3-8f68-bfb2f2e3dedc: ac190d7f-8f8a-427c-b328-fcb2c71a54e3
-    - 7ee64c57-3d7a-4e53-8ed4-f292d8ab741f: a53b5990-7f09-4804-a3ac-d5306340a40d
-    - 827a9639-fed2-440a-b177-186f1f8e47b9: 93a82b13-f1ae-404a-b6f3-f6fa4c3d454a
-    - 829c6a95-221d-424c-8839-a7d4f340291e: 75c70980-fa79-4d52-9576-c9b558df1e70
-    - 83108414-07bc-459d-9b5a-27bac2f09876: b50d0664-596f-4bd5-9d00-f8f4d7e27a90
-    - 83a7075d-8616-4a05-990b-10ec995e9ccd: ad36bd15-0d0d-49b2-a712-033b99866b14
-    - 83f981e9-83fe-443f-8496-ef699f4add99: a041ce3c-f6e7-494b-9fb8-0da10b5a0225
-    - 87eeaa60-fc58-4bac-9bbb-8b8a04a0c159: 66a8dd87-df9a-4166-bc02-99d45a2caff6
-    - 8831d566-545d-49e1-901b-2f107ffc8688: b92e7c34-d016-4929-94af-9b325dfef94c
-    - 88d86769-aded-4961-9197-e3c684e48599: 88a2a29b-d368-412c-9f01-3bd535c31027
-    - 8a3c8dfa-3534-4ba2-8621-e94e8b192091: 3a3fe018-7d5d-4ce2-8a13-411b9a6b2d0d
-    - 8caef79e-515a-4030-9d7f-a5a879d5810d: 146c3d55-6548-4c7f-a4a4-22f402575f4f
-    - 8e93aff0-371b-49fd-b3c2-d35bbf7f51d6: dfa95e7e-64fb-4020-8444-8022e0d510a6
-    - 90e57221-9a1a-459d-b737-1bd5f1f9b7d9: 340699f0-9c85-4b33-a3f1-67f303dd78d6
-    - 94e330db-a0d6-4613-a334-fcd7f779778e: c34bc6ff-bcac-4506-988c-488a03a3fd02
-    - 9671e2db-7793-46c9-addf-c943bc27deb1: 7d75cc0b-46e2-4df2-bae8-0a79d58b2566
-    - 981d2fdf-95c7-4687-a05a-a74bb4c9ef39: 2fb017cb-455d-49d8-8112-5a05da7b338e
-    - 988b418b-e31c-4458-9034-aa8bc73ff42f: b7be8856-93cb-4049-893c-1b5bca4b2fb6
-    - 991cc164-a9cc-4834-a00c-a694b3ba8898: dbb15efd-eddd-45ff-917d-5b143092a640
-    - 994c0587-0fac-4e66-bc83-0521983f1134: 8e3b2e69-294f-497e-a2fe-30431bb76e90
-    - a06c6e2b-570f-43bb-a2eb-d1748f4c106a: 815b6ca2-77e6-4e1c-8ffd-a39df8483042
-    - a0fa40de-fadd-4515-892f-9f0cb286a047: 3ca998f8-03b3-4480-9fb6-c106f2952b90
-    - a48129bb-d569-4810-b828-8f121db7ed6b: 68c03b96-ff3b-4c4c-ada6-b8db24e084fb
-    - a639174f-615c-4a69-9cdf-fdb5b5885bf8: ca180b07-36ad-49ea-a5f9-c22e23697d15
-    - a63b8cff-f669-4bd2-aadc-935bb6cbe57e: adab9e6d-b430-459b-a3ef-286096d8456d
-    - a804bbc2-3390-4a40-a068-6e743dbbff87: 7c03fc5d-a618-491d-815e-9698ccc95eb8
-    - a9624294-2dfa-4f2d-a66d-f5f4ef1b1cb6: 99e6c117-7864-41d8-b39d-e853018e43ac
-    - a99bb0ec-3a3e-4513-ade9-8d7fbbd6e8c2: f24eade7-4784-4f7b-8f89-10cd7e47127e
-    - b2bd378f-8593-4f9a-8b93-95bbd794a5ac: a5dcc3e5-e051-4ad2-9f3c-361dc8e16680
-    - b2f3dd3c-d649-4692-b9e3-4086f7c82610: ff21c245-9565-4f69-827d-5d3a6411b557
-    - b4df6b20-3c44-47ee-aee5-73b6986fa929: a7e3803f-d6eb-43f5-a3ba-c5146b5dd058
-    - b5f1bb25-c388-440e-91d1-91bf5d5ad7bc: 82686826-4088-45dd-a8f0-03683796ce78
-    - b676bbd3-0180-4193-a990-41f217532799: 89b8d96b-b23a-4c1d-9afd-ea5ada766330
-    - ba8e341f-39fa-46bc-b157-06c9da97ecc0: 3b2ad7c8-6228-4421-aad9-65db4e6860b7
-    - bab1f2b9-807c-4ddb-838b-744bc7e819a9: 61c73054-e783-481d-9736-b731ab8896d3
-    - baf727e2-c178-4959-8a17-508eb1da3c84: 5c910008-d09a-4cf8-b0cb-12e5e0e0cffd
-    - bb140d99-9657-4a2b-94f9-ed1278f8d2fa: bc7ca399-42d5-43ce-8b46-6e31b628daf7
-    - bb647096-b5fb-4a3e-a376-5651a63a21a4: b6ce59a2-7157-40d0-acd2-fa7d4fb00afc
-    - bc13fa73-ca5b-43b7-ba8f-2dd8d5a4a2cd: 7dd90ddd-3a7e-4e11-b114-e6a0dd273b4a
-    - be026310-c4b8-473c-80d9-ecf962795a41: e54e9514-91f3-4922-87e0-e2ac31cc4855
-    - be17806a-e314-4530-8bae-baa3209b4851: ecb433df-f587-40a4-8dee-5b1879ca1550
-    - bec963de-5ab7-406c-86cf-80bec59239d9: 3f9892ea-ded0-4c59-ac79-5f72c2580b41
-    - c508bde4-d575-4559-9dce-a903aa80cb68: 05243f1b-f8a9-4eee-b12a-418bd365fa45
-    - c524bfa7-8667-432a-90b9-09b111959fdc: 43019c02-fdbb-4c37-a3e6-58a33e870488
-    - c5d0163a-cb7a-4481-a419-c87ce8425646: 8ac837c8-53c2-4114-915e-b0265e3e9901
-    - c7e1c04a-c913-4a54-bb19-b0f19ab64bbb: 5eda9b75-dd34-4471-bcf6-9264e77b5106
-    - c985cb66-82fb-4cd5-bc77-bafd29eb139a: ec66e9a7-c3ab-4c3d-87fc-675ee0b99805
-    - cfc644c8-b5cb-4dc8-ba35-9782de81369e: f0e07390-6185-4a35-9a7b-632bf9d48126
-    - d0a31085-7c02-486c-a5c2-c635907a72cc: f05448db-5a08-4d04-9b55-ec8dc072831d
-    - d42dbae0-29a2-4773-8861-4ea1572509bd: b1c0f72d-600f-41a7-bb62-316ec7473dfe
-    - d492570c-91aa-462c-9388-e3cfe1e6e9ae: 6c82bb54-cde7-40cc-b09a-ae0407d4a7e4
-    - d5b92050-00ef-4d37-93b5-1a84c04226e7: beabd77f-6564-4eb1-9cda-7d3df9128e67
-    - d8eafd99-a314-4765-af72-e76a45108f5e: 5922e7e5-b979-4848-947a-3f53d2fafc83
-    - dd498639-7e81-4a49-b7a1-7fa641973146: f1e10bfb-c13f-486f-9058-a205aa2a22a5
-    - dd74166f-40fe-44bc-a2ad-b5c6b6a10252: 45c0ee0b-4eae-4c81-8af1-44947508de3f
-    - df65a748-67a9-485a-a40d-8ab75e21ea6d: fa8a056a-2062-4c94-a29d-dedf42c65e7d
-    - e0b1b970-d8c2-4fa8-b491-b68034c1b49d: 8ab59f68-ec36-4c83-8ae2-b9629037fd04
-    - e1c58a52-032e-44f9-9139-2655ea1796a6: ed26aed2-3168-4335-8f84-4fe70d0a1333
-    - e1ce7ee4-bf68-4916-9ad2-413994c9ec2d: 1ff24423-e2c4-43dd-922e-71a93eaf6518
-    - e645b082-9609-4c4c-a498-0e1718f67cf4: 8e635d88-9a0d-4a5d-9f36-9c7bc7dec824
-    - e9b76535-5224-41b7-82d8-1d8e909cb855: 9cedc16a-c9e5-4a68-864c-3a6193939290
-    - eb91d1e7-7f17-4857-997b-a6b6fd7bb55c: a7ac0bc1-703e-43f5-8f34-6e1cc30c61fb
-    - edf79ee5-bfab-4b50-9a1c-c684818c218a: b9d14d3a-7945-428c-a768-41692c2eba14
-    - ef2f9064-dd5f-4ae4-a937-ff0732b890ac: c6ca57a4-4187-47c4-9817-27f2853e83c5
-    - ef73a868-33e2-43fb-b7e4-a2f8a242957f: 6a3dbaa3-d10c-4f71-840d-2b8b8184b67c
-    - f4fa577c-8e57-4a7a-a64c-9b953abb5b4c: ac31778e-bd43-42a4-97bc-4f485fb095fc
-    - f509aaf8-d5b3-44ef-be31-d1d8548caf5e: 6796d74c-36de-4973-b60f-26723675de0e
-    - f8421454-67d2-458a-b7fb-9197425fba6b: 49316d12-58fb-4a4a-b09c-cc6a9303dbe6
-    - f99d28a7-bc85-4126-a723-30ce6cf623d8: 9ed0157f-fd08-47e6-9180-d9eaa60dae8e
-    - fc05711a-2a9b-4228-aa76-3b2ec5879617: 45ddc26d-8076-436c-86a7-4864751e3270
-    - fc1b35dc-9266-44dc-94bf-84ef89e7f1e9: 254b9e85-b5d1-400f-8c84-83dd52f95100
+    []
   Name: SpectaclesInteractionKit
   Enabled: true
   Layers: 1
@@ -5497,12 +5407,10 @@
     _maxRaycastDistance: true
     indirectTargetingVolumeMultiplier: true
     indirectDragThreshold: true
-    raycastAlgorithm: true
     forcePokeOnNonDominantPalmProximity: true
     directColliderEnterRadius: true
     directColliderExitRadius: true
     directDragThreshold: true
-    filterBasedOnIntent: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -5521,12 +5429,10 @@
       indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 40.000000
       handType: left
-      raycastAlgorithm: Proxy
       forcePokeOnNonDominantPalmProximity: false
       directColliderEnterRadius: !<float> 1.000000
       directColliderExitRadius: 1.500000
       directDragThreshold: !<float> 3.000000
-      filterBasedOnIntent: false
   ScriptTypes:
     "":
       {}
@@ -6594,10 +6500,10 @@
     {}
   ScriptInputs:
     "":
-      ui: !<MappingBased.UI> be1a590a-20f3-4fd1-ad5e-c21930da45ce
-      tutorialController: !<MappingBased.TutorialController> bc7442c1-64a9-431c-8091-5127e0c3ea9c
-      pathMaker: !<MappingBased.PathMaker> a88aac47-91cd-4df2-85f9-a02cb889b514
-      pathWalker: !<MappingBased.PathWalker> c27cdde8-1a94-4608-950a-f0f50b7e2fce
+      ui: !<MappingBased.AssignableType> be1a590a-20f3-4fd1-ad5e-c21930da45ce
+      tutorialController: !<MappingBased.AssignableType_1> bc7442c1-64a9-431c-8091-5127e0c3ea9c
+      pathMaker: !<MappingBased.AssignableType_2> a88aac47-91cd-4df2-85f9-a02cb889b514
+      pathWalker: !<MappingBased.AssignableType_3> c27cdde8-1a94-4608-950a-f0f50b7e2fce
       camSo: !<reference.SceneObject> b03d8e1f-3173-4e63-8552-3d716f664184
   ScriptTypes:
     "":
@@ -7028,9 +6934,9 @@
       camObjOffset: !<reference.SceneObject> d8ac4151-64bb-465c-a31c-6fe0e8f2cab8
       pathDistText: !<reference.Text> 4f36d982-ff5a-4f37-91e7-01bd1c18f009
       finalPathDistText: !<reference.Text> b6069db6-75aa-4177-b1db-0b760c8ddc5c
-      playerPaceCalculator: !<MappingBased.PlayerPaceCalculator> 5adbe178-83a9-4c55-a616-79c81130b82b
-      pathmakingPlayerFeedback: !<MappingBased.PathmakingPlayerFeedback> 66cd6f03-5bc7-4b0b-9afc-0933edde5ea7
-      ui: !<MappingBased.UI> be1a590a-20f3-4fd1-ad5e-c21930da45ce
+      playerPaceCalculator: !<MappingBased.AssignableType> 5adbe178-83a9-4c55-a616-79c81130b82b
+      pathmakingPlayerFeedback: !<MappingBased.AssignableType_1> 66cd6f03-5bc7-4b0b-9afc-0933edde5ea7
+      ui: !<MappingBased.AssignableType_2> be1a590a-20f3-4fd1-ad5e-c21930da45ce
       placingStartFinishLinesForwardDisplace: !<float> 300.000000
   ScriptTypes:
     "":
@@ -7450,14 +7356,22 @@
   Enabled: true
   ScriptAsset: !<reference> 1ad7da86-2c32-418c-bdf1-b7150c07c912
   ScriptInputsDefault:
-    hoverAudioTrack: true
+    _playAudioOnHover: true
+    _hoverAudioTrack: true
+    _playAudioOnTriggerStart: true
+    _triggerStartAudioTrack: true
+    _playAudioOnTriggerEnd: true
+    _triggerEndAudioTrack: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      hoverAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
-      triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
-      triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
+      _playAudioOnHover: false
+      _hoverAudioTrack: !<reference.AudioTrackAsset> 97bf97ae-b2da-47d7-bde6-003f597fe888
+      _playAudioOnTriggerStart: true
+      _triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
+      _playAudioOnTriggerEnd: true
+      _triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
   ScriptTypes:
     "":
       {}
@@ -7949,7 +7863,7 @@
     {}
   ScriptInputs:
     "":
-      ui: !<MappingBased.UI> be1a590a-20f3-4fd1-ad5e-c21930da45ce
+      ui: !<MappingBased.AssignableType> be1a590a-20f3-4fd1-ad5e-c21930da45ce
   ScriptTypes:
     "":
       {}
@@ -8168,12 +8082,12 @@
       walkPathScreenHUD: !<reference.SceneObject> 75af1bac-9eab-476a-8b0f-c8f22d5d1e16
       averagePaceText: !<reference.Text> ce08c241-21b8-4e08-90f2-d454e5f357e8
       lapCountText: !<reference.Text> d7ddf4ca-ecb7-4265-8a50-155294db098a
-      timerScript: !<MappingBased.Timer> f37703f7-589c-4147-a7a8-82a4a39e43e2
-      uiScript: !<MappingBased.UI> be1a590a-20f3-4fd1-ad5e-c21930da45ce
-      progressBarController: !<MappingBased.ProgressBarController> 6ce66228-031e-4642-8d2e-4ac17ecb2f71
-      arrowSpawner: !<MappingBased.ArrowsSpawner> dbfd2cc8-ad34-4fb3-9d3f-eeba712abd1f
-      playerPaceCalulator: !<MappingBased.PlayerPaceCalculator> 5adbe178-83a9-4c55-a616-79c81130b82b
-      warningController: !<MappingBased.WarningController> 7c9f6f4b-a58c-44f2-a8b7-51fa125e6294
+      timerScript: !<MappingBased.AssignableType> f37703f7-589c-4147-a7a8-82a4a39e43e2
+      uiScript: !<MappingBased.AssignableType_1> be1a590a-20f3-4fd1-ad5e-c21930da45ce
+      progressBarController: !<MappingBased.AssignableType_2> 6ce66228-031e-4642-8d2e-4ac17ecb2f71
+      arrowSpawner: !<MappingBased.AssignableType_3> dbfd2cc8-ad34-4fb3-9d3f-eeba712abd1f
+      playerPaceCalulator: !<MappingBased.AssignableType_4> 5adbe178-83a9-4c55-a616-79c81130b82b
+      warningController: !<MappingBased.AssignableType_5> 7c9f6f4b-a58c-44f2-a8b7-51fa125e6294
       pathRmv: !<reference.RenderMeshVisual> b024c332-554a-40dc-85c5-def4d5d6ecea
   ScriptTypes:
     "":
@@ -8190,7 +8104,7 @@
     {}
   ScriptInputs:
     "":
-      interactable: !<MappingBased.Interactable> cde9accc-8e75-47c6-b908-ef689aec0df8
+      interactable: !<MappingBased.AssignableType> cde9accc-8e75-47c6-b908-ef689aec0df8
       rmv: !<reference.RenderMeshVisual> 828e7485-ac3d-4a6e-b752-960164bc149e
   ScriptTypes:
     "":
@@ -8691,6 +8605,12 @@
     targetingMode: true
     enableInstantDrag: true
     allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -8698,6 +8618,12 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -8711,6 +8637,12 @@
     targetingMode: true
     enableInstantDrag: true
     allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -8718,6 +8650,12 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -8829,7 +8767,7 @@
     {}
   ScriptInputs:
     "":
-      interactable: !<MappingBased.Interactable> 2ce764aa-19b0-4d43-a173-22fb77b5a634
+      interactable: !<MappingBased.AssignableType> 2ce764aa-19b0-4d43-a173-22fb77b5a634
       rmv: !<reference.RenderMeshVisual> 038b33d8-fcb7-4898-b5b7-0b6286deb3db
   ScriptTypes:
     "":
@@ -8841,14 +8779,22 @@
   Enabled: true
   ScriptAsset: !<reference> 1ad7da86-2c32-418c-bdf1-b7150c07c912
   ScriptInputsDefault:
-    hoverAudioTrack: true
+    _playAudioOnHover: true
+    _hoverAudioTrack: true
+    _playAudioOnTriggerStart: true
+    _triggerStartAudioTrack: true
+    _playAudioOnTriggerEnd: true
+    _triggerEndAudioTrack: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      hoverAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
-      triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
-      triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
+      _playAudioOnHover: false
+      _hoverAudioTrack: !<reference.AudioTrackAsset> 97bf97ae-b2da-47d7-bde6-003f597fe888
+      _playAudioOnTriggerStart: true
+      _triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
+      _playAudioOnTriggerEnd: true
+      _triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
   ScriptTypes:
     "":
       {}
@@ -9068,14 +9014,22 @@
   Enabled: true
   ScriptAsset: !<reference> 1ad7da86-2c32-418c-bdf1-b7150c07c912
   ScriptInputsDefault:
-    hoverAudioTrack: true
+    _playAudioOnHover: true
+    _hoverAudioTrack: true
+    _playAudioOnTriggerStart: true
+    _triggerStartAudioTrack: true
+    _playAudioOnTriggerEnd: true
+    _triggerEndAudioTrack: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      hoverAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
-      triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
-      triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
+      _playAudioOnHover: false
+      _hoverAudioTrack: !<reference.AudioTrackAsset> 97bf97ae-b2da-47d7-bde6-003f597fe888
+      _playAudioOnTriggerStart: true
+      _triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
+      _playAudioOnTriggerEnd: true
+      _triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
   ScriptTypes:
     "":
       {}
@@ -9192,14 +9146,22 @@
   Enabled: true
   ScriptAsset: !<reference> 1ad7da86-2c32-418c-bdf1-b7150c07c912
   ScriptInputsDefault:
-    hoverAudioTrack: true
+    _playAudioOnHover: true
+    _hoverAudioTrack: true
+    _playAudioOnTriggerStart: true
+    _triggerStartAudioTrack: true
+    _playAudioOnTriggerEnd: true
+    _triggerEndAudioTrack: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      hoverAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
-      triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
-      triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
+      _playAudioOnHover: false
+      _hoverAudioTrack: !<reference.AudioTrackAsset> 97bf97ae-b2da-47d7-bde6-003f597fe888
+      _playAudioOnTriggerStart: true
+      _triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
+      _playAudioOnTriggerEnd: true
+      _triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
   ScriptTypes:
     "":
       {}
@@ -9399,6 +9361,7 @@
   DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/df65a748-67a9-485a-a40d-8ab75e21ea6d>
   PrefabRemaps:
     []
@@ -9424,6 +9387,12 @@
     targetingMode: true
     enableInstantDrag: true
     allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -9431,6 +9400,12 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -9710,6 +9685,8 @@
     indirectTargetingVolumeMultiplier: true
     indirectDragThreshold: true
     mouseTargetingMode: true
+    moveInDepth: true
+    moveInDepthAmount: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -9728,6 +9705,8 @@
       indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 3.000000
       mouseTargetingMode: !<float> 2.000000
+      moveInDepth: false
+      moveInDepthAmount: !<float> 5.000000
   ScriptTypes:
     "":
       {}
@@ -9762,7 +9741,7 @@
     {}
   ScriptInputs:
     "":
-      interactable: !<MappingBased.Interactable> ccc758d8-9157-4977-beae-428536d0a69a
+      interactable: !<MappingBased.AssignableType> ccc758d8-9157-4977-beae-428536d0a69a
       rmv: !<reference.RenderMeshVisual> bb52ce9f-f480-4f8d-95cc-69eb81e2a19d
   ScriptTypes:
     "":
@@ -9796,6 +9775,12 @@
     targetingMode: true
     enableInstantDrag: true
     allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -9803,6 +9788,12 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -9880,14 +9871,16 @@
     pinkyMidJoint: true
     pinkyUpperJoint: true
     pinkyTip: true
-    occluderEnabled: true
+    hoverColor: true
+    triggerColor: true
+    behindColor: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handType: left
       selectVisual: Default
-      handInteractor: !<MappingBased.HandInteractor> 827a9639-fed2-440a-b177-186f1f8e47b9
+      handInteractor: !<MappingBased.AssignableType> 827a9639-fed2-440a-b177-186f1f8e47b9
       handMesh: !<reference.RenderMeshVisual> b676bbd3-0180-4193-a990-41f217532799
       root: !<reference.SceneObject> 87eeaa60-fc58-4bac-9bbb-8b8a04a0c159
       autoJointMapping: true
@@ -9920,14 +9913,12 @@
       shouldThumbPokeGlow: true
       unitPlaneMesh: !<reference.RenderMesh> a453f19f-0832-419f-bd8f-b3296b433b23
       tipGlowMaterial: !<reference.Material> 26460eea-cbec-488e-aefd-efde6c5d0085
-      idleColor: !<Vec4> {x: 1.000000, y: 0.686275, z: 0.000000, w: 1.000000}
-      pinchDownColor: !<Vec4> {x: 0.968627, y: 0.827451, z: 0.000000, w: 1.000000}
+      hoverColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      triggerColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      behindColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
       tapProximityThreshold: !<float> 8.000000
       pinchTexture: !<reference.Texture> 3391429c-5c74-4b5c-b9fc-4ad3ba30bda4
       tapTexture: !<reference.Texture> e33d2c7f-1d12-4250-92fb-433c25ce1923
-      occluderEnabled: false
-      occluderUnitPlaneMesh: !<reference.RenderMesh> a453f19f-0832-419f-bd8f-b3296b433b23
-      radialGradientOcclusionMaterial: !<reference.Material> af45ff34-c96f-42c2-8446-8282edf6dece
       handOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
       handOccluderMaterial: !<reference.Material> 5d5c762b-f0dd-4c06-b76f-bcb8f8fb525f
   ScriptTypes:
@@ -9990,14 +9981,22 @@
   Enabled: true
   ScriptAsset: !<reference> 1ad7da86-2c32-418c-bdf1-b7150c07c912
   ScriptInputsDefault:
-    hoverAudioTrack: true
+    _playAudioOnHover: true
+    _hoverAudioTrack: true
+    _playAudioOnTriggerStart: true
+    _triggerStartAudioTrack: true
+    _playAudioOnTriggerEnd: true
+    _triggerEndAudioTrack: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      hoverAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
-      triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
-      triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
+      _playAudioOnHover: false
+      _hoverAudioTrack: !<reference.AudioTrackAsset> 97bf97ae-b2da-47d7-bde6-003f597fe888
+      _playAudioOnTriggerStart: true
+      _triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
+      _playAudioOnTriggerEnd: true
+      _triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
   ScriptTypes:
     "":
       {}
@@ -10446,7 +10445,7 @@
     {}
   ScriptInputs:
     "":
-      interactable: !<MappingBased.Interactable> 2abcd21e-59ae-4a6e-8b60-cbf824882e76
+      interactable: !<MappingBased.AssignableType> 2abcd21e-59ae-4a6e-8b60-cbf824882e76
       rmv: !<reference.RenderMeshVisual> 860f59f1-e38f-4e67-bd35-7fa3e9f949a1
   ScriptTypes:
     "":

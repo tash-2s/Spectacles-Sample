@@ -45,14 +45,14 @@
       homeUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       duringPathCreationUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       goToStartUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      endSessionUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       goToStartUiDistance: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      endSessionUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       pfbLoopUi: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       backplateSo: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      tutorialUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      tutorialText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      tutorialAnimationPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
       warningTutorialUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tutorialUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tutorialAnimationPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
+      tutorialText: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -70,3 +70,6 @@
     - // @input Component.AnimationPlayer tutorialAnimationPlayer
     - // @input Component.Text tutorialText
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

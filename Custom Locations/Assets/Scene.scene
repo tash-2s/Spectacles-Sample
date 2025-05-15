@@ -58,6 +58,7 @@
   DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/0005641c-028d-459a-0000-000000014b4d>
   PrefabRemaps:
     []
@@ -2808,6 +2809,7 @@
       PlaybackSpeed: 1.000000
       Begin: 0.000000
       End: 102.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -2820,6 +2822,7 @@
       PlaybackSpeed: 1.000000
       Begin: 102.000000
       End: 198.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: true
       BlendMode: Default
@@ -4175,6 +4178,7 @@
       PlaybackSpeed: 1.000000
       Begin: 0.000000
       End: 320.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -4187,6 +4191,7 @@
       PlaybackSpeed: 1.000000
       Begin: 328.000000
       End: 344.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: true
       BlendMode: Default
@@ -4207,6 +4212,7 @@
       PlaybackSpeed: 1.000000
       Begin: 210.000000
       End: 350.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -4219,6 +4225,7 @@
       PlaybackSpeed: 1.000000
       Begin: 0.000000
       End: 150.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: true
       BlendMode: Default
@@ -4231,6 +4238,7 @@
       PlaybackSpeed: 1.000000
       Begin: 150.000000
       End: 210.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: true
       BlendMode: Default

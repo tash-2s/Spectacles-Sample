@@ -1,5 +1,5 @@
 - !<AssetImportMetadata/a09bdf3a-7f81-41b3-a2a5-d9f88aaeb1b6>
-  ImporterSettings: !<GltfImporterSettings/e01fe5fd-ec2a-470b-ba72-722d6680c74f>
+  ImporterSettings: !<GltfImporterSettings>
     ImportTangents: true
     ImportMorphTargetAnimation: false
     ConvertMetersToCentimeters: false
@@ -29,9 +29,9 @@
     {}
   DependentFiles:
     []
-  CompressionSettings: !<ComplexCompressionSettings/5e9d2437-db78-4b9d-809b-4dc87828511d>
+  CompressionSettings: !<ComplexCompressionSettings>
     Presets:
-      None Compression: !<SingleCompressionSettings/c56685e8-1f7d-4e21-a38e-b114fdc3e86f>
+      None Compression: !<SingleCompressionSettings>
         CompressorName: None
         CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
     ExtensionMappings:

@@ -1,5 +1,5 @@
 - !<AssetImportMetadata/6e85cbe4-f1c0-4bcc-a409-57876e73ab57>
-  ImporterSettings: !<FileMeshImporterSettings/b44d6d9f-ac0f-490a-882f-1daaffdf2ea7>
+  ImporterSettings: !<FileMeshImporterSettings>
     ModifiedVertexFormats:
       normal: Float
       position: Float
@@ -17,6 +17,6 @@
     {}
   DependentFiles:
     []
-  CompressionSettings: !<SingleCompressionSettings/62c533ff-e0c5-4492-b371-149944fb57e1>
+  CompressionSettings: !<SingleCompressionSettings>
     CompressorName: None
     CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

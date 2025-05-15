@@ -3,7 +3,7 @@ import {ValueControl} from "../SharedControls/ValueControl/ValueControl"
 import {ValueControlInput} from "../SharedControls/ValueControl/ValueControlInput"
 import {ColorControlInput} from "../SharedControls/ColorControl/ColorControlInput"
 import {DataSynchronizationController} from "../SharedControls/SyncControls/DataSynchronizationController"
-import {SessionController} from "../../../SpectaclesSyncKit/Core/SessionController"
+import {SessionController} from "SpectaclesSyncKit.lspkg/Core/SessionController"
 
 // The EntryPointMain class is responsible for initializing and managing color and value controls,
 // as well as synchronizing data between these controls in an interactive scene environment.

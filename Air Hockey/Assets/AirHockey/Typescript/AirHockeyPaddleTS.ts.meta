@@ -11,7 +11,7 @@
     TypeScriptAsset: !<own> ea82fcd1-5591-455a-abf1-3e40167fce8d
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/1feb6b37-19c3-43d0-9258-a43e8f278bc8>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/ea82fcd1-5591-455a-abf1-3e40167fce8d>
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 836862bf-1fdb-4c12-9f75-af6f5875ef5c
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -36,3 +36,7 @@
       {}
   InputLines:
     - // @input Component.ScriptComponent controllerJS
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

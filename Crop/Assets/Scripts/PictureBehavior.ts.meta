@@ -11,7 +11,7 @@
     TypeScriptAsset: !<own> 9319cdc2-66cd-4cfb-b528-c409882fa752
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/bdf934ca-eb23-4f4c-b867-f299115e0e6c>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/9319cdc2-66cd-4cfb-b528-c409882fa752>
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: c57e2c66-ec58-491d-93d3-e5d82d20027d
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -40,14 +40,14 @@
   DefaultScriptInputs:
     - circleObjs: !<reference.SceneObject[]>
         []
+      editorCamObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       picAnchorObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      loadingObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       captureRendMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
       screenCropTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
-      editorCamObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      cropRegion: !<MappingBased.CropRegion> 00000000-0000-0000-0000-000000000000
-      chatGPT: !<MappingBased.ChatGPT> 00000000-0000-0000-0000-000000000000
-      caption: !<MappingBased.CaptionBehavior> 00000000-0000-0000-0000-000000000000
-      loadingObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cropRegion: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      chatGPT: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      caption: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -58,6 +58,10 @@
     - // @input SceneObject loadingObj
     - // @input Component.RenderMeshVisual captureRendMesh
     - // @input Asset.Texture screenCropTexture
-    - // @input CropRegion cropRegion
-    - // @input ChatGPT chatGPT
-    - // @input CaptionBehavior caption
+    - // @input AssignableType cropRegion
+    - // @input AssignableType_1 chatGPT
+    - // @input AssignableType_2 caption
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

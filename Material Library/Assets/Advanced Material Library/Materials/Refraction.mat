@@ -4,7 +4,15 @@
     - !<own> f25d19cc-8327-4df8-ab22-4faabaa7a53a
 - !<PassInfo/f25d19cc-8327-4df8-ab22-4faabaa7a53a>
   CachedProperties:
-    []
+    - backgroundBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - backgroundDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - backgroundUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -64,21 +72,12 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
           mipmaps: true
         type: Texture2D
-    backgroundBorderColor:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    backgroundDims:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     backgroundTransform:
       typeIdx: 7
       value:
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    backgroundUvMinMax:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     chromaticAberration:
       typeIdx: 1
       value: 0.300000

@@ -499,6 +499,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
     - !<AnimationClip>
       AnimationAsset: !<reference> d2c49cf4-4b69-463d-aba6-68a9aac8e599
       Name: SLEEP
@@ -511,6 +512,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
     - !<AnimationClip>
       AnimationAsset: !<reference> d2c49cf4-4b69-463d-aba6-68a9aac8e599
       Name: STAND_UP
@@ -523,6 +525,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
 - !<SceneObject/5c62bdce-b84c-469c-a668-4819e6fe9da9>
   PrefabRemaps:
     []

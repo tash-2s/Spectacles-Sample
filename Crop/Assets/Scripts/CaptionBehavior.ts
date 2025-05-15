@@ -1,4 +1,4 @@
-import animate, { CancelSet } from "SpectaclesInteractionKit/Utils/animate";
+import animate, { CancelSet } from "SpectaclesInteractionKit.lspkg/Utils/animate";
 
 @component
 export class CaptionBehavior extends BaseScriptComponent {

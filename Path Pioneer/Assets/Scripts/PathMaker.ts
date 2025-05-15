@@ -5,7 +5,7 @@ import { PlacingStartState } from "./PathMakerStates/PlacingStartState";
 import { BuildingPathState } from "./PathMakerStates/BuildingPathState";
 import { PlacingFinishState } from "./PathMakerStates/PlacingFinishState";
 import { UI } from "./UI";
-import Event, { PublicApi } from "../SpectaclesInteractionKit/Utils/Event";
+import Event, { PublicApi } from "SpectaclesInteractionKit.lspkg/Utils/Event";
 import { PathData } from "./BuiltPathData";
 import { SurfaceDetection } from "../Surface Detection/Scripts/SurfaceDetection";
 import { PathmakingPlayerFeedback } from "./PathmakingPlayerFeedback";

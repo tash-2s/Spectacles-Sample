@@ -15,6 +15,7 @@
     - !<own> b80962cc-ccd1-4cc0-9feb-084c32d810b2
     - !<own> 6e1aa030-6c05-49ee-8d16-e900e610d5b2
     - !<own> 4bb4e8a3-2b28-43c8-b2b1-6443963a95c4
+    - !<own> 53acad93-7e78-4eb3-bacb-7e9844601f4e
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -393,7 +394,7 @@
   PrefabRemaps:
     []
   Name: LineA
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: -10.000000, y: 10.000000, z: 0.000000}
@@ -604,7 +605,7 @@
   PrefabRemaps:
     []
   Name: AccessCustomComponentsUsingTypeNameTS
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -634,7 +635,7 @@
   PrefabRemaps:
     []
   Name: CircleAreaInstantiatorTS
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -802,6 +803,82 @@
   ScriptTypes:
     "":
       {}
+- !<Text/0555f4d5-c3b3-464e-98dc-7545f1febc24>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: Text
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 48
+  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  DepthTest: false
+  TwoSided: false
 - !<SceneObject/0592e71b-c03d-4b61-80dc-84ded448c65f>
   PrefabRemaps:
     []
@@ -1445,7 +1522,7 @@
   PrefabRemaps:
     []
   Name: ClosedPolylineManager
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1847,7 +1924,7 @@
   PrefabRemaps:
     []
   Name: LineManager
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2530,6 +2607,23 @@
   ScriptTypes:
     "":
       {}
+- !<ScriptComponent/1bafd62b-88f0-4d98-a6c8-68e7332e921f>
+  PrefabRemaps:
+    []
+  Name: LeaderboardExample
+  Enabled: true
+  ScriptAsset: !<reference> e50da608-f9b6-4afd-ace9-9a8e23195612
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      leaderboardModule: !<reference.LeaderboardModule> 5c2f8419-8b4a-46d5-a6e4-d20798b1d969
+      textLogs: !<reference.Text> 0555f4d5-c3b3-464e-98dc-7545f1febc24
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/1bf67e10-b805-46c4-bb7d-7806c4b1c61f>
   PrefabRemaps:
     []
@@ -2577,7 +2671,7 @@
   PrefabRemaps:
     []
   Name: CustomComponentTS
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2669,7 +2763,7 @@
   PrefabRemaps:
     []
   Name: HookUpButtonsEventsTS
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3037,7 +3131,7 @@
   PrefabRemaps:
     []
   Name: InstantiateOn3DGridsTS
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3540,7 +3634,7 @@
   PrefabRemaps:
     []
   Name: "[DistanceEvents]"
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3859,6 +3953,21 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: true
+- !<SceneObject/373a6265-93df-4325-8a94-ead841c71693>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0555f4d5-c3b3-464e-98dc-7545f1febc24
 - !<SceneObject/37a40354-1d54-433b-99ad-57dd221c0fdb>
   PrefabRemaps:
     []
@@ -4999,7 +5108,7 @@
   PrefabRemaps:
     []
   Name: InstantiateAlongLineTS
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -5014,7 +5123,7 @@
   PrefabRemaps:
     []
   Name: LineD
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: -10.000000, y: -10.000000, z: 0.000000}
@@ -5448,6 +5557,22 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/53acad93-7e78-4eb3-bacb-7e9844601f4e>
+  PrefabRemaps:
+    []
+  Name: "[Leaderboard]"
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> a1d64ae2-ecf7-4413-9d29-430af85593cf
+    - !<own> 373a6265-93df-4325-8a94-ead841c71693
+  Components:
+    []
 - !<SceneObject/54c6180b-91ff-4d08-9c8d-56a59b808a67>
   PrefabRemaps:
     []
@@ -6223,7 +6348,7 @@
   PrefabRemaps:
     []
   Name: LineC
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 10.000000, y: -10.000000, z: 0.000000}
@@ -6889,7 +7014,7 @@
   PrefabRemaps:
     []
   Name: SnapToPlaneTS
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -7084,7 +7209,7 @@
   PrefabRemaps:
     []
   Name: SceneObject
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -8727,7 +8852,7 @@
   PrefabRemaps:
     []
   Name: "[DotProduct]"
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -9883,7 +10008,7 @@
   PrefabRemaps:
     []
   Name: AccessComponentOnSceneObjectTS
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -10709,6 +10834,21 @@
     - !<own> ab04e076-49bf-4335-8c2a-56aef2c4a0f0
   Components:
     []
+- !<SceneObject/a1d64ae2-ecf7-4413-9d29-430af85593cf>
+  PrefabRemaps:
+    []
+  Name: LeaderboardExample
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -100.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1bafd62b-88f0-4d98-a6c8-68e7332e921f
 - !<ScriptComponent/a23f43c7-b370-45fb-8dbd-57fc67194673>
   PrefabRemaps:
     []
@@ -10783,7 +10923,7 @@
   PrefabRemaps:
     []
   Name: LineB
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 10.000000, y: 10.000000, z: 0.000000}
@@ -12193,8 +12333,6 @@
   Enabled: true
   ScriptAsset: !<reference> 23b8201f-6b52-4718-b1dd-dc0d7b3821cb
   ScriptInputsDefault:
-    gridWidth: true
-    gridHeight: true
     zPosition: true
   ScriptTypesDefault:
     {}
@@ -12202,10 +12340,10 @@
     "":
       prefab: !<reference.ObjectPrefab> d6b9ce71-b4ae-4827-8134-77b317b35bc8
       gridCenter: !<reference.SceneObject> c791ae07-e146-4c6c-bf81-b9fb3b038dc9
-      gridWidth: !<float> 5.000000
-      gridHeight: !<float> 5.000000
-      spacingX: !<float> 10.000000
-      spacingY: !<float> 10.000000
+      gridWidth: !<float> 10.000000
+      gridHeight: !<float> 10.000000
+      spacingX: !<float> 50.000000
+      spacingY: !<float> 50.000000
       zPosition: !<float> 0.000000
   ScriptTypes:
     "":
@@ -12249,7 +12387,7 @@
   PrefabRemaps:
     []
   Name: AccessJSfromJS_ComponentB
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -12558,7 +12696,7 @@
       initialSpeed: !<float> 400.000000
       gravityStrength: 9.800000
       dragFactor: 0.010000
-      projectile: !<reference.ObjectPrefab> d20e8713-f3a9-4017-8108-e186de6e43a1
+      projectile: !<reference.ObjectPrefab> 271f8e3a-f6cb-487e-93de-b9c470990307
       shootingRayStart: !<reference.SceneObject> 6450fac2-0a30-4eef-9cb1-3b5f0e5cfb4e
       shootingRayEnd: !<reference.SceneObject> 049d8f1d-f15d-49e8-9e7b-93ea64d33625
       lineA: !<reference.SceneObject> d9b10dbb-5580-419e-810a-2893c8c8628b
@@ -13058,7 +13196,7 @@
   PrefabRemaps:
     []
   Name: InstantiateAlongLineWithFixedDistanceTS
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -13624,7 +13762,7 @@
   PrefabRemaps:
     []
   Name: CircleSlicingInstantiatorTS
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -13781,9 +13919,9 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: -100.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 10.000000, y: 10.000000, z: 1.000000}
+    scale: {x: 5.000000, y: 5.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -14434,7 +14572,7 @@
   PrefabRemaps:
     []
   Name: LineEnds
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 10.000000, y: 0.000000, z: 0.000000}
@@ -15172,8 +15310,8 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 74593720-b17b-40b6-a26b-a8a406a20db5
-  Mesh: !<reference> f3cc8afc-cb20-4193-bb1a-39f896f0cd9a
+    - !<reference> b19b2f52-20f2-49a3-9944-dcba06cf46b7
+  Mesh: !<reference> a6edb985-1efb-4139-88cc-02c94a21e75a
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
@@ -15444,7 +15582,7 @@
   PrefabRemaps:
     []
   Name: AccessJSfromJS_ComponentA
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -15466,7 +15604,6 @@
     horizontalDistanceFromTarget: true
     reorientDuringTargetRotation: true
     flattenDuringTargetRotation: true
-    lerpSpeed: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -15477,7 +15614,7 @@
       reorientDuringTargetRotation: true
       flattenDuringTargetRotation: true
       offset: !<Vec3> {x: 0.000000, y: 0.000000, z: -100.000000}
-      lerpSpeed: !<float> 5.000000
+      lerpSpeed: !<float> 1.000000
   ScriptTypes:
     "":
       {}
@@ -15553,7 +15690,7 @@
   PrefabRemaps:
     []
   Name: HookUpButtonsEventsJS
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}

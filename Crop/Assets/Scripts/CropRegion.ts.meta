@@ -11,7 +11,7 @@
     TypeScriptAsset: !<own> 077ef33a-a314-4c14-bfed-0237eddf26ef
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/d2d89d7f-e842-4796-ad45-9cc45c1a7bd2>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/077ef33a-a314-4c14-bfed-0237eddf26ef>
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 639b0802-2bb1-44a5-9a35-a0584cbc92d2
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -32,14 +32,18 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - screenCropTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+    - cameraService: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      screenCropTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
       pointsToTrack: !<reference.SceneObject[]>
         []
-      cameraService: !<MappingBased.CameraService> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input CameraService cameraService
+    - // @input AssignableType cameraService
     - // @input Asset.Texture screenCropTexture
     - "// @input SceneObject[] pointsToTrack"
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

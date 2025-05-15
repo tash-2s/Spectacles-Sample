@@ -8,6 +8,7 @@ Cache/**
 PluginsUserPreferences/**
 Support/**
 BackUp/**
+Workspaces/**
 .vscode/
 /jsconfig.json
 /tsconfig.json

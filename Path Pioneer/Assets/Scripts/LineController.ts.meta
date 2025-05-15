@@ -46,6 +46,8 @@
     {}
   DefaultScriptInputs:
     - visualSo: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      startVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      finishVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       countdownSo: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       countdownSoArray: !<reference.SceneObject[]>
         []
@@ -55,13 +57,11 @@
       realVisualsParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       hintVisualsParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       startLineTurnArrow: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      startVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      finishVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       finishLineTurnArrow: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       hintStartVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       hintFinishVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      pathCollisionEvents: !<MappingBased.PathCollisionEvents> 00000000-0000-0000-0000-000000000000
-      pathWalker: !<MappingBased.PathWalker> 00000000-0000-0000-0000-000000000000
+      pathCollisionEvents: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      pathWalker: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -80,6 +80,9 @@
     - // @input SceneObject finishLineTurnArrow
     - // @input SceneObject hintStartVisual
     - // @input SceneObject hintFinishVisual
-    - // @input PathCollisionEvents pathCollisionEvents
-    - // @input PathWalker pathWalker
+    - // @input AssignableType pathCollisionEvents
+    - // @input AssignableType_1 pathWalker
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

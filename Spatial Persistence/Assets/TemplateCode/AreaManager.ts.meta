@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> 17a4b436-8494-4892-a719-0e8e539b72cd
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/1667f6d7-2be3-4f98-a22d-3ed8ef4f0e8f>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 931e24fa-a7df-4dea-8a39-eef37bd1dff8
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -37,25 +37,28 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - widgetPrefabs: !<reference.ObjectPrefab[]>
-        []
-      areaPromptButton: !<MappingBased.AreaPromptButton> 00000000-0000-0000-0000-000000000000
-      areaSelectionMenu: !<MappingBased.AreaSelectionMenu> 00000000-0000-0000-0000-000000000000
+    - widgetSelectionUI: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      lockWidgetButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      areaPromptButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      areaSelectionMenu: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      toggleMenuButton: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
       widgetParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      widgetSelectionUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      lockWidgetButton: !<MappingBased.LockWidgetButton> 00000000-0000-0000-0000-000000000000
+      widgetPrefabs: !<reference.ObjectPrefab[]>
+        []
       instructionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      areaDeleteButton: !<MappingBased.AreaDeleteButton> 00000000-0000-0000-0000-000000000000
-      toggleMenuButton: !<MappingBased.ToggleMenuButton> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input WidgetSelectionUI widgetSelectionUI
-    - // @input LockWidgetButton lockWidgetButton
-    - // @input AreaPromptButton areaPromptButton
-    - // @input AreaSelectionMenu areaSelectionMenu
-    - // @input ToggleMenuButton toggleMenuButton
+    - // @input AssignableType widgetSelectionUI
+    - // @input AssignableType_1 lockWidgetButton
+    - // @input AssignableType_2 areaPromptButton
+    - // @input AssignableType_3 areaSelectionMenu
+    - // @input AssignableType_4 toggleMenuButton
     - // @input SceneObject widgetParent
     - "// @input Asset.ObjectPrefab[] widgetPrefabs"
     - // @input Component.Text instructionText
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

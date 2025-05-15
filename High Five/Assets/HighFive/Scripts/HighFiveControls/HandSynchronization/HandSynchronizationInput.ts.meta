@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> 2b9a57ac-5e88-406b-b3a6-c01f632ad530
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/d4a7ed0a-befc-4ad4-a772-ed63ee084f99>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: d6537579-6419-4f42-a288-5d6bfd1a7085
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -36,3 +36,7 @@
       {}
   InputLines:
     - // @input SceneObject box
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

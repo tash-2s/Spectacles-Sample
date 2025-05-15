@@ -8,7 +8,7 @@ cameraType:
   options: 4
 deviceType:
   type: string
-  value: Spectacles
+  value: Unknown
   options: 4
 frameRate:
   type: int
@@ -24,11 +24,11 @@ fullscreenSpectaclesSimulation:
   options: 4
 lastPosition:
   type: vec3
-  value: {x: -3.000000, y: 0.000000, z: 57.000000}
+  value: {x: 0.000000, y: 0.000000, z: 122.349991}
   options: 4
 lastRotation:
   type: vec3
-  value: {x: 0.000000, y: 0.000000, z: 0.000000}
+  value: {x: 0.000000, y: -0.000000, z: 0.000000}
   options: 4
 mirrorHorizontally:
   type: bool
@@ -36,7 +36,11 @@ mirrorHorizontally:
   options: 4
 previewSource:
   type: string
-  value: /Applications/Lens Studio Public 5.7.2.app/Contents/MacOS/../Resources/InteractiveResources.bundle/Scenes/Sunlit Room
+  value: InteractiveResources.bundle/Scenes/Sunlit Room
+  options: 4
+previewTarget:
+  type: int
+  value: 0
   options: 4
 previewType:
   type: string
@@ -56,9 +60,13 @@ resolutionScale:
   options: 4
 simulatedDevice:
   type: string
-  value: No Simulation
+  value: Spectacles (2024)
   options: 4
 stereoEye:
   type: string
   value: Center
+  options: 4
+uiMode:
+  type: int
+  value: 0
   options: 4

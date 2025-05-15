@@ -34,7 +34,7 @@
     SpatialImage: false
   DefaultScriptInputs:
     - spatializer: !<Typename.SpatialImage> 00000000-0000-0000-0000-000000000000
-      angleValidator: !<MappingBased.SpatialImageAngleValidator> 00000000-0000-0000-0000-000000000000
+      angleValidator: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       animateSpeed: 0.500000
       minDepth: 0.050000
   ScriptTypes:
@@ -42,7 +42,10 @@
   InputLines:
     - // @typename SpatialImage
     - // @input SpatialImage spatializer
-    - // @input SpatialImageAngleValidator angleValidator
+    - // @input AssignableType angleValidator
     - // @input float animateSpeed = 0.5
     - // @input float minDepth = 0.05
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

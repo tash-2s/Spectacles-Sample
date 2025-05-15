@@ -34,18 +34,21 @@
   ScriptTypesHidden:
     SpatialImage: false
   DefaultScriptInputs:
-    - container: !<MappingBased.ContainerFrame> 00000000-0000-0000-0000-000000000000
-      imageTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
-      spatializer: !<reference.SpatialImage> 00000000-0000-0000-0000-000000000000
-      spatialImageSwapper: !<MappingBased.SpatialImageSwapper> 00000000-0000-0000-0000-000000000000
+    - container: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      spatializer: !<Typename.SpatialImage> 00000000-0000-0000-0000-000000000000
+      spatialImageSwapper: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       camera: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      imageTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     - SpatialImage: !<reference.ScriptAsset> 00000000-0000-0000-0000-000000000000
   InputLines:
     - // @typename SpatialImage
-    - // @input ContainerFrame container
+    - // @input AssignableType container
     - // @input SpatialImage spatializer
-    - // @input SpatialImageSwapper spatialImageSwapper
+    - // @input AssignableType_1 spatialImageSwapper
     - // @input SceneObject camera
     - // @input Asset.Texture imageTexture
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

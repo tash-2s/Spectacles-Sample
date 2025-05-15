@@ -3,7 +3,7 @@ import {HandSynchronization} from "../HighFiveControls/HandSynchronization/HandS
 import {DataSynchronizationController} from "../HighFiveControls/SyncControls/DataSynchronizationController"
 import {HighFiveControllerInput} from "../HighFiveControls/HighFiveController/HighFiveControllerInput"
 import {HighFiveController} from "../HighFiveControls/HighFiveController/HighFiveController"
-import {SessionController} from "../../../SpectaclesSyncKit/Core/SessionController"
+import {SessionController} from "SpectaclesSyncKit.lspkg/Core/SessionController"
 
 // The EntryPointMain class serves as the main entry point for
 // initializing and start the synchronization and interaction processes

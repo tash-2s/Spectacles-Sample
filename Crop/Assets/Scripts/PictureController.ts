@@ -1,4 +1,4 @@
-import { SIK } from "SpectaclesInteractionKit/SIK";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
 
 @component
 export class PictureController extends BaseScriptComponent {

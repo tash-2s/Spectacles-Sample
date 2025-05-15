@@ -1,4 +1,4 @@
-import { ContainerFrame } from "SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame"
+import { ContainerFrame } from "SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/ContainerFrame"
 
 /**
  * Tracks the users point of view and emits events on whether they are viewing

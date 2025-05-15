@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> c2465131-3814-4d46-9dff-18691877afc3
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/08e7976f-1b95-4c0c-bdc2-b905bb3e7474>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 70ff6c0d-9ad7-4221-b6d0-cb0dc27493af
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -31,11 +31,15 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - colorControlInput: !<MappingBased.ColorControlInput> 00000000-0000-0000-0000-000000000000
-      valueControlInput: !<MappingBased.ValueControlInput> 00000000-0000-0000-0000-000000000000
+    - colorControlInput: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      valueControlInput: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input ColorControlInput colorControlInput
-    - // @input ValueControlInput valueControlInput
+    - // @input AssignableType colorControlInput
+    - // @input AssignableType_1 valueControlInput
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

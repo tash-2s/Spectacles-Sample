@@ -1,4 +1,4 @@
-import Event from "../SpectaclesInteractionKit/Utils/Event";
+import Event from "SpectaclesInteractionKit.lspkg/Utils/Event";
 import {Conversions} from "./Conversions";
 import { LoopController } from "./LoopController";
 

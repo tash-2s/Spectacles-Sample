@@ -1,4 +1,4 @@
-import WorldCameraFinderProvider from "../../../SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider";
+import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider";
 
 export enum CameraType {
   Main = 0 ,

@@ -1,4 +1,4 @@
-import { Billboard } from "../../../SpectaclesInteractionKit/Components/Interaction/Billboard/Billboard";
+import { Billboard } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Billboard/Billboard";
 import { ClosedPolyline } from "./ClosedPolyline";
 
 @component

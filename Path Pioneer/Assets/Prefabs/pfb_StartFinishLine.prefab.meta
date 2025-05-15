@@ -138,8 +138,8 @@
       finishLineTurnArrow: !<reference.SceneObject> e1084635-a7c6-4399-8aac-c304be12363a
       hintStartVisual: !<reference.SceneObject> ad74dadf-dbfd-4edd-b973-963ceb72dc4c
       hintFinishVisual: !<reference.SceneObject> 09b51bed-b831-408d-a925-e9d013476409
-      pathCollisionEvents: !<MappingBased.PathCollisionEvents> 5ddfc16b-56bd-4a5e-b0fa-02334b5d7604
-      pathWalker: !<MappingBased.PathWalker> c27cdde8-1a94-4608-950a-f0f50b7e2fce
+      pathCollisionEvents: !<MappingBased.AssignableType> 5ddfc16b-56bd-4a5e-b0fa-02334b5d7604
+      pathWalker: !<MappingBased.AssignableType_1> c27cdde8-1a94-4608-950a-f0f50b7e2fce
   ScriptTypes:
     "":
       {}
@@ -561,6 +561,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/814cea98-0c2a-4d6f-8aec-9b04e42e45b2>
   PrefabRemaps:
     []
@@ -648,6 +649,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<ObjectPrefabAssetData/9a2e4774-b31a-47b7-aee5-929844722dd1>
   SourceRemaps:
     - 08760688-d1af-4294-b045-ba600d6bf95d: d2478d0a-12e1-47eb-b7b2-ee270d2457a1
@@ -858,6 +860,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<RenderMeshVisual/d15f9bec-f450-47b1-8005-b5a4cd2de406>
   PrefabRemaps:
     []
@@ -976,6 +979,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<Text3D/dc5cd7e2-a365-4226-8340-ebf0987fca7e>
   PrefabRemaps:
     []
@@ -1013,6 +1017,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<ObjectPrefab/e06f0744-1916-4cac-a133-101560dd782c>
   PackagePath: ""
   objects:
@@ -1152,6 +1157,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<ScreenTransform/efb4c942-92b8-4fb5-99b3-b06deb8f86ee>
   PrefabRemaps:
     []
@@ -1273,6 +1279,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<Text3D/f69bd493-e12d-47ed-9356-e5adc8674ced>
   PrefabRemaps:
     []
@@ -1308,6 +1315,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/ff0a12e7-083e-430a-9006-a2eb25e74734>
   PrefabRemaps:
     []

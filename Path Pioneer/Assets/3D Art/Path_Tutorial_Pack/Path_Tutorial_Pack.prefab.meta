@@ -164,6 +164,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
     - !<AnimationClip>
       AnimationAsset: !<reference> 8c981457-b7d6-4c26-934a-cae4f7db8b1d
       Name: Sprint_Layer
@@ -176,6 +177,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
     - !<AnimationClip>
       AnimationAsset: !<reference> 8c981457-b7d6-4c26-934a-cae4f7db8b1d
       Name: Loop_Layer
@@ -188,6 +190,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
 - !<SceneObject/17a4c5bc-d52e-40eb-b8a5-2d496e1a823f>
   PrefabRemaps:
     []

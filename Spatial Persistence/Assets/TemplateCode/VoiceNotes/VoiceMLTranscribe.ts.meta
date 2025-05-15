@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> d3e17f54-2a9d-4034-8439-f55503b0f9da
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/c46ad9c1-36cd-468a-9164-5d54c4e2a057>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 2093696f-e33c-4d5f-8f50-5ee758889b38
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -36,3 +36,7 @@
       {}
   InputLines:
     - // @input Asset.VoiceMLModule voiceMLModule
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

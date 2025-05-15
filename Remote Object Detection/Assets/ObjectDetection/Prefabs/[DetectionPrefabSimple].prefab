@@ -43,8 +43,8 @@
     "":
       categoryAndConfidence: !<reference.Text> a79210c6-017f-4e26-a2b7-ea4355485e85
       distanceFromCamera: !<reference.Text> b98573a7-b1b3-4bc6-aef1-bb6971a798cc
-      polyline: !<MappingBased.ClosedPolyline> d7897c4a-5d62-4e77-8ea2-bc052a3811bb
-      billboard: !<MappingBased.Billboard> 1ff6ed0b-30ae-42fd-9cdf-548d261137c4
+      polyline: !<MappingBased.AssignableType> d7897c4a-5d62-4e77-8ea2-bc052a3811bb
+      billboard: !<MappingBased.AssignableType_1> 1ff6ed0b-30ae-42fd-9cdf-548d261137c4
       polylinePoints: !<reference.SceneObject[]>
         []
   ScriptTypes:

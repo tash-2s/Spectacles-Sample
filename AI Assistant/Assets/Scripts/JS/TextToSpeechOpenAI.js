@@ -3,8 +3,7 @@
 // @input string voice {"hint":"Available voices: alloy, echo, fable, onyx, nova, shimmer"}
 
 // Remote service module for fetching data
-var remoteServiceModule = require("LensStudio:RemoteServiceModule");
-
+var internetModule = require("LensStudio:InternetModule");
 const apiKey = "Insert your Open AI Key";
 
 // Make generateAndPlaySpeech globally accessible
@@ -33,7 +32,7 @@ script.api.generateAndPlaySpeech = async function(inputText) {
 
         print("Sending request to OpenAI...");
         
-        let response = await remoteServiceModule.fetch(request);
+        let response = await internetServiceModule.fetch(request);
         print("Response status: " + response.status);
 
         if (response.status === 200) {
@@ -107,7 +106,7 @@ function getAudioTrackFromData(audioData) {
 }
 
 script.createEvent("OnStartEvent").bind(() => {
-    if (!remoteServiceModule || !script.audioComponent || !apiKey) {
+    if (!internetServiceModule || !script.audioComponent || !apiKey) {
         print("Remote Service Module, Audio Component, or API key is missing.");
         return;
     }

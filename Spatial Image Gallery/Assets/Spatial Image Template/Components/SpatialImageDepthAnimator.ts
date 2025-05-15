@@ -1,4 +1,4 @@
-import { easingFunctions } from "SpectaclesInteractionKit/Utils/animate"
+import { easingFunctions } from "SpectaclesInteractionKit.lspkg/Utils/animate"
 import { SpatialImageAngleValidator } from "./SpatialImageAngleValidator"
 
 /**

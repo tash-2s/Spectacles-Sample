@@ -11,7 +11,7 @@
     TypeScriptAsset: !<own> ce18e91a-07df-4b3a-b35d-e6d85b1fe9fc
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/dc519045-e59b-416f-88c3-0a97ec235d55>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/ce18e91a-07df-4b3a-b35d-e6d85b1fe9fc>
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: d7507ba8-9b99-477b-b9ff-b6e851328e9b
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -30,9 +30,13 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - microphoneRecorder: !<MappingBased.MicrophoneRecorder> 00000000-0000-0000-0000-000000000000
+    - microphoneRecorder: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input MicrophoneRecorder microphoneRecorder
+    - // @input AssignableType microphoneRecorder
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

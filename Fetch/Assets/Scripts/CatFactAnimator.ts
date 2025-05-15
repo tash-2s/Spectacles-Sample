@@ -1,7 +1,7 @@
-import Easing from "LSTween/TweenJS/Easing";
+import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { FetchCatFacts } from "./FetchCatFacts";
-import { Interactable } from "SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import { LSTween } from "LSTween/LSTween";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import { LSTween } from "LSTween.lspkg/LSTween";
 
 const TEXT_NO_INTERNET = "Purr... I can't share my secrets without internet!";
 const TEXT_SLEEPING =

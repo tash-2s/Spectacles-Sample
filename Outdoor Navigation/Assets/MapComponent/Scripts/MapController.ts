@@ -1,10 +1,10 @@
 require("LensStudio:RawLocationModule");
 
-import { CancelFunction } from "../../SpectaclesInteractionKit/Utils/animate";
-import Event, { callback } from "../../SpectaclesInteractionKit/Utils/Event";
-import { LensConfig } from "../../SpectaclesInteractionKit/Utils/LensConfig";
-import NativeLogger from "../../SpectaclesInteractionKit/Utils/NativeLogger";
-import { UpdateDispatcher } from "../../SpectaclesInteractionKit/Utils/UpdateDispatcher";
+import { CancelFunction } from "SpectaclesInteractionKit.lspkg/Utils/animate";
+import Event, { callback } from "SpectaclesInteractionKit.lspkg/Utils/Event";
+import { LensConfig } from "SpectaclesInteractionKit.lspkg/Utils/LensConfig";
+import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
+import { UpdateDispatcher } from "SpectaclesInteractionKit.lspkg/Utils/UpdateDispatcher";
 import { Cell, TileViewEvent } from "./Cell";
 import MapConfig from "./MapConfig";
 import { MapGridView } from "./MapGridView";

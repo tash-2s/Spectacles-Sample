@@ -36,17 +36,20 @@
   DefaultScriptInputs:
     - categoryAndConfidence: !<reference.Text> 00000000-0000-0000-0000-000000000000
       distanceFromCamera: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      polyline: !<MappingBased.ClosedPolyline> 00000000-0000-0000-0000-000000000000
+      polyline: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      billboard: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       polylinePoints: !<reference.SceneObject[]>
         []
-      billboard: !<MappingBased.Billboard> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Component.Text categoryAndConfidence
     - // @input Component.Text distanceFromCamera
-    - // @input ClosedPolyline polyline
-    - // @input Billboard billboard
+    - // @input AssignableType polyline
+    - // @input AssignableType_1 billboard
     - "// @input SceneObject[] polylinePoints"
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

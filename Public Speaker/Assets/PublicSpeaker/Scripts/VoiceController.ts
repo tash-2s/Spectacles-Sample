@@ -1,4 +1,4 @@
-import NativeLogger from "../../SpectaclesInteractionKit/Utils/NativeLogger";
+import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
 import { PresentationSwitcher } from "./PresentationSwitcher";
 import { GoogleSlideBridge } from "./GoogleSlideBridge";
 

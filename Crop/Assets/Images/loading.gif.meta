@@ -11,7 +11,7 @@
     AnimatedTexture: !<own> b29a39f1-3715-4cbe-af0f-dea83c3426e7
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/4e437b46-3d00-4fc1-bee0-134a7a6181ff>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<AnimatedTextureData/b29a39f1-3715-4cbe-af0f-dea83c3426e7>

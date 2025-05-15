@@ -1,6 +1,6 @@
-import { Interactable } from "../../SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import { ToggleButton } from "../../SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton";
-import { SIK } from "../../SpectaclesInteractionKit/SIK";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
+import { ToggleButton } from "SpectaclesInteractionKit.lspkg/Components/UI/ToggleButton/ToggleButton";
 import { TransformFollower } from "./TransformFollower";
 
 /**

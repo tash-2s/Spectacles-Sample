@@ -60,6 +60,7 @@
   DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/0005641c-028d-459a-0000-000000014b4d>
   PrefabRemaps:
     []
@@ -504,14 +505,13 @@
     pinkyUpperJoint: true
     pinkyTip: true
     shouldThumbPokeGlow: true
-    occluderEnabled: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handType: left
       selectVisual: Default
-      handInteractor: !<MappingBased.HandInteractor> 75e72a30-933b-43b2-8219-7c49f0c7611a
+      handInteractor: !<MappingBased.AssignableType> 75e72a30-933b-43b2-8219-7c49f0c7611a
       handMesh: !<reference.RenderMeshVisual> 225e9ea5-b7ee-4e9f-9936-54a3ab838a65
       root: !<reference.SceneObject> 489e124a-3c4f-433b-a263-168c7ab1bd96
       autoJointMapping: true
@@ -550,9 +550,6 @@
       tapProximityThreshold: !<float> 8.000000
       pinchTexture: !<reference.Texture> 3391429c-5c74-4b5c-b9fc-4ad3ba30bda4
       tapTexture: !<reference.Texture> e33d2c7f-1d12-4250-92fb-433c25ce1923
-      occluderEnabled: false
-      occluderUnitPlaneMesh: !<reference.RenderMesh> a453f19f-0832-419f-bd8f-b3296b433b23
-      radialGradientOcclusionMaterial: !<reference.Material> af45ff34-c96f-42c2-8446-8282edf6dece
       handOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
       handOccluderMaterial: !<reference.Material> 5d5c762b-f0dd-4c06-b76f-bcb8f8fb525f
   ScriptTypes:
@@ -874,6 +871,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -882,9 +881,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -939,6 +940,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -947,9 +950,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -1042,7 +1047,7 @@
     {}
   ScriptInputs:
     "":
-      mapComponent: !<MappingBased.MapComponent> c99d4f2c-f5f0-4683-bb28-e2bbf4c7ea40
+      mapComponent: !<MappingBased.AssignableType> c99d4f2c-f5f0-4683-bb28-e2bbf4c7ea40
       questMarkerPrefab: !<reference.ObjectPrefab> 140d3cb7-35bb-42a6-a5d7-18428941ada7
       inViewMaterial: !<reference.Material> 8695c20a-6433-4bd4-8fe9-27f568407aa4
       outOfViewMaterial: !<reference.Material> cf2c6c64-7672-4993-be5f-5830f29b2f58
@@ -1112,6 +1117,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1120,9 +1127,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -1172,7 +1181,6 @@
     indirectTargetingVolumeMultiplier: true
     indirectDragThreshold: true
     handType: true
-    raycastAlgorithm: true
     forcePokeOnNonDominantPalmProximity: true
     directColliderEnterRadius: true
     directColliderExitRadius: true
@@ -1195,7 +1203,6 @@
       indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 40.000000
       handType: right
-      raycastAlgorithm: Proxy
       forcePokeOnNonDominantPalmProximity: false
       directColliderEnterRadius: !<float> 1.000000
       directColliderExitRadius: 1.500000
@@ -1264,7 +1271,7 @@
   ScriptInputs:
     "":
       mapSceneObject: !<reference.SceneObject> b602b57e-35d3-4105-9104-6cfbeb5a7b71
-      mapComponent: !<MappingBased.MapComponent> c99d4f2c-f5f0-4683-bb28-e2bbf4c7ea40
+      mapComponent: !<MappingBased.AssignableType> c99d4f2c-f5f0-4683-bb28-e2bbf4c7ea40
       fullMapCollider: !<reference.ColliderComponent> ed4b892c-a8e6-46ac-acca-a1a8b8c6dfa4
       miniMapCollider: !<reference.ColliderComponent> f0b28dbc-3f80-49e5-844d-8d7b0f9e3683
       enableStretchZ: true
@@ -1625,6 +1632,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1633,9 +1642,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -1874,6 +1885,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1882,9 +1895,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -1964,6 +1979,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1972,9 +1989,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -2540,7 +2559,6 @@
     _maxRaycastDistance: true
     indirectTargetingVolumeMultiplier: true
     indirectDragThreshold: true
-    raycastAlgorithm: true
     forcePokeOnNonDominantPalmProximity: true
     directColliderEnterRadius: true
     directColliderExitRadius: true
@@ -2563,7 +2581,6 @@
       indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 40.000000
       handType: left
-      raycastAlgorithm: Proxy
       forcePokeOnNonDominantPalmProximity: false
       directColliderEnterRadius: !<float> 1.000000
       directColliderExitRadius: 1.500000
@@ -2803,8 +2820,8 @@
     {}
   ScriptInputs:
     "":
-      mapComponent: !<MappingBased.MapComponent> c99d4f2c-f5f0-4683-bb28-e2bbf4c7ea40
-      container: !<MappingBased.ContainerFrame> 7646870c-b93e-4c04-a6d9-9d26124174e2
+      mapComponent: !<MappingBased.AssignableType> c99d4f2c-f5f0-4683-bb28-e2bbf4c7ea40
+      container: !<MappingBased.AssignableType_1> 7646870c-b93e-4c04-a6d9-9d26124174e2
       textComponent: !<reference.Text> cbcc56fd-6a24-40e8-9190-f71f3ba576e2
       renderOrder: !<float> 10.000000
   ScriptTypes:
@@ -2824,6 +2841,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -2832,9 +2851,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -2869,6 +2890,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -2877,9 +2900,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -2947,6 +2972,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -2955,9 +2982,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -3049,16 +3078,16 @@
     {}
   ScriptInputs:
     "":
-      mapComponent: !<MappingBased.MapComponent> c99d4f2c-f5f0-4683-bb28-e2bbf4c7ea40
-      spawnPinButton: !<MappingBased.PinchButton> c0310255-673e-4fb8-b857-bc61a536a626
-      clearPinsButton: !<MappingBased.PinchButton> 063e6ed8-f71b-4fde-a985-7c9c9ce82be3
-      zoomInButton: !<MappingBased.PinchButton> 3cc5c6a6-d015-4a98-95ee-24c4d779771e
-      zoomOutButton: !<MappingBased.PinchButton> b08e370a-5e26-457b-b338-9e7eb2186c0d
-      centerMapButton: !<MappingBased.PinchButton> 05d3ba04-f2e2-482f-af8e-554e3e6705fa
-      toggleMiniMapButton: !<MappingBased.ToggleButton> 3a93cb1a-fef8-46ff-81d0-b880f2cb1edd
-      showRestaurantsButton: !<MappingBased.PinchButton> f6e81dfc-3483-44b8-ac9c-ddaadd9fe71e
-      showCafeButton: !<MappingBased.PinchButton> a1f696f8-fe7d-461a-b804-aed9507d7ea1
-      showBarsButton: !<MappingBased.PinchButton> f9781527-9f89-448e-afe6-623658d19913
+      mapComponent: !<MappingBased.AssignableType> c99d4f2c-f5f0-4683-bb28-e2bbf4c7ea40
+      spawnPinButton: !<MappingBased.AssignableType_1> c0310255-673e-4fb8-b857-bc61a536a626
+      clearPinsButton: !<MappingBased.AssignableType_2> 063e6ed8-f71b-4fde-a985-7c9c9ce82be3
+      zoomInButton: !<MappingBased.AssignableType_3> 3cc5c6a6-d015-4a98-95ee-24c4d779771e
+      zoomOutButton: !<MappingBased.AssignableType_4> b08e370a-5e26-457b-b338-9e7eb2186c0d
+      centerMapButton: !<MappingBased.AssignableType_5> 05d3ba04-f2e2-482f-af8e-554e3e6705fa
+      toggleMiniMapButton: !<MappingBased.AssignableType_6> 3a93cb1a-fef8-46ff-81d0-b880f2cb1edd
+      showRestaurantsButton: !<MappingBased.AssignableType_7> f6e81dfc-3483-44b8-ac9c-ddaadd9fe71e
+      showCafeButton: !<MappingBased.AssignableType_8> a1f696f8-fe7d-461a-b804-aed9507d7ea1
+      showBarsButton: !<MappingBased.AssignableType_9> f9781527-9f89-448e-afe6-623658d19913
       logObject: !<reference.SceneObject> aa4c9644-7e91-4fd9-a405-4c02157e2375
   ScriptTypes:
     "":
@@ -3196,6 +3225,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -3204,9 +3235,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -4261,7 +4294,7 @@
     {}
   ScriptInputs:
     "":
-      mapComponent: !<MappingBased.MapComponent> c99d4f2c-f5f0-4683-bb28-e2bbf4c7ea40
+      mapComponent: !<MappingBased.AssignableType> c99d4f2c-f5f0-4683-bb28-e2bbf4c7ea40
       translationXTime: 0.350000
       translationYTime: 0.350000
       translationZTime: 0.350000
@@ -4756,6 +4789,8 @@
     indirectTargetingVolumeMultiplier: true
     indirectDragThreshold: true
     mouseTargetingMode: true
+    moveInDepth: true
+    moveInDepthAmount: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -4774,6 +4809,8 @@
       indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 3.000000
       mouseTargetingMode: !<float> 2.000000
+      moveInDepth: false
+      moveInDepthAmount: !<float> 5.000000
   ScriptTypes:
     "":
       {}
@@ -5706,14 +5743,13 @@
     pinkyUpperJoint: true
     pinkyTip: true
     shouldThumbPokeGlow: true
-    occluderEnabled: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handType: right
       selectVisual: Default
-      handInteractor: !<MappingBased.HandInteractor> 36677c54-25f1-4e3b-a12a-76624b165b80
+      handInteractor: !<MappingBased.AssignableType> 36677c54-25f1-4e3b-a12a-76624b165b80
       handMesh: !<reference.RenderMeshVisual> fda22202-45d2-4777-9adb-d634fcdbd1c0
       root: !<reference.SceneObject> 3ecbf086-f684-43d3-994d-7d6401c14343
       autoJointMapping: true
@@ -5752,9 +5788,6 @@
       tapProximityThreshold: !<float> 8.000000
       pinchTexture: !<reference.Texture> 3391429c-5c74-4b5c-b9fc-4ad3ba30bda4
       tapTexture: !<reference.Texture> e33d2c7f-1d12-4250-92fb-433c25ce1923
-      occluderEnabled: false
-      occluderUnitPlaneMesh: !<reference.RenderMesh> a453f19f-0832-419f-bd8f-b3296b433b23
-      radialGradientOcclusionMaterial: !<reference.Material> af45ff34-c96f-42c2-8446-8282edf6dece
       handOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
       handOccluderMaterial: !<reference.Material> bb8479b9-021e-4c42-809a-60edf99cbeac
   ScriptTypes:

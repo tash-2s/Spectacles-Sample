@@ -42,8 +42,8 @@
       Mats: !<reference.Material[]>
         []
       BarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
-      globalOpacity: !<float> 0.000000
       initialProgress: !<float> 0.000000
+      globalOpacity: !<float> 0.000000
       startPosScreenTransform: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
       endPosScreenTransform: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
@@ -59,3 +59,6 @@
     - // @input Component.ScreenTransform startPosScreenTransform
     - // @input Component.ScreenTransform endPosScreenTransform
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

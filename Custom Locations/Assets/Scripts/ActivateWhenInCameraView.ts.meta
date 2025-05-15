@@ -38,11 +38,11 @@
   DefaultScriptInputs:
     - camera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
       centerReference: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      listenerObjects: !<reference.ScriptComponent[]>
+        []
       sphereInViewForActivationRadius: !<float> 600.000000
       distanceForActivation: !<float> 1000.000000
       deActivateDistanceMultiplier: 1.500000
-      listenerObjects: !<MappingBased.ScriptObject[]>
-        []
   ScriptTypes:
     -
       {}
@@ -54,3 +54,6 @@
     - // @input float sphereInViewForActivationRadius = 600
     - // @input float distanceForActivation = 1000
     - // @input float deActivateDistanceMultiplier = 1.5
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

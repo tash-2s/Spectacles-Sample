@@ -1,16 +1,16 @@
 import { MapComponent } from "../MapComponent/Scripts/MapComponent";
 import { makeTween } from "../MapComponent/Scripts/MapUtils";
-import { ContainerFrame } from "../SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame";
-import WorldCameraFinderProvider from "../SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider";
-import { CancelFunction } from "../SpectaclesInteractionKit/Utils/animate";
-import { LensConfig } from "../SpectaclesInteractionKit/Utils/LensConfig";
+import { ContainerFrame } from "SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/ContainerFrame";
+import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider";
+import { CancelFunction } from "SpectaclesInteractionKit.lspkg/Utils/animate";
+import { LensConfig } from "SpectaclesInteractionKit.lspkg/Utils/LensConfig";
 import {
   clamp,
   smoothDamp,
   smoothDampAngle,
-} from "../SpectaclesInteractionKit/Utils/mathUtils";
-import { UpdateDispatcher } from "../SpectaclesInteractionKit/Utils/UpdateDispatcher";
-import { validate } from "../SpectaclesInteractionKit/Utils/validate";
+} from "SpectaclesInteractionKit.lspkg/Utils/mathUtils";
+import { UpdateDispatcher } from "SpectaclesInteractionKit.lspkg/Utils/UpdateDispatcher";
+import { validate } from "SpectaclesInteractionKit.lspkg/Utils/validate";
 import { TWEEN_DURATION } from "./MapUIController";
 
 const CONTAINER_SIZE_MINI = new vec2(10, 10);

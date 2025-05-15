@@ -35,8 +35,8 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - frame: !<MappingBased.ContainerFrame> 00000000-0000-0000-0000-000000000000
-      image: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - image: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      frame: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       validZoneFocal: !<float> 2.000000
       validZoneAngle: !<float> 25.000000
       validZoneThreshold: !<float> 5.000000
@@ -46,9 +46,12 @@
       {}
   InputLines:
     - // @input SceneObject image
-    - // @input ContainerFrame frame
+    - // @input AssignableType frame
     - // @input float validZoneFocal = 2
     - // @input float validZoneAngle = 25
     - // @input float validZoneThreshold = 5
     - // @input SceneObject camera
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

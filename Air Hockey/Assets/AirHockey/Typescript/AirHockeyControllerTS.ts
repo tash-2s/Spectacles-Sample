@@ -1,11 +1,11 @@
 import { AirHockeyPaddle } from "./AirHockeyPaddleTS";
 import { AirHockeyPuck } from "./AirHockeyPuckTS";
-import { Interactable } from "SpectaclesSyncKit/SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import { InteractableManipulation } from "SpectaclesSyncKit/SpectaclesInteractionKit/Components/Interaction/InteractableManipulation/InteractableManipulation";
-import { PinchButton } from "SpectaclesSyncKit/SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton";
-import { SessionController } from "SpectaclesSyncKit/Core/SessionController";
-import { StorageProperty } from "SpectaclesSyncKit/Core/StorageProperty";
-import { SyncEntity } from "SpectaclesSyncKit/Core/SyncEntity";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import { InteractableManipulation } from "SpectaclesInteractionKit.lspkg/Components/Interaction/InteractableManipulation/InteractableManipulation";
+import { PinchButton } from "SpectaclesInteractionKit.lspkg/Components/UI/PinchButton/PinchButton";
+import { SessionController } from "SpectaclesSyncKit.lspkg/Core/SessionController";
+import { StorageProperty } from "SpectaclesSyncKit.lspkg/Core/StorageProperty";
+import { SyncEntity } from "SpectaclesSyncKit.lspkg/Core/SyncEntity";
 
 @component
 export class AirHockeyController extends BaseScriptComponent {

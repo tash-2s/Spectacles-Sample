@@ -62,6 +62,7 @@
   DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/0005641c-028d-459a-0000-000000014b4d>
   PrefabRemaps:
     []
@@ -434,6 +435,7 @@
       PlaybackSpeed: 1.000000
       Begin: 0.000000
       End: 5.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -446,6 +448,7 @@
       PlaybackSpeed: 1.000000
       Begin: 5.000000
       End: 7.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -458,6 +461,7 @@
       PlaybackSpeed: 1.000000
       Begin: 7.000000
       End: 11.666667
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -732,8 +736,8 @@
     "":
       thoughtBubbleImage: !<reference.Image> 0d588649-a715-415c-a116-2f174098ddd6
       thoughtBubbleText: !<reference.Text> 8eddc1ad-d41f-416a-b9ee-65b11f51af7b
-      fetchCatFacts: !<MappingBased.FetchCatFacts> 2df8b638-4525-423b-9070-fc0059066fb3
-      catInteractable: !<MappingBased.Interactable> e8d53567-254f-42ee-aaa8-811a0721caed
+      fetchCatFacts: !<MappingBased.AssignableType> 2df8b638-4525-423b-9070-fc0059066fb3
+      catInteractable: !<MappingBased.AssignableType_1> e8d53567-254f-42ee-aaa8-811a0721caed
       animationPlayer: !<reference.AnimationPlayer> 1005bdb1-c701-4c8c-85cf-d9ff86a6a8aa
       hintImage: !<reference.Image> 6f91e568-0adb-4c53-8cee-2c78787e7e36
       animationStateMachine: !<reference.ScriptComponent> 505901b3-5230-4c3a-bc74-81e785fa0cda
@@ -964,7 +968,6 @@
     _maxRaycastDistance: true
     indirectTargetingVolumeMultiplier: true
     indirectDragThreshold: true
-    raycastAlgorithm: true
     forcePokeOnNonDominantPalmProximity: true
     directColliderEnterRadius: true
     directColliderExitRadius: true
@@ -987,7 +990,6 @@
       indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 40.000000
       handType: left
-      raycastAlgorithm: Proxy
       forcePokeOnNonDominantPalmProximity: false
       directColliderEnterRadius: !<float> 1.000000
       directColliderExitRadius: 1.500000
@@ -1611,14 +1613,13 @@
     pinkyUpperJoint: true
     pinkyTip: true
     shouldThumbPokeGlow: true
-    occluderEnabled: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handType: left
       selectVisual: Default
-      handInteractor: !<MappingBased.HandInteractor> 27be2f2a-80da-474f-8fcc-cd260dc0ffa6
+      handInteractor: !<MappingBased.AssignableType> 27be2f2a-80da-474f-8fcc-cd260dc0ffa6
       handMesh: !<reference.RenderMeshVisual> 351ceb9a-d027-4155-96af-74969bcbbf9c
       root: !<reference.SceneObject> dbbc97de-ddb6-4cdf-bc83-71642fbb9336
       autoJointMapping: true
@@ -1657,9 +1658,6 @@
       tapProximityThreshold: !<float> 8.000000
       pinchTexture: !<reference.Texture> 3391429c-5c74-4b5c-b9fc-4ad3ba30bda4
       tapTexture: !<reference.Texture> e33d2c7f-1d12-4250-92fb-433c25ce1923
-      occluderEnabled: false
-      occluderUnitPlaneMesh: !<reference.RenderMesh> a453f19f-0832-419f-bd8f-b3296b433b23
-      radialGradientOcclusionMaterial: !<reference.Material> af45ff34-c96f-42c2-8446-8282edf6dece
       handOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
       handOccluderMaterial: !<reference.Material> 5d5c762b-f0dd-4c06-b76f-bcb8f8fb525f
   ScriptTypes:
@@ -2968,7 +2966,6 @@
     indirectTargetingVolumeMultiplier: true
     indirectDragThreshold: true
     handType: true
-    raycastAlgorithm: true
     forcePokeOnNonDominantPalmProximity: true
     directColliderEnterRadius: true
     directColliderExitRadius: true
@@ -2991,7 +2988,6 @@
       indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 40.000000
       handType: right
-      raycastAlgorithm: Proxy
       forcePokeOnNonDominantPalmProximity: false
       directColliderEnterRadius: !<float> 1.000000
       directColliderExitRadius: 1.500000
@@ -3467,6 +3463,8 @@
     indirectTargetingVolumeMultiplier: true
     indirectDragThreshold: true
     mouseTargetingMode: true
+    moveInDepth: true
+    moveInDepthAmount: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -3485,6 +3483,8 @@
       indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 3.000000
       mouseTargetingMode: !<float> 2.000000
+      moveInDepth: false
+      moveInDepthAmount: !<float> 5.000000
   ScriptTypes:
     "":
       {}
@@ -3728,14 +3728,13 @@
     pinkyUpperJoint: true
     pinkyTip: true
     shouldThumbPokeGlow: true
-    occluderEnabled: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handType: right
       selectVisual: Default
-      handInteractor: !<MappingBased.HandInteractor> 81bcc65f-ae28-41f0-843a-70b913478257
+      handInteractor: !<MappingBased.AssignableType> 81bcc65f-ae28-41f0-843a-70b913478257
       handMesh: !<reference.RenderMeshVisual> 84e4a05f-15d8-4e75-9cba-935ca5e776ce
       root: !<reference.SceneObject> 9db2e76d-d5ef-44d5-84b4-094a90c0ea19
       autoJointMapping: true
@@ -3774,9 +3773,6 @@
       tapProximityThreshold: !<float> 8.000000
       pinchTexture: !<reference.Texture> 3391429c-5c74-4b5c-b9fc-4ad3ba30bda4
       tapTexture: !<reference.Texture> e33d2c7f-1d12-4250-92fb-433c25ce1923
-      occluderEnabled: false
-      occluderUnitPlaneMesh: !<reference.RenderMesh> a453f19f-0832-419f-bd8f-b3296b433b23
-      radialGradientOcclusionMaterial: !<reference.Material> af45ff34-c96f-42c2-8446-8282edf6dece
       handOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
       handOccluderMaterial: !<reference.Material> bb8479b9-021e-4c42-809a-60edf99cbeac
   ScriptTypes:
@@ -4368,6 +4364,8 @@
     acceptableXDirections: true
     acceptableYDirections: true
     acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -4376,9 +4374,11 @@
       enableInstantDrag: false
       allowMultipleInteractors: false
       enablePokeDirectionality: false
-      acceptableXDirections: !<float> 3.000000
-      acceptableYDirections: !<float> 3.000000
-      acceptableZDirections: !<float> 3.000000
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}

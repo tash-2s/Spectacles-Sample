@@ -1,5 +1,5 @@
-import { CancelFunction } from "../../SpectaclesInteractionKit/Utils/animate";
-import { LensConfig } from "../../SpectaclesInteractionKit/Utils/LensConfig";
+import { CancelFunction } from "SpectaclesInteractionKit.lspkg/Utils/animate";
+import { LensConfig } from "SpectaclesInteractionKit.lspkg/Utils/LensConfig";
 
 export const EPSILON = 0.000001;
 

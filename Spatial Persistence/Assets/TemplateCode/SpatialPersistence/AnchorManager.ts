@@ -1,14 +1,14 @@
-import { Anchor, State, UserAnchor } from "Spatial Anchors/Anchor";
-import { AnchorModule } from "Spatial Anchors/AnchorModule";
+import { Anchor, State, UserAnchor } from "SpatialAnchors.lspkg/Anchor";
+import { AnchorModule } from "SpatialAnchors.lspkg/AnchorModule";
 import {
   AnchorSession,
   AnchorSessionOptions,
-} from "Spatial Anchors/AnchorSession";
-import { LoggerVisualization } from "Spatial Anchors/SpatialPersistence/Logging";
+} from "SpatialAnchors.lspkg/AnchorSession";
+import { LoggerVisualization } from "SpatialAnchors.lspkg/SpatialPersistence/Logging";
 import Event, {
   PublicApi,
   unsubscribe,
-} from "SpectaclesInteractionKit/Utils/Event";
+} from "SpectaclesInteractionKit.lspkg/Utils/Event";
 
 /**
  * Singleton class that handles all invocations of the AnchorModule logic to retrieve spatially persistent anchors.

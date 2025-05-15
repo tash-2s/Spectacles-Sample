@@ -1,6 +1,6 @@
-import { Billboard } from "SpectaclesInteractionKit/Components/Interaction/Billboard/Billboard";
-import { Interactable } from "../../SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import Event, { PublicApi } from "../../SpectaclesInteractionKit/Utils/Event";
+import { Billboard } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Billboard/Billboard";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import Event, { PublicApi } from "SpectaclesInteractionKit.lspkg/Utils/Event";
 import { SnapToWorld } from "../WorldQuery/SnapToWorld";
 
 export type WidgetSelectionEvent = {

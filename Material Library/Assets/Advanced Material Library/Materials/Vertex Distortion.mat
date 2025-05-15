@@ -4,7 +4,15 @@
     - !<own> 9378a800-d7ad-44fd-bf3f-ee9a6e27b503
 - !<PassInfo/9378a800-d7ad-44fd-bf3f-ee9a6e27b503>
   CachedProperties:
-    []
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -70,15 +78,6 @@
     offset:
       typeIdx: 1
       value: 3.200000
-    overrideTimeDelta:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     strength:
       typeIdx: 1
       value: 0.600000

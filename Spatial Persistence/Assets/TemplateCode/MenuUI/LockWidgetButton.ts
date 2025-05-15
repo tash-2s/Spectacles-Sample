@@ -1,6 +1,8 @@
-import { Interactable } from "SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import { SIK } from "SpectaclesInteractionKit/SIK";
-import Event, { PublicApi } from "SpectaclesInteractionKit/Utils/Event";
+
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import Event, { PublicApi } from "SpectaclesInteractionKit.lspkg/Utils/Event";
+
+const SIK = require("SpectaclesInteractionKit.lspkg/SIK").SIK;
 
 export enum RecoverState {
   Recover,
@@ -13,7 +15,9 @@ export type RecoverEvent = {
 
 @component
 export class RecoverWidgetButton extends BaseScriptComponent {
-  private interactable: Interactable;
+ // private interactable: Interactable;
+
+ private interactable: Interactable
 
   @input
   private text: Text;
@@ -28,6 +32,8 @@ export class RecoverWidgetButton extends BaseScriptComponent {
   }
 
   onStart() {
+
+    /*
     this.interactable = this.sceneObject.getComponent(
       SIK.InteractionConfiguration.requireType("Interactable")
     ) as Interactable;
@@ -35,6 +41,7 @@ export class RecoverWidgetButton extends BaseScriptComponent {
     this.interactable.onTriggerEnd.add(() => {
       this.onRecoverEvent.invoke({ state: this.recoverState });
     });
+    */
 
     this.recoverState = RecoverState.Recover;
   }

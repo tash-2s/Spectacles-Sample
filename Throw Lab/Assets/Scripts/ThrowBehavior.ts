@@ -1,9 +1,9 @@
-import { HandInteractor } from "SpectaclesInteractionKit/Core/HandInteractor/HandInteractor";
-import { Interactor, InteractorTriggerType } from "SpectaclesInteractionKit/Core/Interactor/Interactor";
-import { MouseInteractor } from "SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor";
-import { SIK } from "SpectaclesInteractionKit/SIK";
-import { mix } from "SpectaclesInteractionKit/Utils/animate";
-import { lerp } from "SpectaclesInteractionKit/Utils/mathUtils";
+import { HandInteractor } from "SpectaclesInteractionKit.lspkg/Core/HandInteractor/HandInteractor";
+import { Interactor, InteractorTriggerType } from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
+import { MouseInteractor } from "SpectaclesInteractionKit.lspkg/Core/MouseInteractor/MouseInteractor";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
+import { mix } from "SpectaclesInteractionKit.lspkg/Utils/animate";
+import { lerp } from "SpectaclesInteractionKit.lspkg/Utils/mathUtils";
 
 @component
 export class ThrowBehavior extends BaseScriptComponent {

@@ -1,5 +1,5 @@
-import {InteractableManipulation} from "SpectaclesSyncKit/SpectaclesInteractionKit/Components/Interaction/InteractableManipulation/InteractableManipulation"
-import {SyncEntity} from "SpectaclesSyncKit/Core/SyncEntity"
+import {InteractableManipulation} from "SpectaclesInteractionKit.lspkg/Components/Interaction/InteractableManipulation/InteractableManipulation"
+import {SyncEntity} from "SpectaclesSyncKit.lspkg/Core/SyncEntity"
 import {ControllerTS} from "./ControllerTS"
  
 @component

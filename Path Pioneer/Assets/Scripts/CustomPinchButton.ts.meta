@@ -31,12 +31,15 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - interactable: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+    - interactable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       rmv: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input Interactable interactable
+    - // @input AssignableType interactable
     - // @input Component.RenderMeshVisual rmv
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

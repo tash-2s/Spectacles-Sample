@@ -888,6 +888,7 @@
       PlaybackSpeed: 1.000000
       Begin: 0.000000
       End: 915.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -900,6 +901,7 @@
       PlaybackSpeed: 2.000000
       Begin: 0.000000
       End: 464.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default
@@ -912,6 +914,7 @@
       PlaybackSpeed: 2.000000
       Begin: 465.000000
       End: 915.000000
+      Offset: 0.000000
       Reversed: false
       Disabled: false
       BlendMode: Default

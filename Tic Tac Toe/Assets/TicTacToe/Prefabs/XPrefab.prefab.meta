@@ -9,7 +9,7 @@
     ObjectPrefab: !<own> cc421410-4651-479d-8b1b-e6fc3ba06905
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/ea371d6f-c0ce-444d-a0a1-7c799bafede1>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -156,6 +156,12 @@
     targetingMode: true
     enableInstantDrag: true
     allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -163,6 +169,12 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -234,8 +246,8 @@
   ScriptInputs:
     "":
       showLogs: true
-      controller: !<MappingBased.ControllerTS> bdbb6504-1dd2-46c3-8b61-d317554a4120
-      manipulatable: !<MappingBased.InteractableManipulation> 564ec361-0f96-4d04-bbfe-2e406aae3194
+      controller: !<MappingBased.AssignableType> bdbb6504-1dd2-46c3-8b61-d317554a4120
+      manipulatable: !<MappingBased.AssignableType_1> 564ec361-0f96-4d04-bbfe-2e406aae3194
   ScriptTypes:
     "":
       {}

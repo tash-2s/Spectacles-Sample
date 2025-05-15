@@ -1,5 +1,5 @@
 - !<AssetImportMetadata/45cf74bf-ccd3-453b-9a66-91c45f7fdbb6>
-  ImporterSettings: !<AssetImporterSettings/a5d0c1d9-faa6-4e39-ac9a-c3d2ba39b8ff>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   ImportedAssetIds:
     Scene: !<reference> 1e4cae11-cf66-49fa-b479-1f6bf46388cc

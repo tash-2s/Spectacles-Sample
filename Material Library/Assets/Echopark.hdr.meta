@@ -1,5 +1,5 @@
 - !<AssetImportMetadata/3c7fa187-4761-477d-8560-b306c3a544e5>
-  ImporterSettings: !<EnvmapImporterSettings/c2235b02-7317-4304-a26f-0b48f16196df>
+  ImporterSettings: !<EnvmapImporterSettings>
     ImageQuality: Normal
     SpecularImageResolution: Medium
   ImportedAssetIds:

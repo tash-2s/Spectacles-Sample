@@ -1,6 +1,6 @@
-import Event, { PublicApi } from "../../SpectaclesInteractionKit/Utils/Event";
+import Event, { PublicApi } from "SpectaclesInteractionKit.lspkg/Utils/Event";
 
-import { Singleton } from "../../SpectaclesInteractionKit/Decorators/Singleton";
+import { Singleton } from "SpectaclesInteractionKit.lspkg/Decorators/Singleton";
 
 @Singleton
 export class VoiceMLTranscribeSingleton {

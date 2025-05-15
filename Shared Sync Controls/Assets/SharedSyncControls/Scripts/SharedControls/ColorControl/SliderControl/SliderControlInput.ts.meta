@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> 7d275818-35d9-45a4-aadc-4318cd161676
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/7c88c80c-01de-4f0d-832b-8623c73893be>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: f7e0f454-d838-46b7-8414-74de6d943ab7
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -30,9 +30,13 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - slider: !<Typename.Slider> 00000000-0000-0000-0000-000000000000
+    - slider: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input Slider slider
+    - // @input AssignableType slider
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

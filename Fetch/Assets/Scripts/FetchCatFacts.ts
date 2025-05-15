@@ -9,8 +9,7 @@ const MAX_LENGTH = 93;
 
 @component
 export class FetchCatFacts extends BaseScriptComponent {
-  private remoteService: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
-
+  private internetModule:InternetModule = require("LensStudio:InternetModule");
   private url = "https://catfact.ninja/fact?max_length=" + MAX_LENGTH;
 
   catFactReceived: Event<string>;
@@ -20,7 +19,7 @@ export class FetchCatFacts extends BaseScriptComponent {
   }
 
   public getCatFacts() {
-    this.remoteService
+    this.internetModule
       .fetch(this.url, {
         method: "GET",
         headers: {

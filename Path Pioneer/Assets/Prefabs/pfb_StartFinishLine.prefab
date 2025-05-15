@@ -142,6 +142,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/1aae3d32-711b-4371-bfdc-7ee30f45d223>
   PrefabRemaps:
     []
@@ -245,6 +246,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/2fcf06af-f562-48f5-9cbb-bf4627872edb>
   PrefabRemaps:
     []
@@ -426,8 +428,8 @@
       finishLineTurnArrow: !<reference.SceneObject> 40a59d4d-266e-42ef-84d5-5b5385f34348
       hintStartVisual: !<reference.SceneObject> 7525b5d1-43ee-4208-bb51-0982eb3af572
       hintFinishVisual: !<reference.SceneObject> d1da1e07-2d4f-4330-81d4-fcf7a21f6df5
-      pathCollisionEvents: !<MappingBased.PathCollisionEvents> 99783852-8171-4803-9529-2699ab22c156
-      pathWalker: !<MappingBased.PathWalker> c27cdde8-1a94-4608-950a-f0f50b7e2fce
+      pathCollisionEvents: !<MappingBased.AssignableType> 99783852-8171-4803-9529-2699ab22c156
+      pathWalker: !<MappingBased.AssignableType_1> c27cdde8-1a94-4608-950a-f0f50b7e2fce
   ScriptTypes:
     "":
       {}
@@ -549,6 +551,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/7525b5d1-43ee-4208-bb51-0982eb3af572>
   PrefabRemaps:
     []
@@ -602,6 +605,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/78c8a79e-9205-4382-92a6-1cf0307d6c87>
   PrefabRemaps:
     []
@@ -704,6 +708,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/85afcce5-53a2-46bf-8ade-cd5a5e48f61c>
   PrefabRemaps:
     []
@@ -790,6 +795,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<SceneObject/9d748cf5-3b18-4f0c-bea6-54bf37550331>
   PrefabRemaps:
     []
@@ -909,6 +915,7 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false
 - !<RenderMeshVisual/a9a3f93f-8c2e-4b09-8630-6550c43bbb46>
   PrefabRemaps:
     []
@@ -1247,3 +1254,4 @@
     LetterSpacing: -0.050000
     LineSpacing: 0.200000
     CapitalizationOverride: None
+  EnableBatching: false

@@ -33,8 +33,10 @@
   DefaultScriptInputs:
     - texture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
       outputImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      hfApiToken: ""
   ScriptTypes:
     -
       {}
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

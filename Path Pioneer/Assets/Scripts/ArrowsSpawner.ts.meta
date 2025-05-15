@@ -38,8 +38,8 @@
     - mainCamera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
       maxArrows: !<float> 0.000000
       revealDistance: !<float> 1000.000000
-      pfbSideArrow: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       minimalDistanceBetweenArrows: !<float> 100.000000
+      pfbSideArrow: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       arrowMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
@@ -52,3 +52,6 @@
     - // @input Asset.ObjectPrefab pfbSideArrow
     - // @input Asset.Material arrowMaterial
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

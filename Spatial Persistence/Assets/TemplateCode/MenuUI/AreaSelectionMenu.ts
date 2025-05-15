@@ -1,6 +1,6 @@
-import Event, { PublicApi } from "SpectaclesInteractionKit/Utils/Event";
+import Event, { PublicApi } from "SpectaclesInteractionKit.lspkg/Utils/Event";
 import { AreaSelectionButton } from "./AreaSelectionButton";
-import { ContainerFrame } from "SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame";
+import { ContainerFrame } from "SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/ContainerFrame";
 import { AreaDeleteButton } from "./AreaDeleteButton";
 
 export const NEW_AREA_NAME = "New Area";
@@ -57,12 +57,12 @@ export class AreaSelectionMenu extends BaseScriptComponent {
     ) as ObjectPrefab;
 
     this.capsuleButtonMesh = requireAsset(
-      "SpectaclesInteractionKit/Assets/Meshes/ButtonCapsuleMesh"
+      "SpectaclesInteractionKit.lspkg/Assets/Meshes/ButtonCapsuleMesh"
     ) as RenderMesh;
 
     if (this.capsuleButtonMesh == null) {
       throw new Error(
-        "capsuleButtonMesh not found at SpectaclesInteractionKit/Assets/Meshes/ButtonCapsuleMesh"
+        "capsuleButtonMesh not found at SpectaclesInteractionKit.lspkg/Assets/Meshes/ButtonCapsuleMesh"
       );
     }
   }

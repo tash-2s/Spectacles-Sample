@@ -31,7 +31,6 @@ script.createEvent('OnStartEvent').bind(() => {
     cameraRequest.cameraId = CameraModule.CameraId.Default_Color;
     cameraTexture = cameraModule.requestCamera(cameraRequest);
     cameraTextureProvider = cameraTexture.control;
-    
     cameraTextureProvider.onNewFrame.add((cameraFrame) => {
         if (script.uiImage) {
             script.uiImage.mainPass.baseTex = cameraTexture;

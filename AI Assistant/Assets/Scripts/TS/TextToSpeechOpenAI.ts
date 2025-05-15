@@ -18,10 +18,10 @@ export class TextToSpeechOpenAI extends BaseScriptComponent {
   apiKey: string = "Insert your Open AI Key";
 
   // Remote service module for fetching data
-  private remoteServiceModule: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
+  private internetModule: InternetModule = require("LensStudio:InternetModule");
 
   onAwake() {
-    if (!this.remoteServiceModule || !this.audioComponent || !this.apiKey) {
+    if (!this.internetModule || !this.audioComponent || !this.apiKey) {
       print("Remote Service Module, Audio Component, or API key is missing.");
       return;
     }
@@ -61,7 +61,7 @@ export class TextToSpeechOpenAI extends BaseScriptComponent {
 
       print("Sending request to OpenAI...");
 
-      let response = await this.remoteServiceModule.fetch(request);
+      let response = await this.internetModule.fetch(request);
       print("Response status: " + response.status);
 
       if (response.status === 200) {

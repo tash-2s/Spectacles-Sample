@@ -9,7 +9,7 @@
     TypeScriptAsset: !<own> e80a7124-515d-4977-ae96-69fca568c321
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/54e9bbc8-a3cf-4cea-bc19-227bbbaf2b3e>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: c94ab8f4-1636-4b27-89c7-426e9823ed68
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -30,9 +30,13 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - bubbleAnimationControllerInput: !<MappingBased.BubbleAnimationControllerInput> 00000000-0000-0000-0000-000000000000
+    - bubbleAnimationControllerInput: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input BubbleAnimationControllerInput bubbleAnimationControllerInput
+    - // @input AssignableType bubbleAnimationControllerInput
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

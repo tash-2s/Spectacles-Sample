@@ -1,6 +1,6 @@
-import { SIK } from "SpectaclesInteractionKit/SIK";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
 import { Grabbable } from "./Grabbable";
-import { Interactor } from "SpectaclesInteractionKit/Core/Interactor/Interactor";
+import { Interactor } from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
 
 @component
 export class RacketGrabbable extends BaseScriptComponent {

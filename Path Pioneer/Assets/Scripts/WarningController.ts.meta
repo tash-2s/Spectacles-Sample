@@ -35,8 +35,8 @@
     {}
   DefaultScriptInputs:
     - mainCamera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
-      orthoCamera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
       mainCameraCapture: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      orthoCamera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
       orthoCameraCapture: !<reference.Camera> 00000000-0000-0000-0000-000000000000
       warningVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
@@ -49,3 +49,6 @@
     - // @input Component.Camera orthoCameraCapture
     - // @input SceneObject warningVisual
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

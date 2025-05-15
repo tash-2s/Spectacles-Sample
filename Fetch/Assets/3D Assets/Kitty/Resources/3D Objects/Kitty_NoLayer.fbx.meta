@@ -565,6 +565,7 @@
       BlendMode: Default
       ScaleMode: Multiply
       PlaybackMode: Loop
+      Offset: 0.000000
 - !<RenderMeshVisual/3c98c820-c24f-490a-85b7-c31846bdc576>
   PrefabRemaps:
     []

@@ -4,7 +4,15 @@
     - !<own> 0b5bae2b-9a21-4df3-be65-67c65cf6f174
 - !<PassInfo/0b5bae2b-9a21-4df3-be65-67c65cf6f174>
   CachedProperties:
-    []
+    - noiseTextureBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - noiseTextureDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - noiseTextureUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -109,21 +117,12 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
           mipmaps: true
         type: Texture2D
-    noiseTextureBorderColor:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    noiseTextureDims:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     noiseTextureTransform:
       typeIdx: 7
       value:
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    noiseTextureUvMinMax:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     scale:
       typeIdx: 1
       value: 1.130100

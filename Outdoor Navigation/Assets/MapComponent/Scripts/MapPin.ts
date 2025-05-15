@@ -1,4 +1,4 @@
-import { CancelFunction } from "../../SpectaclesInteractionKit/Utils/animate";
+import { CancelFunction } from "SpectaclesInteractionKit.lspkg/Utils/animate";
 import { easeOutElastic, makeTween } from "./MapUtils";
 import { PlaceInfo } from "./SnapPlacesProvider";
 

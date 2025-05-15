@@ -31,6 +31,12 @@
     targetingMode: true
     enableInstantDrag: true
     allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -38,6 +44,12 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -54,8 +66,8 @@
   ScriptInputs:
     "":
       showLogs: true
-      controller: !<MappingBased.ControllerTS> bdbb6504-1dd2-46c3-8b61-d317554a4120
-      manipulatable: !<MappingBased.InteractableManipulation> fba50bc8-c99c-4af2-9c7f-030d1b51b18a
+      controller: !<MappingBased.AssignableType> bdbb6504-1dd2-46c3-8b61-d317554a4120
+      manipulatable: !<MappingBased.AssignableType_1> fba50bc8-c99c-4af2-9c7f-030d1b51b18a
   ScriptTypes:
     "":
       {}

@@ -104,6 +104,12 @@
     targetingMode: true
     enableInstantDrag: true
     allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -111,6 +117,12 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
   ScriptTypes:
     "":
       {}
@@ -174,15 +186,14 @@
   Enabled: true
   ScriptAsset: !<reference> 16736bf8-9deb-41df-bba4-c6f13d3a082b
   ScriptInputsDefault:
-    targetOutlineMaterial: true
-    meshVisual: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       audio: !<reference.AudioComponent> 22da7cd5-79e1-409a-8d49-ed5d6a434529
-      targetOutlineMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
-      meshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      targetOutlineMaterial: !<reference.Material> 7231c7bc-6c14-4331-ad23-9ab928107707
+      meshVisual: !<reference.RenderMeshVisual> 7cf00fe5-58b3-4853-b4ef-a0970e36fd56
   ScriptTypes:
     "":
       {}

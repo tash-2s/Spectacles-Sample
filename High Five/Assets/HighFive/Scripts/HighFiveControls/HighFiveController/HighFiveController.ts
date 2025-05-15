@@ -1,11 +1,11 @@
 import {RealtimeStoreKeys} from "../SyncControls/RealtimeStoreKeys"
 import {HighFiveControllerInput} from "./HighFiveControllerInput"
 import WorldCameraFinderProvider
-  from "../../../../SpectaclesSyncKit/SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider"
-import TrackedHand from "../../../../SpectaclesSyncKit/SpectaclesInteractionKit/Providers/HandInputData/TrackedHand"
-import {SIK} from "../../../../SpectaclesSyncKit/SpectaclesInteractionKit/SIK"
+  from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider"
+import TrackedHand from "SpectaclesInteractionKit.lspkg/Providers/HandInputData/TrackedHand"
+import {SIK} from "SpectaclesInteractionKit.lspkg/SIK"
 import {BubbleAnimationController} from "../BubbleAnimationController/BubbleAnimationController"
-import {SessionController} from "../../../../SpectaclesSyncKit/Core/SessionController"
+import {SessionController} from "SpectaclesSyncKit.lspkg/Core/SessionController"
 
 // The HighFiveController class is responsible for detecting and handling virtual high-five
 // interactions between users in a real-time environment.

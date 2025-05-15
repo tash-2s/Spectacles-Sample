@@ -27,7 +27,7 @@
   ScriptInputs:
     "":
       timeoutDuration: !<float> 1.000000
-      container: !<MappingBased.DetectionContainer> dd84b063-7116-4ece-87e5-1575d44c5752
+      container: !<MappingBased.AssignableType> dd84b063-7116-4ece-87e5-1575d44c5752
       filterEnabled: true
   ScriptTypes:
     "":
@@ -1004,8 +1004,8 @@
     "":
       categoryAndConfidence: !<reference.Text> 41817f93-f02b-4a72-983c-84bf4c76d95f
       distanceFromCamera: !<reference.Text> be2755eb-3d97-4957-b5b4-96d6d2566ec7
-      polyline: !<MappingBased.ClosedPolyline> 0c3653f9-ce9e-4a33-a04a-73365e3a08a8
-      billboard: !<MappingBased.Billboard> 10f1a46b-6669-4f0b-93fa-fef04c87ae4c
+      polyline: !<MappingBased.AssignableType> 0c3653f9-ce9e-4a33-a04a-73365e3a08a8
+      billboard: !<MappingBased.AssignableType_1> 10f1a46b-6669-4f0b-93fa-fef04c87ae4c
       polylinePoints: !<reference.SceneObject[]>
         []
   ScriptTypes:

@@ -1,5 +1,5 @@
-import {Interactable} from "../SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable"
-import { lerp } from "../SpectaclesInteractionKit/Utils/mathUtils";
+import {Interactable} from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
+import { lerp } from "SpectaclesInteractionKit.lspkg/Utils/mathUtils";
 
 @component
 export class CustomPinchButton extends BaseScriptComponent {

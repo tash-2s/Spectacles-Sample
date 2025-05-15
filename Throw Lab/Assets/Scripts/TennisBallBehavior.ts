@@ -1,9 +1,9 @@
-import { Interactable } from "SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import WorldCameraFinderProvider from "SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider";
-import { SIK } from "SpectaclesInteractionKit/SIK";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider";
+import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
 import { Buffer } from "Scripts/Utils/Buffer";
-import { InteractorEvent } from "SpectaclesInteractionKit/Core/Interactor/InteractorEvent";
-import { Interactor, InteractorInputType } from "SpectaclesInteractionKit/Core/Interactor/Interactor";
+import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
+import { Interactor, InteractorInputType } from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
 import { Grabbable } from "./Grabbable";
 import { ScreenLogger } from "./Utils/ScreenLogger";
 
